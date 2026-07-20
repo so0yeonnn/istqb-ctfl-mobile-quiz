@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="ISTQB CTFL v4.0.1 모바일 실전 모의고사">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="app.css">
+  <title>ISTQB CTFL 모바일 모의고사</title>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">CTFL v4.0.1 · 모의고사 2회</p>
+      <h1>ISTQB 모바일 모의고사</h1>
+    </div>
+    <div class="timer" aria-live="polite"><span id="timer">60:00</span></div>
+  </header>
+
+  <main>
+    <section id="start-screen" class="screen active" aria-labelledby="start-title">
+      <div class="hero">
+        <p class="kicker">40문제 · 60분 · 합격 기준 26점</p>
+        <h2 id="start-title">휴대폰에서 바로 풀고<br>마지막에 한 번만 전송하세요.</h2>
+        <p>선택한 답은 기기에 자동 저장됩니다. 시험을 마치면 즉시 채점하고 오답·영역별 결과를 한 번에 내보냅니다.</p>
+        <button id="start-button" class="primary">시험 시작</button>
+        <button id="resume-button" class="secondary hidden">이어 풀기</button>
+      </div>
+    </section>
+
+    <section id="quiz-screen" class="screen" aria-labelledby="question-number">
+      <div class="progress-row">
+        <span id="question-number">1 / 40</span>
+        <span id="answered-count">답변 0개</span>
+      </div>
+      <div class="progress" aria-hidden="true"><div id="progress-fill"></div></div>
+
+      <article class="question-card">
+        <div class="meta"><span id="chapter"></span><span id="syllabus"></span></div>
+        <h2 id="question-text"></h2>
+        <fieldset id="options"><legend class="sr-only">답안 선택</legend></fieldset>
+      </article>
+
+      <nav class="question-nav" aria-label="문항 이동">
+        <button id="prev-button" class="secondary">이전</button>
+        <button id="flag-button" class="ghost" aria-pressed="false">검토 표시</button>
+        <button id="next-button" class="primary">다음</button>
+      </nav>
+      <button id="open-overview" class="overview-button">문항 전체 보기</button>
+    </section>
+
+    <section id="overview-screen" class="screen" aria-labelledby="overview-title">
+      <h2 id="overview-title">문항 전체 보기</h2>
+      <p id="overview-summary"></p>
+      <div id="question-grid" class="question-grid"></div>
+      <div class="stack-actions">
+        <button id="return-button" class="secondary">문제로 돌아가기</button>
+        <button id="finish-button" class="primary">시험 종료 및 채점</button>
+      </div>
+    </section>
+
+    <section id="result-screen" class="screen" aria-labelledby="result-title">
+      <div class="result-hero">
+        <p id="result-label" class="kicker"></p>
+        <h2 id="result-title"></h2>
+        <p id="result-summary"></p>
+      </div>
+      <div id="chapter-results" class="chapter-results"></div>
+      <h3>오답 해설</h3>
+      <div id="wrong-answers" class="wrong-answers"></div>
+      <div class="stack-actions">
+        <button id="share-button" class="primary">오답을 한 번에 전송</button>
+        <button id="download-button" class="secondary">결과 파일 저장</button>
+        <button id="reset-button" class="ghost danger">새로 시작</button>
+      </div>
+      <p id="export-status" class="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <dialog id="finish-dialog">
+    <h2>시험을 종료할까요?</h2>
+    <p id="finish-dialog-text"></p>
+    <div class="dialog-actions">
+      <button id="cancel-finish" class="secondary">계속 풀기</button>
+      <button id="confirm-finish" class="primary">채점하기</button>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
