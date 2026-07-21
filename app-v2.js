@@ -6,6 +6,7 @@ const canonicalChapter = value => value
 const questionBank = QUESTION_BANK.map(q=>({...q,chapter:canonicalChapter(q.chapter)}));
 const chapters = [...new Set(questionBank.map(q => q.chapter))];
 const letters = ['A','B','C','D','E'];
+const verifiedSets = new Set([1,2]);
 const officialSamples = {
   3:{name:'A',version:'1.7'},
   9:{name:'B',version:'1.7'},
@@ -26,66 +27,20 @@ const show = id => screens.forEach(x => $(x).classList.toggle('active', x === id
 const same = (a,b) => JSON.stringify([...(a||[])].sort()) === JSON.stringify([...(b||[])].sort());
 const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-function seeded(seed) {
-  let x = seed >>> 0;
-  return () => ((x = Math.imul(1664525, x) + 1013904223 >>> 0) / 4294967296);
-}
-
-function shuffle(items, rnd=Math.random) {
-  const a = [...items];
-  for (let i=a.length-1;i>0;i--) { const j=Math.floor(rnd()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
-  return a;
-}
-
-function variantize(q, round, position) {
-  const rnd = seeded(round*1009 + position*97);
-  const order = shuffle(q.options.map((_,i)=>i), rnd);
-  const replacements = [
-    ['결제','예약'],['배송','정산'],['회원','구독자'],['상품','서비스'],['주문','신청'],
-    ['문서','계약서'],['로그인','인증'],['좌석','수량'],['고객','사용자'],['프로젝트','제품 팀']
-  ];
-  let text = q.text;
-  const shift = round % replacements.length;
-  for (let i=0;i<3;i++) {
-    const [from,to] = replacements[(shift+i*3)%replacements.length];
-    text = text.replaceAll(from,to);
-  }
-  return {
-    ...q,
-    id:`P${round}-${String(position+1).padStart(2,'0')}`,
-    set:`prediction-${round}`,
-    sourceId:q.id,
-    text,
-    options:order.map(i=>q.options[i]),
-    answer:q.answer.map(a=>order.indexOf(a)).sort()
-  };
-}
-
-function generatedSet(round) {
-  const blueprint = questionBank.filter(q=>q.set==='prediction-1');
-  const chosen=[];
-  const used = new Set();
-  blueprint.forEach((model, i) => {
-    const pool = questionBank.filter(q=>q.chapter===model.chapter && q.level===model.level && !used.has(q.id));
-    const pick = pool[(round+i) % pool.length];
-    used.add(pick.id);
-    chosen.push(variantize(pick,round,i));
-  });
-  return chosen;
-}
-
 function getSet(n) {
-  if (n===1 || n===2) return questionBank.filter(q=>q.set===`prediction-${n}`);
-  return generatedSet(n);
+  if (!verifiedSets.has(n)) return [];
+  return questionBank.filter(q=>q.set===`prediction-${n}`);
 }
 
 function renderStart() {
   const grid=$('set-grid'); grid.innerHTML='';
   for(let n=1;n<=25;n++) {
     const official=officialSamples[n];
+    const verified=verifiedSets.has(n);
     const b=document.createElement('button');
-    b.className=`set-button ${n<=2?'curated':''} ${official?'official':''}`;
-    b.innerHTML=`${n}회<small>${n<=2?'검수 완료':official?`공식 ${official.name}`:'변형 실전'}</small>`;
+    b.className=`set-button ${verified?'curated':''} ${official?'official':''} ${!verified&&!official?'locked':''}`;
+    b.disabled=!verified&&!official;
+    b.innerHTML=`${n}회<small>${verified?'개별 검수 완료':official?`공식 ${official.name}`:'개별 검수 중'}</small>`;
     b.addEventListener('click',()=>{
       if(official){
         const base='https://www.istqb.org/wp-content/uploads/sdm-uploads/';
