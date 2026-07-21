@@ -6,7 +6,7 @@ const canonicalChapter = value => value
 const questionBank = QUESTION_BANK.map(q=>({...q,chapter:canonicalChapter(q.chapter)}));
 const chapters = [...new Set(questionBank.map(q => q.chapter))];
 const letters = ['A','B','C','D','E'];
-const verifiedSets = new Set([1,2,4,5,6,7,8,10,11,12,13,14,15,17,18,19,20,21,22,24]);
+const verifiedSets = new Set([1,2,4,5,6,7,8,10,11,12,13,14,15,17,18,19,20,21,22,24,25]);
 const officialSamples = {
   3:{name:'A',version:'1.7'},
   9:{name:'B',version:'1.7'},
