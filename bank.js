@@ -12915,1288 +12915,6 @@ const QUESTION_BANK = [
     }
   },
   {
-    "id": "P13-01",
-    "set": "prediction-13",
-    "chapter": "1장 테스트 기초",
-    "lo": "1.1.1",
-    "level": "K1",
-    "text": "테스터가 주문 취소 흐름의 장애를 출시 전에 발견했다. 이 활동이 달성하는 테스트 목적은?",
-    "options": [
-      "개발자의 업무 성과를 평가한다.",
-      "결함을 드러내고 관련 품질 리스크를 낮춘다.",
-      "모든 미래 장애가 사라졌음을 증명한다.",
-      "테스터가 코드를 직접 수정할 권한을 얻는다."
-    ],
-    "answer": [
-      1
-    ],
-    "explanation": "출시 전 장애를 관찰하면 원인이 되는 결함을 처리하고 사용자에게 미칠 품질 리스크를 낮출 기회를 제공한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-02",
-    "set": "prediction-13",
-    "chapter": "1장 테스트 기초",
-    "lo": "1.2.2",
-    "level": "K1",
-    "text": "품질 보증 활동에 해당하는 것은?",
-    "options": [
-      "경계값 테스트 데이터를 생성한다.",
-      "회원가입 테스트를 실행해 실제 결과를 기록한다.",
-      "실패 원인을 찾아 프로그램을 수정한다.",
-      "조직의 테스트 프로세스가 표준에 맞게 정의·적용되는지 평가한다."
-    ],
-    "answer": [
-      3
-    ],
-    "explanation": "품질 보증은 프로세스가 적절히 정의되고 적용되는지를 평가하고 개선하는 프로세스 지향 활동이다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-03",
-    "set": "prediction-13",
-    "chapter": "1장 테스트 기초",
-    "lo": "1.2.1",
-    "level": "K2",
-    "text": "새 세금 규칙을 개발자·업무 담당자·테스터가 예제로 검토한 뒤 구현했다. 성공에 기여하는 테스팅 관행은?",
-    "options": [
-      "조기에 협업해 서로 다른 관점으로 요구사항의 오해를 줄였다.",
-      "구현 전에는 실행할 코드가 없으므로 아무 테스트 활동도 할 수 없다.",
-      "테스터가 세금 규칙의 최종 소유자가 되었다.",
-      "검토를 했으므로 동적 테스트는 불필요하다."
-    ],
-    "answer": [
-      0
-    ],
-    "explanation": "조기 테스트와 이해관계자 협업은 요구사항의 모호함과 오해를 구현 전에 발견해 제품 성공 가능성을 높인다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-04",
-    "set": "prediction-13",
-    "chapter": "1장 테스트 기초",
-    "lo": "1.2.3",
-    "level": "K2",
-    "text": "피로한 분석가가 소수점 규칙을 잘못 이해해 잘못된 요구사항을 작성했다. 인과관계의 올바른 설명은?",
-    "options": [
-      "잘못 이해한 행위는 결함이고 문서는 장애이다.",
-      "피로는 장애이고 잘못된 요구사항은 오류이다.",
-      "피로는 근본 원인이 될 수 있고, 잘못 이해한 행위는 오류이며, 잘못된 요구사항은 결함이다.",
-      "문서 결함은 실행하지 않아도 항상 사용자 장애이다."
-    ],
-    "answer": [
-      2
-    ],
-    "explanation": "근본 원인은 사람의 오류를 유발할 수 있고, 그 오류로 작업 산출물에 결함이 만들어질 수 있다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-05",
-    "set": "prediction-13",
-    "chapter": "1장 테스트 기초",
-    "lo": "1.4.4",
-    "level": "K2",
-    "text": "요구사항 R7이 변경되었다. 추적성이 잘 유지된 경우 가장 먼저 확인하기 쉬운 것은?",
-    "options": [
-      "R7을 작성한 사람의 근무 일정",
-      "R7과 연결된 테스트 조건·케이스·결과 중 영향받는 항목",
-      "모든 프로젝트의 결함 총수",
-      "제품과 무관한 도구 라이선스 가격"
-    ],
-    "answer": [
-      1
-    ],
-    "explanation": "테스트 베이시스와 테스트웨어 사이의 양방향 추적성은 변경 영향 분석과 커버리지 평가를 지원한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-06",
-    "set": "prediction-13",
-    "chapter": "1장 테스트 기초",
-    "lo": "1.4.1",
-    "level": "K2",
-    "text": "테스트 실행 활동에 가장 직접적으로 해당하는 것은?",
-    "options": [
-      "프로젝트 전체 테스트 접근법을 선택한다.",
-      "테스트 조건을 커버리지 항목으로 구체화한다.",
-      "완료 보고서와 교훈을 작성한다.",
-      "준비된 테스트 절차를 수행하고 실제 결과와 이상을 기록한다."
-    ],
-    "answer": [
-      3
-    ],
-    "explanation": "테스트 실행에서는 절차를 수행하고 실제 결과를 기대 결과와 비교하며 이상을 기록한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-07",
-    "set": "prediction-13",
-    "chapter": "1장 테스트 기초",
-    "lo": "1.5.1",
-    "level": "K2",
-    "text": "테스터가 모호한 환불 규칙의 가정을 질문하고, 재현 증거를 비난 없이 팀에 설명했다. 드러난 역량을 두 개 고르시오.",
-    "options": [
-      "이해관계자와의 접촉 회피",
-      "소스 코드 자동 생성 능력만",
-      "도메인 지식 배제",
-      "비판적 사고",
-      "효과적인 의사소통"
-    ],
-    "answer": [
-      3,
-      4
-    ],
-    "explanation": "가정을 검토하고 근거를 평가하는 것은 비판적 사고이며, 증거를 건설적으로 공유하는 것은 효과적인 의사소통이다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-08",
-    "set": "prediction-13",
-    "chapter": "1장 테스트 기초",
-    "lo": "1.3.1",
-    "level": "K2",
-    "text": "명세된 기능은 모두 통과했지만 사용자가 실제 업무를 완료할 수 없다. 관련된 테스트 원리는?",
-    "options": [
-      "오류 부재의 궤변",
-      "결함 집중",
-      "테스트 마모",
-      "완전한 테스팅은 불가능"
-    ],
-    "answer": [
-      0
-    ],
-    "explanation": "결함이 거의 없더라도 시스템이 사용자의 필요와 비즈니스 목표를 충족하지 못하면 성공적인 제품이라고 할 수 없다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-09",
-    "set": "prediction-13",
-    "chapter": "2장 SDLC 전반의 테스팅",
-    "lo": "2.1.2",
-    "level": "K1",
-    "text": "테스트 레벨을 구분하는 요소로 적절한 것은?",
-    "options": [
-      "프로그래밍 언어 하나만",
-      "테스트 대상, 목적, 베이시스, 결함과 실패, 접근법 및 책임",
-      "테스터의 근무 장소만",
-      "릴리스의 판매 가격만"
-    ],
-    "answer": [
-      1
-    ],
-    "explanation": "각 테스트 레벨은 대상과 목적, 테스트 베이시스, 예상 결함·실패, 접근법과 책임 등의 특성으로 구분된다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-10",
-    "set": "prediction-13",
-    "chapter": "2장 SDLC 전반의 테스팅",
-    "lo": "2.1.3",
-    "level": "K1",
-    "text": "구현할 코드보다 먼저 실패하는 단위 테스트를 작성하고 이를 통과하도록 코드를 만드는 접근법은?",
-    "options": [
-      "탐색적 테스팅",
-      "BDD",
-      "인수 테스팅",
-      "TDD"
-    ],
-    "answer": [
-      3
-    ],
-    "explanation": "TDD는 작은 테스트를 먼저 작성하고 실패를 확인한 뒤, 이를 통과하는 코드를 만들고 리팩터링하는 방식이다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-11",
-    "set": "prediction-13",
-    "chapter": "2장 SDLC 전반의 테스팅",
-    "lo": "2.1.5",
-    "level": "K2",
-    "text": "요구사항 예제와 정적 분석을 개발 초기에 수행하는 것이 시프트 레프트인 이유는?",
-    "options": [
-      "테스트 활동을 더 이른 단계로 옮겨 빠른 피드백과 조기 결함 발견을 얻기 때문이다.",
-      "운영 테스트를 왼쪽 화면에서 실행하기 때문이다.",
-      "후반 테스트를 모두 삭제하기 때문이다.",
-      "개발자만 테스트하도록 역할을 제한하기 때문이다."
-    ],
-    "answer": [
-      0
-    ],
-    "explanation": "시프트 레프트는 리뷰·분석·자동화 같은 테스트 활동을 수명주기의 앞쪽에서 시작해 결함 전파와 수정 비용을 줄인다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-12",
-    "set": "prediction-13",
-    "chapter": "2장 SDLC 전반의 테스팅",
-    "lo": "2.1.6",
-    "level": "K2",
-    "text": "회고에서 자동 테스트의 잦은 오탐이 피드백을 늦춘다는 사실을 확인했다. 개선 조치로 가장 적절한 것은?",
-    "options": [
-      "자동 테스트 결과를 팀에 숨긴다.",
-      "실패 알림을 전부 끄고 통과로 처리한다.",
-      "불안정 테스트의 원인을 분류하고 담당자·기한·오탐 감소 목표를 정해 다음 회고에서 측정한다.",
-      "측정 기준 없이 도구를 즉시 교체한다."
-    ],
-    "answer": [
-      2
-    ],
-    "explanation": "회고의 개선 항목은 관찰된 문제에 대응하며 담당과 기한, 확인 가능한 목표가 있어야 효과를 추적할 수 있다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-13",
-    "set": "prediction-13",
-    "chapter": "2장 SDLC 전반의 테스팅",
-    "lo": "2.2.2",
-    "level": "K2",
-    "text": "주문 서비스와 결제 서비스 사이의 요청 형식과 오류 처리 상호작용을 검증한다. 가장 알맞은 테스트 레벨은?",
-    "options": [
-      "컴포넌트 테스팅",
-      "컴포넌트 통합 테스팅",
-      "시스템 테스팅만",
-      "인수 테스팅만"
-    ],
-    "answer": [
-      1
-    ],
-    "explanation": "컴포넌트 통합 테스팅은 컴포넌트 또는 서비스 사이의 인터페이스와 상호작용을 중점적으로 확인한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-14",
-    "set": "prediction-13",
-    "chapter": "2장 SDLC 전반의 테스팅",
-    "lo": "2.3.1",
-    "level": "K2",
-    "text": "운영 데이터베이스 엔진을 교체하기 전 테스트 범위를 정할 때 가장 먼저 필요한 것은?",
-    "options": [
-      "변경 내용을 보지 않고 전체 시스템 재작성",
-      "기존 테스트를 모두 폐기하는 결정",
-      "사용자 수와 무관한 화면 색상 변경",
-      "변경 부분과 연관 기능·데이터에 대한 영향 분석"
-    ],
-    "answer": [
-      3
-    ],
-    "explanation": "유지보수 테스트의 범위는 변경의 위험도와 크기, 기존 시스템에 미치는 영향에 대한 분석을 바탕으로 정한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-15",
-    "set": "prediction-13",
-    "chapter": "3장 정적 테스팅",
-    "lo": "3.2.1",
-    "level": "K1",
-    "text": "개발 초기에 이해관계자로부터 자주 피드백을 받을 때의 이점은?",
-    "options": [
-      "요구사항의 오해와 변경을 일찍 발견해 재작업 위험을 줄인다.",
-      "모든 동적 테스트를 없앨 수 있다.",
-      "이해관계자의 책임을 개발팀에 넘긴다.",
-      "제품이 무결함임을 즉시 증명한다."
-    ],
-    "answer": [
-      0
-    ],
-    "explanation": "조기·빈번한 피드백은 기대와 구현 사이의 차이, 오해와 변경을 빠르게 드러내어 잘못된 방향으로 진행할 위험을 줄인다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-16",
-    "set": "prediction-13",
-    "chapter": "3장 정적 테스팅",
-    "lo": "3.1.1",
-    "level": "K1",
-    "text": "리뷰 대상으로 적절한 작업 산출물은?",
-    "options": [
-      "운영 사용자 개인의 감정만",
-      "실행 중 CPU 온도만",
-      "요구사항 명세서, 테스트 계획, 소스 코드 모두",
-      "컴파일된 프로그램의 응답시간만"
-    ],
-    "answer": [
-      2
-    ],
-    "explanation": "읽고 이해할 수 있는 요구사항, 설계, 코드, 테스트웨어, 계획과 계약 등 다양한 작업 산출물을 리뷰할 수 있다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-17",
-    "set": "prediction-13",
-    "chapter": "3장 정적 테스팅",
-    "lo": "3.1.3",
-    "level": "K2",
-    "text": "정적 테스팅과 동적 테스팅을 함께 사용하는 이유로 가장 적절한 것은?",
-    "options": [
-      "두 방법은 항상 동일한 결함만 찾기 때문이다.",
-      "문서·코드 자체의 이상과 실행 중 드러나는 실패를 서로 다른 방식으로 찾기 때문이다.",
-      "정적 테스팅을 하면 실행 환경이 필요 없어지기 때문이다.",
-      "동적 테스팅은 요구사항과 무관하기 때문이다."
-    ],
-    "answer": [
-      1
-    ],
-    "explanation": "정적 테스팅은 실행 전에 산출물의 결함을 찾고 동적 테스팅은 실행 시 실패를 관찰하므로 상호 보완적이다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-18",
-    "set": "prediction-13",
-    "chapter": "3장 정적 테스팅",
-    "lo": "3.2.2",
-    "level": "K2",
-    "text": "공식 리뷰에서 개인 검토가 끝난 직후 일반적으로 수행할 활동은?",
-    "options": [
-      "테스트 계획을 프로젝트와 무관하게 삭제한다.",
-      "수정 확인 없이 산출물을 즉시 폐기한다.",
-      "제품을 운영에 강제 배포한다.",
-      "참가자들이 발견한 이상을 소통하고 분석해 상태·책임·조치를 결정한다."
-    ],
-    "answer": [
-      3
-    ],
-    "explanation": "개별 리뷰 후에는 발견 사항을 공유·분석하고 결함 여부, 소유자와 후속 조치를 합의하는 소통 및 분석 활동이 이어진다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-19",
-    "set": "prediction-13",
-    "chapter": "4장 테스트 분석과 설계",
-    "lo": "4.1.1",
-    "level": "K2",
-    "text": "과거 장애와 테스터의 직관을 이용해 취약한 입력을 예상했다. 사용한 테스트 기법 범주는?",
-    "options": [
-      "경험 기반 테스트 기법",
-      "블랙박스 테스트 기법만",
-      "화이트박스 테스트 기법만",
-      "정적 분석 기법"
-    ],
-    "answer": [
-      0
-    ],
-    "explanation": "오류 추정과 같은 경험 기반 기법은 테스터의 지식, 과거 결함과 직관을 활용해 테스트를 도출한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-20",
-    "set": "prediction-13",
-    "chapter": "4장 테스트 분석과 설계",
-    "lo": "4.2.1",
-    "level": "K3",
-    "text": "할인율은 구매액이 0원 미만이면 무효, 0~49,999원은 0%, 50,000~99,999원은 5%, 100,000원 이상은 10%이다. 모든 동등 분할을 대표하는 값 집합은?",
-    "options": [
-      "{-1, 0, 50000, 100000}",
-      "{0, 49999, 50000, 99999}",
-      "{-1, 30000, 70000, 120000}",
-      "{30000, 49999, 99999, 100000}"
-    ],
-    "answer": [
-      2
-    ],
-    "explanation": "네 분할은 음수 무효, 0~49,999, 50,000~99,999, 100,000 이상이며 첫 번째 집합은 각 분할에서 하나씩 선택한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-21",
-    "set": "prediction-13",
-    "chapter": "4장 테스트 분석과 설계",
-    "lo": "4.2.2",
-    "level": "K3",
-    "text": "입력 가능한 좌석 수는 정수 1~6이다. 2값 경계값 분석으로 모든 경계를 검사하는 최소 값 집합은?",
-    "options": [
-      "{1,6}",
-      "{0,1,6,7}",
-      "{0,1,2,5,6,7}",
-      "{-1,0,6,7}"
-    ],
-    "answer": [
-      1
-    ],
-    "explanation": "2값 경계값 분석에서는 각 경계 자체와 인접 분할의 가장 가까운 값을 사용하므로 0·1과 6·7이 필요하다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-22",
-    "set": "prediction-13",
-    "chapter": "4장 테스트 분석과 설계",
-    "lo": "4.2.3",
-    "level": "K3",
-    "text": "대출 규칙은 “성인이며 신용 양호이면 승인, 성인이며 신용 불량이면 보증인이 있을 때만 승인, 미성년자는 거절”이다. 승인되는 조건 조합은?",
-    "options": [
-      "미성년·신용 불량·보증인 있음",
-      "성인·신용 불량·보증인 없음",
-      "미성년·신용 양호·보증인 있음",
-      "성인·신용 불량·보증인 있음"
-    ],
-    "answer": [
-      3
-    ],
-    "explanation": "성인이고 신용이 불량한 경우에는 보증인이 있을 때에만 승인 규칙을 만족한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-23",
-    "set": "prediction-13",
-    "chapter": "4장 테스트 분석과 설계",
-    "lo": "4.2.4",
-    "level": "K3",
-    "text": "문서 상태 전이는 초안→검토중→승인됨이며, 검토중에서는 초안으로 반려될 수 있다. 승인됨 이후에는 보관됨으로만 이동한다. 유효하지 않은 전이 순서는?",
-    "options": [
-      "초안→검토중→승인됨→초안",
-      "초안→검토중→초안→검토중",
-      "초안→검토중→승인됨→보관됨",
-      "초안→검토중→초안"
-    ],
-    "answer": [
-      0
-    ],
-    "explanation": "승인됨 상태에서는 보관됨으로만 이동할 수 있으므로 승인됨에서 초안으로의 전이는 정의되지 않았다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-24",
-    "set": "prediction-13",
-    "chapter": "4장 테스트 분석과 설계",
-    "lo": "4.5.3",
-    "level": "K3",
-    "text": "인수 조건은 “쿠폰이 유효하고 최소 주문액 이상이면 할인하고 쿠폰을 사용 처리한다”이다. 이 조건을 직접 검증하는 테스트는?",
-    "options": [
-      "쿠폰 없이 주문하고 결제 성공만 확인한다.",
-      "유효한 쿠폰으로 최소 주문액 미만 주문 후 배송지만 확인한다.",
-      "유효한 쿠폰과 최소 주문액 이상 주문에서 할인액과 쿠폰 사용 상태를 모두 확인한다.",
-      "사용 완료 쿠폰으로 로그인 성능만 측정한다."
-    ],
-    "answer": [
-      2
-    ],
-    "explanation": "인수 테스트는 주어진 유효 쿠폰과 주문액 조건, 할인 행동, 쿠폰 상태 변경이라는 기대 결과를 함께 확인해야 한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-25",
-    "set": "prediction-13",
-    "chapter": "4장 테스트 분석과 설계",
-    "lo": "4.3.1",
-    "level": "K2",
-    "text": "실행문 60개 중 테스트 스위트가 45개를 실행했다. 구문 커버리지는?",
-    "options": [
-      "25%",
-      "75%",
-      "45%",
-      "80%"
-    ],
-    "answer": [
-      1
-    ],
-    "explanation": "구문 커버리지는 실행된 구문 수를 전체 구문 수로 나눈 값이므로 45÷60×100=75%이다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-26",
-    "set": "prediction-13",
-    "chapter": "4장 테스트 분석과 설계",
-    "lo": "4.3.2",
-    "level": "K2",
-    "text": "분기 커버리지 100%가 의미하는 것은?",
-    "options": [
-      "결함이 더 이상 존재하지 않는다.",
-      "모든 가능한 실행 경로가 수행되었다.",
-      "모든 입력 조합이 검사되었다.",
-      "각 결정의 모든 분기 결과가 적어도 한 번 실행되었다."
-    ],
-    "answer": [
-      3
-    ],
-    "explanation": "100% 분기 커버리지는 각 결정 결과를 모두 실행했음을 뜻하지만 모든 경로나 결함 부재를 보장하지 않는다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-27",
-    "set": "prediction-13",
-    "chapter": "4장 테스트 분석과 설계",
-    "lo": "4.4.1",
-    "level": "K2",
-    "text": "과거에 날짜 형식과 윤년 처리에서 결함이 많았던 시스템을 다시 시험한다. 오류 추정을 가장 잘 적용한 것은?",
-    "options": [
-      "2월 29일, 잘못된 구분자, 빈 날짜와 같은 취약 사례를 추가한다.",
-      "명세에서 임의의 정상 예 하나만 선택한다.",
-      "소스 코드의 모든 분기를 계산만 한다.",
-      "이전 결함 정보는 편향이므로 폐기한다."
-    ],
-    "answer": [
-      0
-    ],
-    "explanation": "오류 추정은 과거 결함, 개발자의 실수 경향과 도메인 지식을 이용해 실패 가능성이 높은 사례를 선택한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-28",
-    "set": "prediction-13",
-    "chapter": "4장 테스트 분석과 설계",
-    "lo": "4.4.2",
-    "level": "K2",
-    "text": "60분 탐색적 테스트 세션을 효과적으로 관리하는 방법은?",
-    "options": [
-      "실행 전에 모든 세부 절차를 고정해 학습을 반영하지 않는다.",
-      "아무 목표나 기록 없이 무작위로 클릭한다.",
-      "목표와 범위를 차터로 정하고 발견·아이디어·시간 사용을 기록한 뒤 디브리핑한다.",
-      "발견한 이상을 보고하지 않는다."
-    ],
-    "answer": [
-      2
-    ],
-    "explanation": "세션 기반 테스트 관리는 차터, 시간 상자, 세션 기록과 디브리핑으로 탐색의 자율성과 책임성을 함께 지원한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-29",
-    "set": "prediction-13",
-    "chapter": "4장 테스트 분석과 설계",
-    "lo": "4.5.1",
-    "level": "K2",
-    "text": "사용자 스토리를 개발하기 전 고객·개발자·테스터가 예시와 인수 조건을 함께 논의했다. 가장 큰 이점은?",
-    "options": [
-      "고객이 모든 테스트를 혼자 작성하게 한다.",
-      "서로 다른 관점으로 스토리의 공통 이해와 테스트 가능성을 높인다.",
-      "인수 조건 없이 구현을 시작하게 한다.",
-      "테스터가 비즈니스 결정을 단독 승인하게 한다."
-    ],
-    "answer": [
-      1
-    ],
-    "explanation": "협업 기반 사용자 스토리 작성은 비즈니스·개발·테스트 관점을 결합해 모호함을 줄이고 검증 가능한 인수 조건을 만든다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-30",
-    "set": "prediction-13",
-    "chapter": "5장 테스트 활동 관리",
-    "lo": "5.1.2",
-    "level": "K1",
-    "text": "프로젝트에서 무엇을 어떻게 시험하고 누가 언제 수행할지를 이해관계자에게 전달하는 산출물은?",
-    "options": [
-      "소스 코드 정적 분석 로그",
-      "결함 보고서",
-      "테스트 완료 보고서",
-      "테스트 계획"
-    ],
-    "answer": [
-      3
-    ],
-    "explanation": "테스트 계획은 테스트 목적과 범위, 접근법, 자원, 책임과 일정을 포함해 예정된 테스트 활동을 설명한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-31",
-    "set": "prediction-13",
-    "chapter": "5장 테스트 활동 관리",
-    "lo": "5.1.3",
-    "level": "K2",
-    "text": "출구 조건으로 “치명 결함 0개, 고위험 요구사항 테스트 100% 완료”를 정한 이유는?",
-    "options": [
-      "테스트 종료 판단을 목표와 리스크에 연결된 측정 가능한 기준으로 만들기 위해서이다.",
-      "모든 결함이 영원히 없음을 증명하기 위해서이다.",
-      "진행 상황을 보고하지 않기 위해서이다.",
-      "테스트 실행 순서를 무작위로 정하기 위해서이다."
-    ],
-    "answer": [
-      0
-    ],
-    "explanation": "출구 조건은 완료 여부와 품질 상태를 객관적으로 평가하도록 측정 가능한 테스트 목표 및 리스크 기준을 제공한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-32",
-    "set": "prediction-13",
-    "chapter": "5장 테스트 활동 관리",
-    "lo": "5.1.4",
-    "level": "K3",
-    "text": "한 테스트 작업의 낙관값 4시간, 최빈값 7시간, 비관값 16시간이다. 세 점 추정 E=(낙관+4×최빈+비관)÷6의 결과는?",
-    "options": [
-      "7시간",
-      "9시간",
-      "8시간",
-      "11시간"
-    ],
-    "answer": [
-      2
-    ],
-    "explanation": "(4+4×7+16)÷6=48÷6=8시간이다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-33",
-    "set": "prediction-13",
-    "chapter": "5장 테스트 활동 관리",
-    "lo": "5.1.5",
-    "level": "K3",
-    "text": "리스크 수준이 큰 테스트를 먼저 하되 선행 조건을 지킨다. A(리스크 9, B 이후), B(6, 독립), C(8, 독립), D(7, C 이후)의 순서는?",
-    "options": [
-      "B → A → C → D",
-      "C → D → B → A",
-      "C → B → A → D",
-      "A → C → D → B"
-    ],
-    "answer": [
-      1
-    ],
-    "explanation": "처음 가능한 B와 C 중 C의 리스크가 더 크다. C 이후 D가 가능해지며 D, B, 그리고 B에 의존하는 A 순서가 된다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-34",
-    "set": "prediction-13",
-    "chapter": "5장 테스트 활동 관리",
-    "lo": "5.5.1",
-    "level": "K3",
-    "text": "검색 버튼을 누르면 8초 뒤 결과가 나오지만 요구사항은 2초 이내이다. 가장 유용한 결함 보고 제목과 증거는?",
-    "options": [
-      "“요구사항이 틀림”과 개발자 이름만",
-      "“검색이 느림”이라는 제목만",
-      "“성능 오류”와 화면 색상 캡처만",
-      "“검색 응답시간 2초 기준 초과—동일 데이터 5회 평균 8.1초”와 환경·데이터·측정 로그"
-    ],
-    "answer": [
-      3
-    ],
-    "explanation": "구체적인 기능, 기대 기준과 실제 측정값을 제목·결과에 담고 재현 환경과 증거를 제공하면 분석과 우선순위 판단에 유용하다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-35",
-    "set": "prediction-13",
-    "chapter": "5장 테스트 활동 관리",
-    "lo": "5.2.3",
-    "level": "K2",
-    "text": "개인정보 노출 가능성이 매우 낮지만 영향이 치명적이라고 평가됐다. 테스트 접근법에 미칠 수 있는 영향은?",
-    "options": [
-      "높은 영향도를 고려해 보안 전문성·독립성·관련 커버리지를 강화한다.",
-      "가능성이 낮으므로 기록 없이 테스트에서 제외한다.",
-      "모든 기능에 같은 깊이의 테스트만 적용한다.",
-      "보안과 무관한 정상 화면 하나만 확인한다."
-    ],
-    "answer": [
-      0
-    ],
-    "explanation": "제품 리스크 수준과 특성은 테스트 범위, 철저함, 기법, 인력의 전문성 및 독립 수준을 정하는 근거가 된다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-36",
-    "set": "prediction-13",
-    "chapter": "5장 테스트 활동 관리",
-    "lo": "5.3.2",
-    "level": "K2",
-    "text": "완료 보고서에서 “테스트 95% 통과”만 제시했을 때 추가로 필요한 정보는?",
-    "options": [
-      "보고서 작성자의 취미",
-      "통과한 테스트 이름 하나만",
-      "미실행·실패 항목, 잔여 결함과 리스크, 완료 기준 달성 여부",
-      "프로젝트와 무관한 전체 소스 코드"
-    ],
-    "answer": [
-      2
-    ],
-    "explanation": "통과율만으로는 출시 판단이 어렵다. 범위와 편차, 실패·미실행, 잔여 결함·리스크 및 완료 기준을 함께 설명해야 한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-37",
-    "set": "prediction-13",
-    "chapter": "5장 테스트 활동 관리",
-    "lo": "5.3.3",
-    "level": "K2",
-    "text": "결제 API 환경 장애로 고위험 테스트 30건이 차단되어 출구 조건 달성이 지연되고 있다. 상태 전달 문장으로 가장 적절한 것은?",
-    "options": [
-      "“전체적으로 조금 늦지만 아마 괜찮다.”",
-      "“고위험 결제 테스트 30건이 환경 장애로 차단됐고 출구 조건은 미달이다. 수요일까지 환경 복구 결정이 필요하며 일정 영향은 2일로 예상한다.”",
-      "“실행률 72%”라는 숫자만 전달한다.",
-      "장애가 해결될 때까지 이해관계자에게 알리지 않는다."
-    ],
-    "answer": [
-      1
-    ],
-    "explanation": "효과적인 상태 소통은 대상 독자에게 현재 상태, 원인, 품질·일정 영향, 불확실성과 필요한 결정을 구체적이고 시기적절하게 전달한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-38",
-    "set": "prediction-13",
-    "chapter": "5장 테스트 활동 관리",
-    "lo": "5.4.1",
-    "level": "K2",
-    "text": "승인된 테스트 케이스 기준선이 변경되었다. 형상 관리상 올바른 처리는?",
-    "options": [
-      "모든 과거 실행 결과를 새 버전에 자동 연결한다.",
-      "기존 버전을 추적 불가능하게 덮어쓴다.",
-      "변경 이유와 승인자를 삭제한다.",
-      "변경을 식별·통제하고 새 버전과 승인 이력, 관련 결과의 연결을 보존한다."
-    ],
-    "answer": [
-      3
-    ],
-    "explanation": "형상 관리는 테스트웨어의 버전과 변경 이력을 통제하고 관련 제품 버전·실행 결과와의 추적성을 유지한다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-39",
-    "set": "prediction-13",
-    "chapter": "6장 테스트 도구",
-    "lo": "6.1.1",
-    "level": "K2",
-    "text": "테스트 실행 자동화 도구를 사용할 때 생길 수 있는 리스크는?",
-    "options": [
-      "취약한 스크립트 유지보수와 도구에 대한 비현실적인 기대가 비용을 키울 수 있다.",
-      "반복 실행 속도가 빨라질 수 있다.",
-      "결과 비교가 일관될 수 있다.",
-      "야간에 무인 실행할 수 있다."
-    ],
-    "answer": [
-      0
-    ],
-    "explanation": "자동화에는 초기 투자, 스크립트 유지보수, 도구 종속과 과도한 기대 같은 리스크가 있으며 조직적·기술적 관리가 필요하다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
-    "id": "P13-40",
-    "set": "prediction-13",
-    "chapter": "6장 테스트 도구",
-    "lo": "6.2.1",
-    "level": "K1",
-    "text": "잘못된 기대 결과를 자동 스크립트에 구현했는데 반복 실행이 모두 통과했다. 드러난 자동화 리스크는?",
-    "options": [
-      "통과 횟수가 많으면 테스트 설계가 자동 검증된다.",
-      "자동 실행은 항상 기대 결과 오류를 스스로 수정한다.",
-      "결함 있는 자동 검사가 반복되어 잘못된 품질 신뢰를 줄 수 있다.",
-      "자동화하면 테스트웨어 리뷰가 불가능해진다."
-    ],
-    "answer": [
-      2
-    ],
-    "explanation": "자동화는 작성된 검사를 빠르게 반복할 뿐 그 검사가 올바름을 보장하지 않으므로 잘못된 설계가 거짓 신뢰를 만들 수 있다.",
-    "review": {
-      "status": "verified",
-      "date": "2026-07-21",
-      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
-      "checks": [
-        "learning-objective",
-        "k-level",
-        "answer",
-        "distractors",
-        "explanation",
-        "language",
-        "duplicate-screening"
-      ]
-    }
-  },
-  {
     "id": "P14-01",
     "set": "prediction-14",
     "chapter": "1장 테스트 기초",
@@ -16741,6 +15459,2568 @@ const QUESTION_BANK = [
       2
     ],
     "explanation": "자동화 스크립트는 제품과 환경 변화에 맞춰 유지해야 하며, 방치하면 오탐·미탐과 신뢰 하락 및 유지보수 부채가 발생할 수 있다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-01",
+    "set": "prediction-13",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.1.1",
+    "level": "K1",
+    "text": "테스터가 주문 취소 흐름의 장애를 출시 전에 발견했다. 이 활동이 달성하는 테스트 목적은?",
+    "options": [
+      "개발자의 업무 성과를 평가한다.",
+      "결함을 드러내고 관련 품질 리스크를 낮춘다.",
+      "모든 미래 장애가 사라졌음을 증명한다.",
+      "테스터가 코드를 직접 수정할 권한을 얻는다."
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "출시 전 장애를 관찰하면 원인이 되는 결함을 처리하고 사용자에게 미칠 품질 리스크를 낮출 기회를 제공한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-02",
+    "set": "prediction-13",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.2.2",
+    "level": "K1",
+    "text": "품질 보증 활동에 해당하는 것은?",
+    "options": [
+      "경계값 테스트 데이터를 생성한다.",
+      "회원가입 테스트를 실행해 실제 결과를 기록한다.",
+      "실패 원인을 찾아 프로그램을 수정한다.",
+      "조직의 테스트 프로세스가 표준에 맞게 정의·적용되는지 평가한다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "품질 보증은 프로세스가 적절히 정의되고 적용되는지를 평가하고 개선하는 프로세스 지향 활동이다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-03",
+    "set": "prediction-13",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.2.1",
+    "level": "K2",
+    "text": "새 세금 규칙을 개발자·업무 담당자·테스터가 예제로 검토한 뒤 구현했다. 성공에 기여하는 테스팅 관행은?",
+    "options": [
+      "조기에 협업해 서로 다른 관점으로 요구사항의 오해를 줄였다.",
+      "구현 전에는 실행할 코드가 없으므로 아무 테스트 활동도 할 수 없다.",
+      "테스터가 세금 규칙의 최종 소유자가 되었다.",
+      "검토를 했으므로 동적 테스트는 불필요하다."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "조기 테스트와 이해관계자 협업은 요구사항의 모호함과 오해를 구현 전에 발견해 제품 성공 가능성을 높인다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-04",
+    "set": "prediction-13",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.2.3",
+    "level": "K2",
+    "text": "피로한 분석가가 소수점 규칙을 잘못 이해해 잘못된 요구사항을 작성했다. 인과관계의 올바른 설명은?",
+    "options": [
+      "잘못 이해한 행위는 결함이고 문서는 장애이다.",
+      "피로는 장애이고 잘못된 요구사항은 오류이다.",
+      "피로는 근본 원인이 될 수 있고, 잘못 이해한 행위는 오류이며, 잘못된 요구사항은 결함이다.",
+      "문서 결함은 실행하지 않아도 항상 사용자 장애이다."
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "근본 원인은 사람의 오류를 유발할 수 있고, 그 오류로 작업 산출물에 결함이 만들어질 수 있다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-05",
+    "set": "prediction-13",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.4.4",
+    "level": "K2",
+    "text": "요구사항 R7이 변경되었다. 추적성이 잘 유지된 경우 가장 먼저 확인하기 쉬운 것은?",
+    "options": [
+      "R7을 작성한 사람의 근무 일정",
+      "R7과 연결된 테스트 조건·케이스·결과 중 영향받는 항목",
+      "모든 프로젝트의 결함 총수",
+      "제품과 무관한 도구 라이선스 가격"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "테스트 베이시스와 테스트웨어 사이의 양방향 추적성은 변경 영향 분석과 커버리지 평가를 지원한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-06",
+    "set": "prediction-13",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.4.1",
+    "level": "K2",
+    "text": "테스트 실행 활동에 가장 직접적으로 해당하는 것은?",
+    "options": [
+      "프로젝트 전체 테스트 접근법을 선택한다.",
+      "테스트 조건을 커버리지 항목으로 구체화한다.",
+      "완료 보고서와 교훈을 작성한다.",
+      "준비된 테스트 절차를 수행하고 실제 결과와 이상을 기록한다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "테스트 실행에서는 절차를 수행하고 실제 결과를 기대 결과와 비교하며 이상을 기록한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-07",
+    "set": "prediction-13",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.5.1",
+    "level": "K2",
+    "text": "테스터가 모호한 환불 규칙의 가정을 질문하고, 재현 증거를 비난 없이 팀에 설명했다. 드러난 역량을 두 개 고르시오.",
+    "options": [
+      "이해관계자와의 접촉 회피",
+      "소스 코드 자동 생성 능력만",
+      "도메인 지식 배제",
+      "비판적 사고",
+      "효과적인 의사소통"
+    ],
+    "answer": [
+      3,
+      4
+    ],
+    "explanation": "가정을 검토하고 근거를 평가하는 것은 비판적 사고이며, 증거를 건설적으로 공유하는 것은 효과적인 의사소통이다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-08",
+    "set": "prediction-13",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.3.1",
+    "level": "K2",
+    "text": "명세된 기능은 모두 통과했지만 사용자가 실제 업무를 완료할 수 없다. 관련된 테스트 원리는?",
+    "options": [
+      "오류 부재의 궤변",
+      "결함 집중",
+      "테스트 마모",
+      "완전한 테스팅은 불가능"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "결함이 거의 없더라도 시스템이 사용자의 필요와 비즈니스 목표를 충족하지 못하면 성공적인 제품이라고 할 수 없다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-09",
+    "set": "prediction-13",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.1.2",
+    "level": "K1",
+    "text": "테스트 레벨을 구분하는 요소로 적절한 것은?",
+    "options": [
+      "프로그래밍 언어 하나만",
+      "테스트 대상, 목적, 베이시스, 결함과 실패, 접근법 및 책임",
+      "테스터의 근무 장소만",
+      "릴리스의 판매 가격만"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "각 테스트 레벨은 대상과 목적, 테스트 베이시스, 예상 결함·실패, 접근법과 책임 등의 특성으로 구분된다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-10",
+    "set": "prediction-13",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.1.3",
+    "level": "K1",
+    "text": "구현할 코드보다 먼저 실패하는 단위 테스트를 작성하고 이를 통과하도록 코드를 만드는 접근법은?",
+    "options": [
+      "탐색적 테스팅",
+      "BDD",
+      "인수 테스팅",
+      "TDD"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "TDD는 작은 테스트를 먼저 작성하고 실패를 확인한 뒤, 이를 통과하는 코드를 만들고 리팩터링하는 방식이다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-11",
+    "set": "prediction-13",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.1.5",
+    "level": "K2",
+    "text": "요구사항 예제와 정적 분석을 개발 초기에 수행하는 것이 시프트 레프트인 이유는?",
+    "options": [
+      "테스트 활동을 더 이른 단계로 옮겨 빠른 피드백과 조기 결함 발견을 얻기 때문이다.",
+      "운영 테스트를 왼쪽 화면에서 실행하기 때문이다.",
+      "후반 테스트를 모두 삭제하기 때문이다.",
+      "개발자만 테스트하도록 역할을 제한하기 때문이다."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "시프트 레프트는 리뷰·분석·자동화 같은 테스트 활동을 수명주기의 앞쪽에서 시작해 결함 전파와 수정 비용을 줄인다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-12",
+    "set": "prediction-13",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.1.6",
+    "level": "K2",
+    "text": "회고에서 자동 테스트의 잦은 오탐이 피드백을 늦춘다는 사실을 확인했다. 개선 조치로 가장 적절한 것은?",
+    "options": [
+      "자동 테스트 결과를 팀에 숨긴다.",
+      "실패 알림을 전부 끄고 통과로 처리한다.",
+      "불안정 테스트의 원인을 분류하고 담당자·기한·오탐 감소 목표를 정해 다음 회고에서 측정한다.",
+      "측정 기준 없이 도구를 즉시 교체한다."
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "회고의 개선 항목은 관찰된 문제에 대응하며 담당과 기한, 확인 가능한 목표가 있어야 효과를 추적할 수 있다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-13",
+    "set": "prediction-13",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.2.2",
+    "level": "K2",
+    "text": "주문 서비스와 결제 서비스 사이의 요청 형식과 오류 처리 상호작용을 검증한다. 가장 알맞은 테스트 레벨은?",
+    "options": [
+      "컴포넌트 테스팅",
+      "컴포넌트 통합 테스팅",
+      "시스템 테스팅만",
+      "인수 테스팅만"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "컴포넌트 통합 테스팅은 컴포넌트 또는 서비스 사이의 인터페이스와 상호작용을 중점적으로 확인한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-14",
+    "set": "prediction-13",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.3.1",
+    "level": "K2",
+    "text": "운영 데이터베이스 엔진을 교체하기 전 테스트 범위를 정할 때 가장 먼저 필요한 것은?",
+    "options": [
+      "변경 내용을 보지 않고 전체 시스템 재작성",
+      "기존 테스트를 모두 폐기하는 결정",
+      "사용자 수와 무관한 화면 색상 변경",
+      "변경 부분과 연관 기능·데이터에 대한 영향 분석"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "유지보수 테스트의 범위는 변경의 위험도와 크기, 기존 시스템에 미치는 영향에 대한 분석을 바탕으로 정한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-15",
+    "set": "prediction-13",
+    "chapter": "3장 정적 테스팅",
+    "lo": "3.2.1",
+    "level": "K1",
+    "text": "개발 초기에 이해관계자로부터 자주 피드백을 받을 때의 이점은?",
+    "options": [
+      "요구사항의 오해와 변경을 일찍 발견해 재작업 위험을 줄인다.",
+      "모든 동적 테스트를 없앨 수 있다.",
+      "이해관계자의 책임을 개발팀에 넘긴다.",
+      "제품이 무결함임을 즉시 증명한다."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "조기·빈번한 피드백은 기대와 구현 사이의 차이, 오해와 변경을 빠르게 드러내어 잘못된 방향으로 진행할 위험을 줄인다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-16",
+    "set": "prediction-13",
+    "chapter": "3장 정적 테스팅",
+    "lo": "3.1.1",
+    "level": "K1",
+    "text": "리뷰 대상으로 적절한 작업 산출물은?",
+    "options": [
+      "운영 사용자 개인의 감정만",
+      "실행 중 CPU 온도만",
+      "요구사항 명세서, 테스트 계획, 소스 코드 모두",
+      "컴파일된 프로그램의 응답시간만"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "읽고 이해할 수 있는 요구사항, 설계, 코드, 테스트웨어, 계획과 계약 등 다양한 작업 산출물을 리뷰할 수 있다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-17",
+    "set": "prediction-13",
+    "chapter": "3장 정적 테스팅",
+    "lo": "3.1.3",
+    "level": "K2",
+    "text": "정적 테스팅과 동적 테스팅을 함께 사용하는 이유로 가장 적절한 것은?",
+    "options": [
+      "두 방법은 항상 동일한 결함만 찾기 때문이다.",
+      "문서·코드 자체의 이상과 실행 중 드러나는 실패를 서로 다른 방식으로 찾기 때문이다.",
+      "정적 테스팅을 하면 실행 환경이 필요 없어지기 때문이다.",
+      "동적 테스팅은 요구사항과 무관하기 때문이다."
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "정적 테스팅은 실행 전에 산출물의 결함을 찾고 동적 테스팅은 실행 시 실패를 관찰하므로 상호 보완적이다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-18",
+    "set": "prediction-13",
+    "chapter": "3장 정적 테스팅",
+    "lo": "3.2.2",
+    "level": "K2",
+    "text": "공식 리뷰에서 개인 검토가 끝난 직후 일반적으로 수행할 활동은?",
+    "options": [
+      "테스트 계획을 프로젝트와 무관하게 삭제한다.",
+      "수정 확인 없이 산출물을 즉시 폐기한다.",
+      "제품을 운영에 강제 배포한다.",
+      "참가자들이 발견한 이상을 소통하고 분석해 상태·책임·조치를 결정한다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "개별 리뷰 후에는 발견 사항을 공유·분석하고 결함 여부, 소유자와 후속 조치를 합의하는 소통 및 분석 활동이 이어진다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-19",
+    "set": "prediction-13",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.1.1",
+    "level": "K2",
+    "text": "과거 장애와 테스터의 직관을 이용해 취약한 입력을 예상했다. 사용한 테스트 기법 범주는?",
+    "options": [
+      "경험 기반 테스트 기법",
+      "블랙박스 테스트 기법만",
+      "화이트박스 테스트 기법만",
+      "정적 분석 기법"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "오류 추정과 같은 경험 기반 기법은 테스터의 지식, 과거 결함과 직관을 활용해 테스트를 도출한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-20",
+    "set": "prediction-13",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.2.1",
+    "level": "K3",
+    "text": "할인율은 구매액이 0원 미만이면 무효, 0~49,999원은 0%, 50,000~99,999원은 5%, 100,000원 이상은 10%이다. 모든 동등 분할을 대표하는 값 집합은?",
+    "options": [
+      "{-1, 0, 50000, 100000}",
+      "{0, 49999, 50000, 99999}",
+      "{-1, 30000, 70000, 120000}",
+      "{30000, 49999, 99999, 100000}"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "네 분할은 음수 무효, 0~49,999, 50,000~99,999, 100,000 이상이며 첫 번째 집합은 각 분할에서 하나씩 선택한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-21",
+    "set": "prediction-13",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.2.2",
+    "level": "K3",
+    "text": "입력 가능한 좌석 수는 정수 1~6이다. 2값 경계값 분석으로 모든 경계를 검사하는 최소 값 집합은?",
+    "options": [
+      "{1,6}",
+      "{0,1,6,7}",
+      "{0,1,2,5,6,7}",
+      "{-1,0,6,7}"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "2값 경계값 분석에서는 각 경계 자체와 인접 분할의 가장 가까운 값을 사용하므로 0·1과 6·7이 필요하다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-22",
+    "set": "prediction-13",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.2.3",
+    "level": "K3",
+    "text": "대출 규칙은 “성인이며 신용 양호이면 승인, 성인이며 신용 불량이면 보증인이 있을 때만 승인, 미성년자는 거절”이다. 승인되는 조건 조합은?",
+    "options": [
+      "미성년·신용 불량·보증인 있음",
+      "성인·신용 불량·보증인 없음",
+      "미성년·신용 양호·보증인 있음",
+      "성인·신용 불량·보증인 있음"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "성인이고 신용이 불량한 경우에는 보증인이 있을 때에만 승인 규칙을 만족한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-23",
+    "set": "prediction-13",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.2.4",
+    "level": "K3",
+    "text": "문서 상태 전이는 초안→검토중→승인됨이며, 검토중에서는 초안으로 반려될 수 있다. 승인됨 이후에는 보관됨으로만 이동한다. 유효하지 않은 전이 순서는?",
+    "options": [
+      "초안→검토중→승인됨→초안",
+      "초안→검토중→초안→검토중",
+      "초안→검토중→승인됨→보관됨",
+      "초안→검토중→초안"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "승인됨 상태에서는 보관됨으로만 이동할 수 있으므로 승인됨에서 초안으로의 전이는 정의되지 않았다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-24",
+    "set": "prediction-13",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.5.3",
+    "level": "K3",
+    "text": "인수 조건은 “쿠폰이 유효하고 최소 주문액 이상이면 할인하고 쿠폰을 사용 처리한다”이다. 이 조건을 직접 검증하는 테스트는?",
+    "options": [
+      "쿠폰 없이 주문하고 결제 성공만 확인한다.",
+      "유효한 쿠폰으로 최소 주문액 미만 주문 후 배송지만 확인한다.",
+      "유효한 쿠폰과 최소 주문액 이상 주문에서 할인액과 쿠폰 사용 상태를 모두 확인한다.",
+      "사용 완료 쿠폰으로 로그인 성능만 측정한다."
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "인수 테스트는 주어진 유효 쿠폰과 주문액 조건, 할인 행동, 쿠폰 상태 변경이라는 기대 결과를 함께 확인해야 한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-25",
+    "set": "prediction-13",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.3.1",
+    "level": "K2",
+    "text": "실행문 60개 중 테스트 스위트가 45개를 실행했다. 구문 커버리지는?",
+    "options": [
+      "25%",
+      "75%",
+      "45%",
+      "80%"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "구문 커버리지는 실행된 구문 수를 전체 구문 수로 나눈 값이므로 45÷60×100=75%이다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-26",
+    "set": "prediction-13",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.3.2",
+    "level": "K2",
+    "text": "분기 커버리지 100%가 의미하는 것은?",
+    "options": [
+      "결함이 더 이상 존재하지 않는다.",
+      "모든 가능한 실행 경로가 수행되었다.",
+      "모든 입력 조합이 검사되었다.",
+      "각 결정의 모든 분기 결과가 적어도 한 번 실행되었다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "100% 분기 커버리지는 각 결정 결과를 모두 실행했음을 뜻하지만 모든 경로나 결함 부재를 보장하지 않는다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-27",
+    "set": "prediction-13",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.4.1",
+    "level": "K2",
+    "text": "과거에 날짜 형식과 윤년 처리에서 결함이 많았던 시스템을 다시 시험한다. 오류 추정을 가장 잘 적용한 것은?",
+    "options": [
+      "2월 29일, 잘못된 구분자, 빈 날짜와 같은 취약 사례를 추가한다.",
+      "명세에서 임의의 정상 예 하나만 선택한다.",
+      "소스 코드의 모든 분기를 계산만 한다.",
+      "이전 결함 정보는 편향이므로 폐기한다."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "오류 추정은 과거 결함, 개발자의 실수 경향과 도메인 지식을 이용해 실패 가능성이 높은 사례를 선택한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-28",
+    "set": "prediction-13",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.4.2",
+    "level": "K2",
+    "text": "60분 탐색적 테스트 세션을 효과적으로 관리하는 방법은?",
+    "options": [
+      "실행 전에 모든 세부 절차를 고정해 학습을 반영하지 않는다.",
+      "아무 목표나 기록 없이 무작위로 클릭한다.",
+      "목표와 범위를 차터로 정하고 발견·아이디어·시간 사용을 기록한 뒤 디브리핑한다.",
+      "발견한 이상을 보고하지 않는다."
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "세션 기반 테스트 관리는 차터, 시간 상자, 세션 기록과 디브리핑으로 탐색의 자율성과 책임성을 함께 지원한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-29",
+    "set": "prediction-13",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.5.1",
+    "level": "K2",
+    "text": "사용자 스토리를 개발하기 전 고객·개발자·테스터가 예시와 인수 조건을 함께 논의했다. 가장 큰 이점은?",
+    "options": [
+      "고객이 모든 테스트를 혼자 작성하게 한다.",
+      "서로 다른 관점으로 스토리의 공통 이해와 테스트 가능성을 높인다.",
+      "인수 조건 없이 구현을 시작하게 한다.",
+      "테스터가 비즈니스 결정을 단독 승인하게 한다."
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "협업 기반 사용자 스토리 작성은 비즈니스·개발·테스트 관점을 결합해 모호함을 줄이고 검증 가능한 인수 조건을 만든다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-30",
+    "set": "prediction-13",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.1.2",
+    "level": "K1",
+    "text": "릴리스 계획 회의에서 테스터가 제공할 수 있는 가치는?",
+    "options": [
+      "테스트 범위와 무관하게 출시일을 보장한다.",
+      "비즈니스 우선순위를 혼자 최종 승인한다.",
+      "개발자의 구현 방법을 모두 대신 결정한다.",
+      "품질 리스크·테스트 가능성·테스트 노력에 관한 정보를 제공한다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "테스터는 계획 단계에서 리스크, 테스트 가능성, 테스트 접근법·노력과 완료 기준에 대한 관점을 제공해 현실적인 계획에 기여한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-31",
+    "set": "prediction-13",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.1.3",
+    "level": "K2",
+    "text": "출구 조건으로 “치명 결함 0개, 고위험 요구사항 테스트 100% 완료”를 정한 이유는?",
+    "options": [
+      "테스트 종료 판단을 목표와 리스크에 연결된 측정 가능한 기준으로 만들기 위해서이다.",
+      "모든 결함이 영원히 없음을 증명하기 위해서이다.",
+      "진행 상황을 보고하지 않기 위해서이다.",
+      "테스트 실행 순서를 무작위로 정하기 위해서이다."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "출구 조건은 완료 여부와 품질 상태를 객관적으로 평가하도록 측정 가능한 테스트 목표 및 리스크 기준을 제공한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-32",
+    "set": "prediction-13",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.1.4",
+    "level": "K3",
+    "text": "한 테스트 작업의 낙관값 4시간, 최빈값 7시간, 비관값 16시간이다. 세 점 추정 E=(낙관+4×최빈+비관)÷6의 결과는?",
+    "options": [
+      "7시간",
+      "9시간",
+      "8시간",
+      "11시간"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "(4+4×7+16)÷6=48÷6=8시간이다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-33",
+    "set": "prediction-13",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.1.5",
+    "level": "K3",
+    "text": "리스크 수준이 큰 테스트를 먼저 하되 선행 조건을 지킨다. A(리스크 9, B 이후), B(6, 독립), C(8, 독립), D(7, C 이후)의 순서는?",
+    "options": [
+      "B → A → C → D",
+      "C → D → B → A",
+      "C → B → A → D",
+      "A → C → D → B"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "처음 가능한 B와 C 중 C의 리스크가 더 크다. C 이후 D가 가능해지며 D, B, 그리고 B에 의존하는 A 순서가 된다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-34",
+    "set": "prediction-13",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.5.1",
+    "level": "K3",
+    "text": "검색 버튼을 누르면 8초 뒤 결과가 나오지만 요구사항은 2초 이내이다. 가장 유용한 결함 보고 제목과 증거는?",
+    "options": [
+      "“요구사항이 틀림”과 개발자 이름만",
+      "“검색이 느림”이라는 제목만",
+      "“성능 오류”와 화면 색상 캡처만",
+      "“검색 응답시간 2초 기준 초과—동일 데이터 5회 평균 8.1초”와 환경·데이터·측정 로그"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "구체적인 기능, 기대 기준과 실제 측정값을 제목·결과에 담고 재현 환경과 증거를 제공하면 분석과 우선순위 판단에 유용하다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-35",
+    "set": "prediction-13",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.2.3",
+    "level": "K2",
+    "text": "개인정보 노출 가능성이 매우 낮지만 영향이 치명적이라고 평가됐다. 테스트 접근법에 미칠 수 있는 영향은?",
+    "options": [
+      "높은 영향도를 고려해 보안 전문성·독립성·관련 커버리지를 강화한다.",
+      "가능성이 낮으므로 기록 없이 테스트에서 제외한다.",
+      "모든 기능에 같은 깊이의 테스트만 적용한다.",
+      "보안과 무관한 정상 화면 하나만 확인한다."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "제품 리스크 수준과 특성은 테스트 범위, 철저함, 기법, 인력의 전문성 및 독립 수준을 정하는 근거가 된다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-36",
+    "set": "prediction-13",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.3.2",
+    "level": "K2",
+    "text": "완료 보고서에서 “테스트 95% 통과”만 제시했을 때 추가로 필요한 정보는?",
+    "options": [
+      "보고서 작성자의 취미",
+      "통과한 테스트 이름 하나만",
+      "미실행·실패 항목, 잔여 결함과 리스크, 완료 기준 달성 여부",
+      "프로젝트와 무관한 전체 소스 코드"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "통과율만으로는 출시 판단이 어렵다. 범위와 편차, 실패·미실행, 잔여 결함·리스크 및 완료 기준을 함께 설명해야 한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-37",
+    "set": "prediction-13",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.3.3",
+    "level": "K2",
+    "text": "결제 API 환경 장애로 고위험 테스트 30건이 차단되어 출구 조건 달성이 지연되고 있다. 상태 전달 문장으로 가장 적절한 것은?",
+    "options": [
+      "“전체적으로 조금 늦지만 아마 괜찮다.”",
+      "“고위험 결제 테스트 30건이 환경 장애로 차단됐고 출구 조건은 미달이다. 수요일까지 환경 복구 결정이 필요하며 일정 영향은 2일로 예상한다.”",
+      "“실행률 72%”라는 숫자만 전달한다.",
+      "장애가 해결될 때까지 이해관계자에게 알리지 않는다."
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "효과적인 상태 소통은 대상 독자에게 현재 상태, 원인, 품질·일정 영향, 불확실성과 필요한 결정을 구체적이고 시기적절하게 전달한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-38",
+    "set": "prediction-13",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.4.1",
+    "level": "K2",
+    "text": "승인된 테스트 케이스 기준선이 변경되었다. 형상 관리상 올바른 처리는?",
+    "options": [
+      "모든 과거 실행 결과를 새 버전에 자동 연결한다.",
+      "기존 버전을 추적 불가능하게 덮어쓴다.",
+      "변경 이유와 승인자를 삭제한다.",
+      "변경을 식별·통제하고 새 버전과 승인 이력, 관련 결과의 연결을 보존한다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "형상 관리는 테스트웨어의 버전과 변경 이력을 통제하고 관련 제품 버전·실행 결과와의 추적성을 유지한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-39",
+    "set": "prediction-13",
+    "chapter": "6장 테스트 도구",
+    "lo": "6.1.1",
+    "level": "K2",
+    "text": "테스트 실행 자동화 도구를 사용할 때 생길 수 있는 리스크는?",
+    "options": [
+      "취약한 스크립트 유지보수와 도구에 대한 비현실적인 기대가 비용을 키울 수 있다.",
+      "반복 실행 속도가 빨라질 수 있다.",
+      "결과 비교가 일관될 수 있다.",
+      "야간에 무인 실행할 수 있다."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "자동화에는 초기 투자, 스크립트 유지보수, 도구 종속과 과도한 기대 같은 리스크가 있으며 조직적·기술적 관리가 필요하다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P13-40",
+    "set": "prediction-13",
+    "chapter": "6장 테스트 도구",
+    "lo": "6.2.1",
+    "level": "K1",
+    "text": "잘못된 기대 결과를 자동 스크립트에 구현했는데 반복 실행이 모두 통과했다. 드러난 자동화 리스크는?",
+    "options": [
+      "통과 횟수가 많으면 테스트 설계가 자동 검증된다.",
+      "자동 실행은 항상 기대 결과 오류를 스스로 수정한다.",
+      "결함 있는 자동 검사가 반복되어 잘못된 품질 신뢰를 줄 수 있다.",
+      "자동화하면 테스트웨어 리뷰가 불가능해진다."
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "자동화는 작성된 검사를 빠르게 반복할 뿐 그 검사가 올바름을 보장하지 않으므로 잘못된 설계가 거짓 신뢰를 만들 수 있다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-01",
+    "set": "prediction-17",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.1.1",
+    "level": "K1",
+    "text": "계약상 기능 충족 여부를 확인하는 테스트 목적은?",
+    "options": [
+      "명시된 계약 요구사항의 충족 여부를 검증한다.",
+      "계약 내용을 테스터가 임의로 변경한다.",
+      "모든 사용자의 미래 행동을 예측한다.",
+      "결함 수정 코드를 직접 배포한다."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "테스팅의 목적에는 명시된 요구사항과 계약·법규 요구의 충족 여부를 검증하는 것이 포함된다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-02",
+    "set": "prediction-17",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.5.2",
+    "level": "K1",
+    "text": "전체 팀 접근법에서 제품 책임자의 기여로 적절한 것은?",
+    "options": [
+      "개발자와 테스터의 협업을 금지한다.",
+      "모든 테스트 실행을 테스터에게 숨긴다.",
+      "비즈니스 가치와 인수 조건을 명확히 하고 품질 논의에 참여한다.",
+      "기술적 결함을 직접 모두 수정한다."
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "제품 책임자와 비즈니스 담당자는 가치·요구·인수 조건에 대한 지식을 제공하여 팀의 공통 품질 책임에 기여한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-03",
+    "set": "prediction-17",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.2.3",
+    "level": "K2",
+    "text": "모호한 시간대 요구를 분석가가 잘못 해석해 코드에 잘못된 변환 규칙이 들어갔고 사용자에게 하루 전 날짜가 보였다. 연결은?",
+    "options": [
+      "모호한 요구는 장애이고 날짜 오표시는 근본 원인이다.",
+      "모호한 요구는 근본 원인, 잘못된 해석은 오류, 변환 규칙은 결함, 날짜 오표시는 장애가 될 수 있다.",
+      "잘못된 해석은 장애이고 코드는 오류이다.",
+      "코드 결함은 실행 전에도 항상 사용자 장애이다."
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "근본 원인이 사람의 오류를 유발하고, 오류가 산출물 결함을 만들며, 결함이 실행될 때 관찰 가능한 장애로 나타날 수 있다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-04",
+    "set": "prediction-17",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.3.1",
+    "level": "K2",
+    "text": "가능한 입력 조합이 수십억 개라 모두 실행할 수 없다. 적용해야 할 원리는?",
+    "options": [
+      "입력 수가 많으면 테스트를 생략한다.",
+      "모든 조합을 실행할 때까지 출시를 무기한 연기한다.",
+      "한 정상 입력만으로 무결함을 증명한다.",
+      "완전한 테스팅은 불가능하므로 리스크와 우선순위에 따라 표본을 선택한다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "사소한 경우를 제외하면 모든 조합과 경로를 시험하는 것은 불가능하므로 위험·우선순위와 기법을 이용해 테스트를 선택한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-05",
+    "set": "prediction-17",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.4.1",
+    "level": "K2",
+    "text": "요구사항에서 테스트 가능한 특징을 찾아 우선순위가 있는 테스트 조건으로 만드는 활동은?",
+    "options": [
+      "테스트 분석",
+      "테스트 구현",
+      "테스트 실행",
+      "테스트 완료"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "테스트 분석은 테스트 베이시스를 검토하고 테스트 가능한 특징과 조건을 식별·우선순위화한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-06",
+    "set": "prediction-17",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.4.2",
+    "level": "K2",
+    "text": "짧은 프로토타입 프로젝트가 상세 문서보다 탐색적 테스트와 빠른 피드백을 많이 사용한 이유는?",
+    "options": [
+      "프로토타입에는 결함이 생기지 않기 때문이다.",
+      "모든 프로젝트는 같은 테스트웨어를 의무적으로 사용하기 때문이다.",
+      "기간·개발 방식·문서 수준 같은 맥락에 맞춰 프로세스를 조정했기 때문이다.",
+      "탐색적 테스트는 계획과 목적이 필요 없기 때문이다."
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "테스트 활동과 형식성은 수명주기, 기간, 위험, 팀과 사용 가능한 베이시스 등 프로젝트 맥락에 맞춰 조정된다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-07",
+    "set": "prediction-17",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.4.4",
+    "level": "K2",
+    "text": "결함 D12를 실패한 테스트와 원래 요구사항에 연결했을 때 가장 유용한 것은?",
+    "options": [
+      "결함 심각도가 자동으로 0이 된다.",
+      "결함 영향과 수정 후 재시험할 범위를 추적할 수 있다.",
+      "요구사항 작성자가 자동 변경된다.",
+      "테스트 데이터가 필요 없어지게 된다."
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "요구사항·테스트·결과·결함 사이 추적성은 영향 분석, 커버리지 평가와 확인·회귀 테스트 선택을 지원한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-08",
+    "set": "prediction-17",
+    "chapter": "1장 테스트 기초",
+    "lo": "1.5.3",
+    "level": "K2",
+    "text": "외부 독립 테스트팀이 늦게 참여해 제품 맥락을 충분히 알지 못했다. 가능한 단점은?",
+    "options": [
+      "외부 팀은 다른 관점을 가질 수 없다.",
+      "독립성이 있으면 모든 결함을 자동 발견한다.",
+      "개발팀의 품질 책임이 법적으로 사라진다.",
+      "학습과 의사소통 비용 때문에 피드백이 늦거나 부정확할 수 있다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "높은 독립성은 새 관점을 주지만 제품 지식 부족, 고립과 의사소통 장벽이라는 단점이 생길 수 있다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-09",
+    "set": "prediction-17",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.1.2",
+    "level": "K1",
+    "text": "수명주기와 무관하게 적용되는 관행은?",
+    "options": [
+      "각 테스트 레벨의 목적에 맞는 테스트 베이시스를 정한다.",
+      "테스트는 운영 장애 후에만 시작한다.",
+      "모든 레벨에서 같은 환경만 쓴다.",
+      "개발 산출물과 테스트를 연결하지 않는다."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "각 레벨의 목적과 대상에 적합한 베이시스를 정하고 개발 활동과 테스트 활동을 연결하는 관행은 여러 수명주기에 적용된다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-10",
+    "set": "prediction-17",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.1.3",
+    "level": "K1",
+    "text": "작은 실패 테스트 작성→최소 코드 구현→리팩터링의 반복은?",
+    "options": [
+      "워크스루",
+      "ATDD",
+      "TDD",
+      "상태 전이 테스팅"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "TDD는 구현 전에 단위 테스트를 쓰고 통과할 최소 코드를 만든 뒤 리팩터링하는 짧은 주기를 반복한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-11",
+    "set": "prediction-17",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.1.1",
+    "level": "K2",
+    "text": "증분 개발에서 각 증분마다 시스템 테스트와 회귀 테스트를 수행하는 이유는?",
+    "options": [
+      "첫 증분 이후에는 변경이 발생하지 않기 때문이다.",
+      "새 기능의 품질과 기존 기능과의 통합 영향을 지속적으로 확인하기 위해서이다.",
+      "최종 증분에서만 제품이 실행 가능하기 때문이다.",
+      "증분 사이 추적성을 없애기 위해서이다."
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "증분마다 제품이 성장하고 통합되므로 새 기능 확인과 누적된 기존 기능에 대한 회귀 테스트가 필요하다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-12",
+    "set": "prediction-17",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.1.4",
+    "level": "K2",
+    "text": "DevOps 환경에서 테스터가 운영 모니터링 데이터에 관심을 가져야 하는 이유는?",
+    "options": [
+      "모니터링은 기능·성능과 무관하기 때문이다.",
+      "운영 데이터가 모든 사전 테스트를 대체하기 때문이다.",
+      "운영팀만 품질 책임을 갖기 때문이다.",
+      "실사용 실패와 품질 추세를 피드백으로 받아 테스트와 리스크 평가를 개선할 수 있기 때문이다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "DevOps는 개발·테스트·운영의 빠른 피드백을 장려하며 운영 정보는 실제 위험과 테스트 개선에 유용하다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-13",
+    "set": "prediction-17",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.2.2",
+    "level": "K2",
+    "text": "브라우저 종류별 화면 동작을 비교하는 테스트 유형은?",
+    "options": [
+      "호환성 테스팅",
+      "컴포넌트 테스팅",
+      "확인 테스팅",
+      "정적 리뷰"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "호환성 테스팅은 서로 다른 하드웨어·소프트웨어·브라우저·운영체제 환경에서의 상호운용과 동작을 평가하는 비기능 테스트 유형이다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-14",
+    "set": "prediction-17",
+    "chapter": "2장 SDLC 전반의 테스팅",
+    "lo": "2.3.1",
+    "level": "K2",
+    "text": "운영체제 업그레이드 뒤 유지보수 테스트 범위에 포함할 내용은?",
+    "options": [
+      "업그레이드 전 결과를 자동 통과 처리",
+      "새 기능이 없으므로 테스트 없음",
+      "업그레이드와 직접 관련된 호환성 확인 및 영향받는 기능의 회귀 테스트",
+      "광고 페이지 문구만 검토"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "환경 변경도 유지보수 테스트 트리거이며 변경 적합성과 기존 기능에 미친 부작용을 확인해야 한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-15",
+    "set": "prediction-17",
+    "chapter": "3장 정적 테스팅",
+    "lo": "3.1.1",
+    "level": "K1",
+    "text": "실행 전에 정적 테스팅으로 함께 검토할 수 있는 조합은?",
+    "options": [
+      "실행 중 응답시간·메모리 사용량·전력 소비량",
+      "화면 와이어프레임·API 명세·탐색 테스트 차터",
+      "실사용자의 클릭 속도·표정·만족도",
+      "운영 장애의 실제 복구시간만"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "와이어프레임, API 명세와 테스트 차터는 읽고 이해할 수 있는 작업 산출물이므로 실행 없이 리뷰할 수 있다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-16",
+    "set": "prediction-17",
+    "chapter": "3장 정적 테스팅",
+    "lo": "3.2.5",
+    "level": "K1",
+    "text": "리뷰의 성공 가능성을 높이는 관리 행동은?",
+    "options": [
+      "항상 가장 공식적인 유형만 사용한다.",
+      "발견 결함 수로 개인을 처벌한다.",
+      "리뷰 목적을 공개하지 않는다.",
+      "참가자에게 충분한 준비 시간과 교육을 제공한다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "참가자 준비, 교육, 시간 확보와 건설적인 문화 및 관리 지원은 효과적인 리뷰의 성공 요인이다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-17",
+    "set": "prediction-17",
+    "chapter": "3장 정적 테스팅",
+    "lo": "3.1.2",
+    "level": "K2",
+    "text": "코딩 전에 인터페이스 설계의 타입 불일치를 리뷰로 찾았다. 정적 테스팅의 가치로 적절한 것은?",
+    "options": [
+      "후속 코드·테스트에 결함이 전파되기 전에 낮은 비용으로 수정할 수 있다.",
+      "실제 네트워크 응답시간을 자동 측정한다.",
+      "모든 운영 장애를 재현한다.",
+      "동적 테스트의 필요성을 없앤다."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "산출물 결함을 조기에 발견하면 하위 산출물로의 전파와 재작업 비용 및 일정 위험을 줄일 수 있다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-18",
+    "set": "prediction-17",
+    "chapter": "3장 정적 테스팅",
+    "lo": "3.2.2",
+    "level": "K2",
+    "text": "리뷰에서 수정이 완료된 뒤 수행할 후속조치로 적절한 것은?",
+    "options": [
+      "수정 여부와 무관하게 즉시 종료한다.",
+      "모든 발견 기록을 삭제한다.",
+      "합의한 결함이 처리됐는지 확인하고 리뷰 기준에 따라 결과를 보고한다.",
+      "제품 성능 테스트를 리뷰 기록 대신 사용한다."
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "수정 및 보고 활동에서는 결함 상태와 조치를 추적하고 출구 조건 충족을 확인하며 결과와 지표를 보고한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-19",
+    "set": "prediction-17",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.1.1",
+    "level": "K2",
+    "text": "경계값 분석과 분기 테스팅의 범주 연결은?",
+    "options": [
+      "둘 다 경험 기반",
+      "경계값 분석은 블랙박스, 분기 테스팅은 화이트박스",
+      "경계값 분석은 화이트박스, 분기는 블랙박스",
+      "둘 다 비공식 리뷰"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "경계값은 입력·출력 분할 경계를 이용하는 블랙박스 기법이고 분기 테스팅은 코드 제어 흐름을 이용하는 화이트박스 기법이다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-20",
+    "set": "prediction-17",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.2.1",
+    "level": "K3",
+    "text": "회원 등급 점수가 0 미만이면 무효, 0~199는 일반, 200~499는 실버, 500 이상은 골드이다. 각 분할 대표값 집합은?",
+    "options": [
+      "{100,199,499,500}",
+      "{0,199,200,499}",
+      "{-1,0,200,500}",
+      "{-1,100,300,700}"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "네 분할은 음수 무효, 0~199, 200~499, 500 이상이며 첫 집합이 각각 하나씩 대표한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-21",
+    "set": "prediction-17",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.2.2",
+    "level": "K3",
+    "text": "유효한 정수 포트 번호가 1024~49151이다. 2값 경계값 분석 집합은?",
+    "options": [
+      "{1023,1024,49151,49152}",
+      "{1024,49151}",
+      "{1023,1024,1025,49150,49151,49152}",
+      "{1022,1023,49152,49153}"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "각 경계 양쪽의 가장 가까운 값인 1023·1024와 49151·49152를 사용한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-22",
+    "set": "prediction-17",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.2.3",
+    "level": "K3",
+    "text": "지원 규칙은 “프리미엄 고객은 24시간, 일반 고객은 평일 근무시간에만 채팅, 계정 정지 고객은 항상 거절”이다. 허용 조합은?",
+    "options": [
+      "일반·활성·일요일 14시",
+      "프리미엄·정지·월요일 10시",
+      "일반·활성·화요일 14시",
+      "일반·정지·수요일 11시"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "활성 일반 고객은 평일 근무시간에 채팅이 허용되며 정지 고객은 등급·시간과 관계없이 거절된다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-23",
+    "set": "prediction-17",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.2.4",
+    "level": "K3",
+    "text": "배송 상태는 준비→발송→배송중→완료이며 배송중에서 실패 시 발송으로 돌아간다. 유효한 왕복 전이 순서는?",
+    "options": [
+      "준비→배송중→완료",
+      "준비→발송→배송중→발송→배송중",
+      "발송→준비→배송중",
+      "준비→발송→완료"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "첫 순서는 정상 전이 후 배송 실패로 발송 상태에 돌아갔다가 다시 배송중으로 이동하는 정의된 경로다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-24",
+    "set": "prediction-17",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.5.3",
+    "level": "K3",
+    "text": "인수 조건은 “예약 취소가 출발 24시간 전이면 전액 환불하고 좌석을 다시 판매 가능하게 한다”이다. 적절한 테스트는?",
+    "options": [
+      "출발 30시간 전 취소 후 환불만 보고 좌석 상태는 보지 않는다.",
+      "출발 10시간 전 취소 후 로그인만 확인한다.",
+      "예약 없이 노선 검색 속도만 측정한다.",
+      "출발 30시간 전 취소 후 전액 환불과 좌석 재판매 상태를 확인한다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "조건을 충족하는 취소 시점과 전액 환불, 좌석 상태 변경이라는 모든 기대 결과를 함께 검증해야 한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-25",
+    "set": "prediction-17",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.3.1",
+    "level": "K2",
+    "text": "의사코드가 “합계=0; 프리미엄이면 합계=10; 합계를 출력”이다. 100% 구문 커버리지에 필요한 최소 테스트는?",
+    "options": [
+      "프리미엄이 참인 테스트 1개",
+      "프리미엄이 거짓인 테스트 1개",
+      "참과 거짓 테스트 2개가 반드시 필요",
+      "어떤 테스트도 필요 없음"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "프리미엄이 참이면 초기화, 조건 내부 대입과 출력 구문을 모두 실행하므로 한 테스트로 100% 구문 커버리지를 달성한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-26",
+    "set": "prediction-17",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.3.2",
+    "level": "K2",
+    "text": "결정이 6개이고 각 결정의 참·거짓 결과 중 9개를 실행했다. 분기 커버리지는?",
+    "options": [
+      "9%",
+      "66.7%",
+      "75%",
+      "90%"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "전체 분기 결과는 6×2=12개이며 9÷12×100=75%이다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-27",
+    "set": "prediction-17",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.4.1",
+    "level": "K2",
+    "text": "과거 결함 목록에서 파일 이름의 공백·특수문자 문제가 많았다. 오류 추정 적용은?",
+    "options": [
+      "파일 이름 결함 이력을 무시한다.",
+      "공백·다국어·예약문자·매우 긴 이름을 집중 시험한다.",
+      "정상 영문 이름 하나만 반복한다.",
+      "코드 커버리지 수치만 보고 입력을 고른다."
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "오류 추정은 과거 결함과 흔한 실수를 근거로 실패 가능성이 높은 입력과 상황을 선택한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-28",
+    "set": "prediction-17",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.4.2",
+    "level": "K2",
+    "text": "탐색 세션 종료 후 디브리핑의 목적은?",
+    "options": [
+      "모든 탐색을 영구 중단한다.",
+      "발견 기록을 삭제한다.",
+      "차터와 무관하게 통과만 선언한다.",
+      "수행 범위·발견·리스크·후속 아이디어를 공유하고 다음 세션을 조정한다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "디브리핑은 세션에서 수행한 테스트와 결과, 방해 요소, 위험과 다음 아이디어를 검토해 투명성과 학습을 높인다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-29",
+    "set": "prediction-17",
+    "chapter": "4장 테스트 분석과 설계",
+    "lo": "4.5.2",
+    "level": "K2",
+    "text": "“세금은 배송 국가와 상품 유형의 조합으로 결정한다”는 인수 조건을 명확히 표현하기 좋은 형식은?",
+    "options": [
+      "조건 조합과 결과를 나열한 결정 테이블 형태의 규칙 지향 형식",
+      "기대 결과가 없는 자유 문장",
+      "소스 코드 분기 수만 기록",
+      "사용자 감정만 적은 시나리오"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "여러 조건 조합과 결과를 다루는 비즈니스 규칙은 결정 테이블 같은 규칙 지향 형식으로 명확하게 표현할 수 있다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-30",
+    "set": "prediction-17",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.1.2",
+    "level": "K1",
+    "text": "반복 계획에서 테스터가 사용자 스토리에 기여하는 방식은?",
+    "options": [
+      "개발자의 모든 작업을 대신 추정한다.",
+      "제품 우선순위를 혼자 확정한다.",
+      "테스트 가능성·리스크·필요한 테스트 작업과 노력에 대한 의견을 제공한다.",
+      "인수 조건을 삭제한다."
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "테스터는 계획 중 품질 리스크와 테스트 가능성, 테스트 작업·노력, 의존성과 완료 기준을 논의해 계획의 현실성을 높인다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-31",
+    "set": "prediction-17",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.1.1",
+    "level": "K2",
+    "text": "테스트 계획에서 의사소통 방식을 정하는 목적은?",
+    "options": [
+      "결함 정보를 팀 밖에 숨기기 위해서이다.",
+      "누가 어떤 상태·리스크 정보를 언제 어떤 형식으로 받을지 합의하기 위해서이다.",
+      "모든 회의를 없애기 위해서이다.",
+      "제품 요구사항을 자동 생성하기 위해서이다."
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "테스트 계획은 이해관계자, 보고 내용·주기·형식과 소통 경로를 정의해 적시에 의사결정을 지원한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-32",
+    "set": "prediction-17",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.1.4",
+    "level": "K3",
+    "text": "25개 테스트에 40시간이 들었다. 같은 복잡도의 90개를 비율로 추정한 시간은?",
+    "options": [
+      "160시간",
+      "130시간",
+      "115시간",
+      "144시간"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "테스트 하나당 40÷25=1.6시간이며 90×1.6=144시간이다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-33",
+    "set": "prediction-17",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.1.5",
+    "level": "K3",
+    "text": "시간 제한은 5시간이다. A(리스크 20,4시간), B(16,3시간), C(12,2시간), D(7,1시간) 중 합계 리스크가 최대인 조합은?",
+    "options": [
+      "B와 C",
+      "A와 D",
+      "B와 D",
+      "C와 D"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "B+C는 5시간에 리스크 28로 A+D의 27, B+D의 23, C+D의 19보다 크다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-34",
+    "set": "prediction-17",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.5.1",
+    "level": "K3",
+    "text": "모바일 앱 5.2에서 알림을 누르면 앱이 종료되고 오류 코드 N14가 남았다. 완전한 결함 보고는?",
+    "options": [
+      "오류 코드 없이 개발자 이름만 쓴다.",
+      "“앱 꺼짐”만 기록한다.",
+      "기기·OS·앱 빌드, 알림 사전조건과 단계, 기대 화면, 실제 종료·N14, 로그·빈도·영향을 기록한다.",
+      "기대 결과와 재현 단계를 생략한다."
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "효과적인 결함 보고는 식별 정보, 환경, 사전조건, 재현 단계, 기대·실제 결과, 심각도와 증거를 포함한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-35",
+    "set": "prediction-17",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.2.2",
+    "level": "K2",
+    "text": "“오프라인 저장 시 데이터 손상 가능성”과 “테스트 환경 납품 지연 가능성”의 분류는?",
+    "options": [
+      "둘 다 제품 리스크",
+      "제품 리스크와 프로젝트 리스크",
+      "둘 다 프로젝트 리스크",
+      "프로젝트 리스크와 제품 리스크"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "데이터 무결성 실패는 제품 품질 위험이고 환경 납품 지연은 테스트 수행 일정이라는 프로젝트 목표를 위협한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-36",
+    "set": "prediction-17",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.2.4",
+    "level": "K2",
+    "text": "낮은 수준으로 평가된 표시 오류 리스크를 이해관계자가 수용했다. 적절한 관리는?",
+    "options": [
+      "발생 시 대응을 금지한다.",
+      "리스크를 기록에서 삭제한다.",
+      "사용자에게 숨긴다.",
+      "수용 근거와 책임을 기록하고 상태 변화와 발생 신호를 모니터링한다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "리스크 수용은 무시가 아니며 결정과 근거를 기록하고 변화를 모니터링하며 필요하면 대응을 재검토해야 한다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-37",
+    "set": "prediction-17",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.3.2",
+    "level": "K2",
+    "text": "반복 중간에 작성하는 테스트 진행 보고서의 주요 목적은?",
+    "options": [
+      "현재 상태·편차·장애물·리스크를 알려 제어와 의사결정을 지원한다.",
+      "최종 교훈만 보관하고 진행 정보는 숨긴다.",
+      "제품 코드를 대신 수정한다.",
+      "모든 잔여 결함을 자동 종료한다."
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "진행 보고서는 테스트 중 현재 진척, 결과, 편차와 위험을 정기적으로 전달하여 필요한 제어 조치를 돕는다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-38",
+    "set": "prediction-17",
+    "chapter": "5장 테스트 활동 관리",
+    "lo": "5.4.1",
+    "level": "K2",
+    "text": "동일한 빌드 이름을 서로 다른 바이너리에 재사용했다. 형상 관리 문제는?",
+    "options": [
+      "결함 우선순위가 자동 상승한다.",
+      "모든 테스트가 자동 통과한다.",
+      "제품 버전 식별이 모호해 결과 추적과 재현의 신뢰성이 떨어진다.",
+      "테스트 데이터가 필요 없어지게 된다."
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "형상 항목은 고유하게 식별되어야 하며 동일 이름 재사용은 어떤 제품이 시험됐는지 증명하기 어렵게 만든다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-39",
+    "set": "prediction-17",
+    "chapter": "6장 테스트 도구",
+    "lo": "6.1.1",
+    "level": "K2",
+    "text": "정적 분석 도구가 지원할 수 있는 활동은?",
+    "options": [
+      "실사용자의 만족도를 자동 확정한다.",
+      "코드의 미사용 변수·도달 불가능 코드·규칙 위반을 실행 없이 탐지한다.",
+      "모든 런타임 성능 실패를 재현한다.",
+      "결함 수정 우선순위를 사업 대신 결정한다."
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "정적 분석 도구는 산출물을 실행하지 않고 코딩 규칙 위반, 제어·데이터 흐름 이상과 특정 결함 패턴을 찾을 수 있다.",
+    "review": {
+      "status": "verified",
+      "date": "2026-07-21",
+      "basis": "ISTQB CTFL v4.0.1 syllabus and official Sample Exams A-D",
+      "checks": [
+        "learning-objective",
+        "k-level",
+        "answer",
+        "distractors",
+        "explanation",
+        "language",
+        "duplicate-screening"
+      ]
+    }
+  },
+  {
+    "id": "P17-40",
+    "set": "prediction-17",
+    "chapter": "6장 테스트 도구",
+    "lo": "6.2.1",
+    "level": "K1",
+    "text": "자동화의 잠재적 이점으로 적절한 것은?",
+    "options": [
+      "초기 투자와 유지보수를 제거한다.",
+      "자동 스크립트의 결함 가능성을 없앤다.",
+      "모든 탐색적 테스트를 대체한다.",
+      "사람이 수행하기 어려운 대용량·고빈도 검사를 반복 실행할 수 있다."
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "자동화는 대량·반복·고빈도 작업을 효율적으로 수행할 수 있지만 스크립트 결함, 투자와 유지보수 및 사람 판단의 필요성은 남는다.",
     "review": {
       "status": "verified",
       "date": "2026-07-21",
