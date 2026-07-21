@@ -1,4 +1,4 @@
-const CACHE = 'istqb-ctfl-v5-reviewed';
+const CACHE = 'istqb-ctfl-v6-set4';
 const ASSETS = ['./', './index.html', './app.css', './bank.js', './app-v2.js', './manifest.webmanifest'];
 
 self.addEventListener('install', event => {

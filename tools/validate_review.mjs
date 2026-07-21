@@ -17,7 +17,8 @@ const loLevels = {
 const expectedChapters = {'1':8,'2':6,'3':4,'4':11,'5':9,'6':2};
 const expectedLevels = {K1:8,K2:24,K3:8};
 const errors = [];
-if (bank.length !== 80) errors.push(`expected 80 verified questions, got ${bank.length}`);
+const setNames = [...new Set(bank.map(q=>q.set))].sort();
+if (bank.length !== setNames.length*40) errors.push(`expected ${setNames.length*40} verified questions, got ${bank.length}`);
 const ids = new Set();
 for (const q of bank) {
   if (ids.has(q.id)) errors.push(`duplicate id ${q.id}`); ids.add(q.id);
@@ -25,9 +26,11 @@ for (const q of bank) {
   if (![4,5].includes(q.options.length)) errors.push(`${q.id}: invalid option count`);
   if (!Array.isArray(q.answer) || q.answer.length < 1 || q.answer.some(i=>i<0 || i>=q.options.length)) errors.push(`${q.id}: invalid answer`);
   if (!q.explanation?.trim()) errors.push(`${q.id}: missing explanation`);
+  if (new Set(q.options).size !== q.options.length) errors.push(`${q.id}: duplicate options`);
+  if (q.text.includes('두 개 고르시오') && q.answer.length !== 2) errors.push(`${q.id}: must have two answers`);
   if (q.review?.status !== 'verified' || !q.review.checks?.includes('duplicate-screening')) errors.push(`${q.id}: missing review evidence`);
 }
-for (const set of ['prediction-1','prediction-2']) {
+for (const set of setNames) {
   const qs=bank.filter(q=>q.set===set);
   if (qs.length!==40) errors.push(`${set}: expected 40, got ${qs.length}`);
   const chapters={}; const levels={};
@@ -35,9 +38,13 @@ for (const set of ['prediction-1','prediction-2']) {
   if(JSON.stringify(chapters)!==JSON.stringify(expectedChapters)) errors.push(`${set}: chapter blueprint ${JSON.stringify(chapters)}`);
   if(JSON.stringify(levels)!==JSON.stringify(expectedLevels)) errors.push(`${set}: K-level blueprint ${JSON.stringify(levels)}`);
 }
+const tokens=s=>new Set(s.replace(/[^가-힣a-z0-9 ]/gi,' ').toLowerCase().split(/\s+/).filter(w=>w.length>1));
 const norm=s=>s.replace(/[^가-힣a-z0-9]/gi,'').toLowerCase();
 for(let i=0;i<bank.length;i++) for(let j=i+1;j<bank.length;j++) {
   if(norm(bank[i].text)===norm(bank[j].text)) errors.push(`identical question text: ${bank[i].id}/${bank[j].id}`);
+  const a=tokens(bank[i].text), b=tokens(bank[j].text);
+  const overlap=[...a].filter(x=>b.has(x)).length, union=new Set([...a,...b]).size;
+  if(union && overlap/union>=0.5) errors.push(`near-duplicate question text: ${bank[i].id}/${bank[j].id} (${(overlap/union).toFixed(2)})`);
 }
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
-console.log('PASS: 80 individually reviewed questions; LO/K, answers, explanations, blueprint, IDs, and exact duplicates validated.');
+console.log(`PASS: ${bank.length} individually reviewed questions across ${setNames.length} sets; LO/K, answers, explanations, blueprint, IDs, and exact duplicates validated.`);
