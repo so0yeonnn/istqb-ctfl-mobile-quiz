@@ -1,5 +1,5 @@
-const CACHE = 'istqb-ctfl-v1';
-const ASSETS = ['./', './index.html', './app.css', './app.js', './manifest.webmanifest'];
+const CACHE = 'istqb-ctfl-v3';
+const ASSETS = ['./', './index.html', './app.css', './bank.js', './app-v2.js', './manifest.webmanifest'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
