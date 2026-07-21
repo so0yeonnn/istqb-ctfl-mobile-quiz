@@ -37,6 +37,9 @@ for (const set of setNames) {
   for(const q of qs){chapters[q.lo[0]]=(chapters[q.lo[0]]||0)+1;levels[q.level]=(levels[q.level]||0)+1;}
   if(JSON.stringify(chapters)!==JSON.stringify(expectedChapters)) errors.push(`${set}: chapter blueprint ${JSON.stringify(chapters)}`);
   if(JSON.stringify(levels)!==JSON.stringify(expectedLevels)) errors.push(`${set}: K-level blueprint ${JSON.stringify(levels)}`);
+  const positions=[0,0,0,0];
+  for(const q of qs.filter(q=>q.answer.length===1)) positions[q.answer[0]]++;
+  if(Math.max(...positions)-Math.min(...positions)>2) errors.push(`${set}: answer positions are skewed ${JSON.stringify(positions)}`);
 }
 const tokens=s=>new Set(s.replace(/[^가-힣a-z0-9 ]/gi,' ').toLowerCase().split(/\s+/).filter(w=>w.length>1));
 const norm=s=>s.replace(/[^가-힣a-z0-9]/gi,'').toLowerCase();
