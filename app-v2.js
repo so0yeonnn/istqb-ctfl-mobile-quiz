@@ -5,7 +5,13 @@ const canonicalChapter = value => value
   .replace('2장 소프트웨어 개발 수명주기 전반의 테스트','2장 SDLC 전반의 테스팅');
 const questionBank = QUESTION_BANK.map(q=>({...q,chapter:canonicalChapter(q.chapter)}));
 const chapters = [...new Set(questionBank.map(q => q.chapter))];
-const letters = ['A','B','C','D'];
+const letters = ['A','B','C','D','E'];
+const officialSamples = {
+  3:{name:'A',version:'1.7'},
+  9:{name:'B',version:'1.7'},
+  16:{name:'C',version:'1.6'},
+  23:{name:'D',version:'1.5'}
+};
 let exam = [];
 let examName = '';
 let answers = [];
@@ -75,12 +81,20 @@ function getSet(n) {
 
 function renderStart() {
   const grid=$('set-grid'); grid.innerHTML='';
-  for(let n=1;n<=20;n++) {
+  for(let n=1;n<=25;n++) {
+    const official=officialSamples[n];
     const b=document.createElement('button');
-    b.className=`set-button ${n<=2?'curated':''} ${n===4?'official':''}`;
-    b.innerHTML=`${n}회<small>${n<=2?'검수 완료':n===4?'공식 PDF':'변형 실전'}</small>`;
+    b.className=`set-button ${n<=2?'curated':''} ${official?'official':''}`;
+    b.innerHTML=`${n}회<small>${n<=2?'검수 완료':official?`공식 ${official.name}`:'변형 실전'}</small>`;
     b.addEventListener('click',()=>{
-      if(n===4){ $('official-links').classList.toggle('hidden'); return; }
+      if(official){
+        const base='https://www.istqb.org/wp-content/uploads/sdm-uploads/';
+        $('official-links').innerHTML=`<strong>${n}회차 · ISTQB 공식 Sample ${official.name}</strong><a href="${base}ISTQB_CTFL_v4.0_Sample-Exam-${official.name}-Questions_v${official.version}.pdf" target="_blank" rel="noopener">문제 PDF 열기</a><a href="${base}ISTQB_CTFL_v4.0_Sample-Exam-${official.name}-Answers_v${official.version}.pdf" target="_blank" rel="noopener">답안·해설 PDF 열기</a><p>공식 문항은 저작권 보호를 위해 ISTQB 원문 PDF로 연결합니다.</p>`;
+        $('official-links').classList.remove('hidden');
+        $('official-links').scrollIntoView({behavior:'smooth',block:'nearest'});
+        return;
+      }
+      $('official-links').classList.add('hidden');
       startExam(getSet(n),`실전 예측 ${n}회차`);
     });
     grid.appendChild(b);
