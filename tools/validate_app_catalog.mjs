@@ -27,6 +27,8 @@ for(const n of authored){
   }
   if(Math.max(...positions)-Math.min(...positions)>2) throw new Error(`prediction-${n}: skewed single-answer positions ${positions}`);
 }
-for(const id of ['set-grid','official-links','options','share-button','download-button','reset-button']) if(!html.includes(`id="${id}"`)) throw new Error(`missing DOM target ${id}`);
+for(const id of ['set-grid','official-links','options','share-button','copy-button','download-button','reset-button']) if(!html.includes(`id="${id}"`)) throw new Error(`missing DOM target ${id}`);
+if(app.includes('navigator.share')) throw new Error('native share sheet must not be used');
+if(!app.includes('codex://threads/019f7f7d-3300-7d63-9b8e-2cba380e9a49')) throw new Error('Codex thread deep link missing');
 if(!html.includes('840문항은 모두 개별 검수')) throw new Error('final review status copy missing');
 console.log('PASS: 25 selectable slots = 21 reviewed mock sets (840 questions) + 4 official Sample A-D links; answers balanced and DOM targets present.');

@@ -1,5 +1,6 @@
 const STORAGE_KEY = 'istqb-ctfl-v3-session';
 const WRONG_KEY = 'istqb-ctfl-v3-wrongs';
+const CODEX_THREAD_URL = 'codex://threads/019f7f7d-3300-7d63-9b8e-2cba380e9a49';
 const canonicalChapter = value => value
   .replace('1장 테스트의 기초','1장 테스트 기초')
   .replace('2장 소프트웨어 개발 수명주기 전반의 테스트','2장 SDLC 전반의 테스팅');
@@ -107,6 +108,33 @@ function renderResults(){
 function readWrongs(){ try{return JSON.parse(localStorage.getItem(WRONG_KEY)||'[]')}catch{return[]} }
 function exportText(){ const correct=exam.filter((q,i)=>same(q.answer,answers[i])).length; const bad=exam.map((q,i)=>({q,i})).filter(x=>!same(x.q.answer,answers[x.i])); return `# ISTQB CTFL ${examName} 결과\n\n- 점수: ${correct}/${exam.length} (${Math.round(correct/exam.length*100)}%)\n- 제출일: ${new Date().toLocaleString('ko-KR')}\n\n## 오답\n\n${bad.map(({q,i})=>`### ${i+1}번 · ${q.chapter} · LO ${q.lo} · ${q.level}\n- 문제: ${q.text}\n- 내 답: ${answers[i].length?answers[i].map(x=>letters[x]).join(', '):'미응답'}\n- 정답: ${q.answer.map(x=>letters[x]).join(', ')}\n- 해설: ${q.explanation}`).join('\n\n')}`; }
 
+async function copyText(text){
+  if(navigator.clipboard?.writeText){
+    try{await navigator.clipboard.writeText(text);return;}catch{}
+  }
+  const area=document.createElement('textarea');
+  area.value=text;
+  area.setAttribute('readonly','');
+  area.style.cssText='position:fixed;left:-9999px;top:0;opacity:0';
+  document.body.appendChild(area);
+  area.focus();
+  area.select();
+  area.setSelectionRange(0,area.value.length);
+  const copied=document.execCommand('copy');
+  area.remove();
+  if(!copied) throw new Error('copy failed');
+}
+
+async function copyResult(openCodex){
+  try{
+    await copyText(exportText());
+    $('export-status').textContent=openCodex?'결과를 복사했습니다. Codex가 열리지 않으면 앱으로 돌아와 붙여넣으세요.':'결과를 복사했습니다. Codex 채팅에 붙여넣으세요.';
+    if(openCodex) window.setTimeout(()=>{window.location.href=CODEX_THREAD_URL;},120);
+  }catch{
+    $('export-status').textContent='자동 복사에 실패했습니다. 결과 파일 저장을 이용하세요.';
+  }
+}
+
 $('custom-start').onclick=()=>{const selected=[...document.querySelectorAll('#chapter-picker input:checked')].map(x=>chapters[Number(x.value)]);if(!selected.length){alert('한 개 이상의 장을 선택하세요.');return;}const pool=questionBank.filter(q=>selected.includes(q.chapter));const count=Math.min(Number($('question-count').value),pool.length);startExam(shuffle(pool).slice(0,count),'맞춤 랜덤 연습');};
 $('wrong-start').onclick=()=>{const ids=readWrongs();const items=questionBank.filter(q=>ids.includes(q.id));if(items.length)startExam(shuffle(items),'오답 다시 풀기');};
 $('resume-button').onclick=()=>{try{const s=JSON.parse(localStorage.getItem(STORAGE_KEY));startExam(s.exam,s.examName,s)}catch{localStorage.removeItem(STORAGE_KEY);renderStart();}};
@@ -118,6 +146,7 @@ $('finish-button').onclick=()=>{$('finish-dialog-text').textContent=`미응답 $
 $('cancel-finish').onclick=()=>$('finish-dialog').close();$('confirm-finish').onclick=()=>{$('finish-dialog').close();finish();};
 $('reset-button').onclick=()=>{show('start-screen');renderStart();window.scrollTo(0,0);};
 $('download-button').onclick=()=>{const blob=new Blob([exportText()],{type:'text/markdown;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`istqb-${examName.replaceAll(' ','-')}.md`;a.click();URL.revokeObjectURL(a.href);};
-$('share-button').onclick=async()=>{const text=exportText();try{if(navigator.share){await navigator.share({title:`ISTQB ${examName} 결과`,text});$('export-status').textContent='공유 화면을 열었습니다.';}else{await navigator.clipboard.writeText(text);$('export-status').textContent='결과를 복사했습니다. Codex 채팅에 붙여넣으세요.';}}catch{$('export-status').textContent='공유가 취소되었습니다. 결과 파일 저장을 이용하세요.';}};
+$('share-button').onclick=()=>copyResult(true);
+$('copy-button').onclick=()=>copyResult(false);
 if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
 renderStart();
