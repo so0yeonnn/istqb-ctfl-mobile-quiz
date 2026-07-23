@@ -1,5 +1,5 @@
-const CACHE = 'istqb-ctfl-official-and-mobile-fix-20260723ko';
-const ASSETS = ['./', './index.html', './app.css', './bank.js', './app-v2.js', './manifest.webmanifest'];
+const CACHE = 'istqb-ctfl-official-table-layout-20260723';
+const ASSETS = ['./', './index.html', './app.css', './bank.js', './app-v2.js', './manifest.webmanifest', './assets/official/sample-a-q23-state.png'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));

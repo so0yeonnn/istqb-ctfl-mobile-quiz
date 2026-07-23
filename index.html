@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#111827">
   <meta name="description" content="ISTQB CTFL v4.0.1 실전 예측 문제은행">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="app.css?v=20260723table">
   <title>ISTQB CTFL 실전 문제은행</title>
 </head>
 <body>
@@ -52,6 +52,7 @@
         <div class="meta"><span id="exam-name"></span><span id="chapter"></span><span id="syllabus"></span><span id="level"></span></div>
         <p id="multi-hint" class="multi-hint hidden">복수 정답 · 2개 선택</p>
         <h2 id="question-text"></h2>
+        <div id="question-detail" class="question-detail hidden"></div>
         <fieldset id="options"><legend class="sr-only">답안 선택</legend></fieldset>
       </article>
       <nav class="question-nav"><button id="prev-button" class="secondary">이전</button><button id="flag-button" class="ghost">검토</button><button id="next-button" class="primary">다음</button></nav>
@@ -73,7 +74,7 @@
   </main>
 
   <dialog id="finish-dialog"><h2>시험을 종료할까요?</h2><p id="finish-dialog-text"></p><div class="dialog-actions"><button id="cancel-finish" class="secondary">계속 풀기</button><button id="confirm-finish" class="primary">채점하기</button></div></dialog>
-  <script src="bank.js?v=20260723ko"></script>
-  <script src="app-v2.js?v=20260723ko"></script>
+  <script src="bank.js?v=20260723table"></script>
+  <script src="app-v2.js?v=20260723table"></script>
 </body>
 </html>

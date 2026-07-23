@@ -35,6 +35,108 @@ const screens = ['start-screen','quiz-screen','overview-screen','result-screen']
 const show = id => screens.forEach(x => $(x).classList.toggle('active', x === id));
 const same = (a,b) => JSON.stringify([...(a||[])].sort()) === JSON.stringify([...(b||[])].sort());
 const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const officialChapter = lo => ({
+  1:'1장 테스트 기초',
+  2:'2장 SDLC 전반의 테스팅',
+  3:'3장 정적 테스팅',
+  4:'4장 테스트 분석 및 설계',
+  5:'5장 테스트 활동 관리',
+  6:'6장 테스트 도구'
+})[Number(String(lo)[0])];
+const normalizeOfficial = items => items.map(q=>({...q,chapter:officialChapter(q.lo)||q.chapter}));
+
+function officialLayout(q) {
+  const layouts = {
+    'OA-13': `
+      <h2>장애 유형과 테스트 레벨을 올바르게 연결한 것은?</h2>
+      <ol>
+        <li>사용자의 비즈니스 요구와 다른 시스템 동작으로 인한 장애</li>
+        <li>컴포넌트 간 통신 실패로 인한 장애</li>
+        <li>코드 내 논리로 인한 장애</li>
+        <li>올바르게 구현되지 않은 비즈니스 규칙으로 인한 장애</li>
+      </ol>
+      <div class="question-table-wrap"><table class="question-table">
+        <thead><tr><th>기호</th><th>테스트 레벨</th></tr></thead>
+        <tbody><tr><th>A</th><td>단위 테스팅</td></tr><tr><th>B</th><td>단위 통합 테스팅</td></tr><tr><th>C</th><td>시스템 테스팅</td></tr><tr><th>D</th><td>인수 테스팅</td></tr></tbody>
+      </table></div>`,
+    'OA-14': `
+      <p>세 가지 인수 조건 AC1, AC2, AC3을 각각 TC1, TC2, TC3으로 테스트한다. 결함을 수정해 새 버전을 만들 때마다 테스트를 다시 수행했다.</p>
+      <div class="question-table-wrap"><table class="question-table">
+        <thead><tr><th>테스트</th><th>첫 번째 실행</th><th>두 번째 실행</th><th>세 번째 실행</th></tr></thead>
+        <tbody>
+          <tr><th>TC1</th><td>(1) 실패</td><td>(4) 합격</td><td>(7) 합격</td></tr>
+          <tr><th>TC2</th><td>(2) 합격</td><td>(5) 실패</td><td>(8) 합격</td></tr>
+          <tr><th>TC3</th><td>(3) 실패</td><td>(6) 실패</td><td>(9) 합격</td></tr>
+        </tbody>
+      </table></div>
+      <h2>다음 중 리그레션 테스트로 수행된 테스트는?</h2>`,
+    'OA-17': `
+      <h2>조직에서 수행하는 리뷰의 특징은 다음과 같다.</h2>
+      <ul><li>서기 역할을 하는 사람이 있다.</li><li>주요 목적은 품질을 평가하는 것이다.</li><li>작업 산출물 작성자가 회의를 주도한다.</li><li>개별 준비 단계가 있다.</li><li>리뷰 보고서를 작성한다.</li></ul>
+      <p class="question-note">사용하고 있는 리뷰 유형일 가능성이 가장 높은 것은?</p>`,
+    'OA-20': `
+      <p>검색 옵션이 두 개인 아파트 검색 기능을 테스트한다.</p>
+      <ul><li><strong>층:</strong> 지상 층, 1층, 2층 이상</li><li><strong>정원:</strong> 정원 없음, 작은 정원, 큰 정원</li></ul>
+      <p>지상 층 아파트에는 정원이 있고, 더 높은 층에는 정원이 없다. 규칙을 위반한 검색은 허용하지 않는다.</p>
+      <h2>100% 유효한 동등분할 커버리지를 달성하기 위한 최소 테스트 케이스 수는?</h2>`,
+    'OA-21': `
+      <p>학생의 최종 점수에 따라 성적을 배정한다.</p>
+      <ul><li>0~50점: 탈락</li><li>51~60점: 보통</li><li>61~70점: 양호</li><li>71~80점: 우수</li><li>81~100점: 최우수</li></ul>
+      <h2>3값 경계값 분석으로 100% 커버리지를 달성하는 테스트 입력 집합은?</h2>`,
+    'OA-22': `
+      <p>자전거 대여점 고객 관리 시스템의 기능은 다음과 같다.</p>
+      <ul><li>누구나 자전거를 빌릴 수 있고 회원은 20% 할인을 받는다.</li><li>반납기한을 어기면 할인이 적용되지 않는다.</li><li>15회 대여 후 회원은 티셔츠를 받는다.</li></ul>
+      <div class="question-table-wrap"><table class="question-table">
+        <thead><tr><th>조건/결과</th><th>R1</th><th>R2</th><th>R3</th><th>R4</th><th>R5</th><th>R6</th><th>R7</th><th>R8</th></tr></thead>
+        <tbody>
+          <tr><th>회원</th><td>T</td><td>T</td><td>T</td><td>T</td><td>F</td><td>F</td><td>F</td><td>F</td></tr>
+          <tr><th>반납기한 경과</th><td>T</td><td>F</td><td>T</td><td>F</td><td>T</td><td>F</td><td>T</td><td>F</td></tr>
+          <tr><th>15회 대여</th><td>F</td><td>F</td><td>T</td><td>T</td><td>F</td><td>F</td><td>T</td><td>T</td></tr>
+          <tr><th>20% 할인</th><td></td><td>X</td><td></td><td>X</td><td></td><td></td><td></td><td></td></tr>
+          <tr><th>티셔츠 선물</th><td></td><td></td><td>X</td><td>X</td><td></td><td></td><td>X</td><td>X</td></tr>
+        </tbody>
+      </table></div>
+      <h2>기능 설명만을 기준으로 불가능한 상황은?</h2>`,
+    'OA-23': `
+      <p>시스템은 INIT 상태에서 시작하고 OFF 상태에서 동작을 종료한다.</p>
+      <img class="question-diagram" src="./assets/official/sample-a-q23-state.png" alt="INIT, DEBUG MODE, IN OPERATION, ON HOLD, OFF 상태와 test, run, error, pause, resume, done 전이를 나타낸 상태 전이 다이어그램">
+      <h2>100% 유효 전이 커버리지를 달성하기 위한 최소 테스트 케이스 수는?</h2>`,
+    'OA-29': `
+      <p><strong>사용자 스토리:</strong> 편집자로서 문서가 게시되기 전에 내용을 리뷰해 문법이 정확한지 확인하고 싶다.</p>
+      <p><strong>인수 조건:</strong></p>
+      <ul><li>문서의 맞춤법 오류를 식별한다.</li><li>문서의 문법 오류를 식별한다.</li><li>문서를 게시할 수 있는지 표시한다.</li></ul>
+      <h2>ATDD 접근법에 가장 적절한 테스트 케이스는?</h2>`,
+    'OA-32': `
+      <p>3점 추정 기법으로 리스크가 높은 기능의 테스트 노력을 추정한다.</p>
+      <ul><li>가장 낙관적인 추정: 2 인일</li><li>가장 가능성 높은 추정: 6 인일</li><li>가장 비관적인 추정: 14 인일</li></ul>
+      <h2>최종 추정치는?</h2>`,
+    'OA-33': `
+      <p>숫자가 작을수록 우선순위가 높다. 논리적 종속성을 먼저 만족해야 한다.</p>
+      <div class="question-table-wrap"><table class="question-table">
+        <thead><tr><th>번호</th><th>커버되는 테스트 컨디션</th><th>우선순위</th><th>논리적 종속성</th></tr></thead>
+        <tbody>
+          <tr><th>TC001</th><td>음식 종류 선택</td><td>3</td><td>없음</td></tr>
+          <tr><th>TC002</th><td>음식점 선택</td><td>2</td><td>TC001</td></tr>
+          <tr><th>TC003</th><td>경로 획득</td><td>1</td><td>TC002</td></tr>
+          <tr><th>TC004</th><td>식당에 전화하기</td><td>2</td><td>TC002</td></tr>
+          <tr><th>TC005</th><td>예약하기</td><td>3</td><td>TC002</td></tr>
+        </tbody>
+      </table></div>
+      <h2>세 번째로 실행할 테스트 케이스는?</h2>`,
+    'OA-34': `
+      <p><strong>테스트 유형</strong></p><ol><li>사용성 테스팅</li><li>단위 테스팅</li><li>기능 테스팅</li><li>신뢰성 테스팅</li></ol>
+      <div class="question-table-wrap"><table class="question-table">
+        <thead><tr><th>기호</th><th>애자일 테스팅 사분면</th></tr></thead>
+        <tbody><tr><th>A</th><td>1사분면: 기술 측면, 개발팀 지원</td></tr><tr><th>B</th><td>2사분면: 비즈니스 측면, 개발팀 지원</td></tr><tr><th>C</th><td>3사분면: 비즈니스 측면, 제품 평가</td></tr><tr><th>D</th><td>4사분면: 기술 측면, 제품 평가</td></tr></tbody>
+      </table></div>
+      <h2>올바르게 짝지어진 것은?</h2>`,
+    'OA-35': `
+      <p><strong>식별된 리스크:</strong> 보고서 생성에 너무 많은 시간이 걸린다.</p>
+      <ul><li><strong>발생 가능성:</strong> 중간</li><li><strong>영향도:</strong> 높음</li><li><strong>대응:</strong><ul><li>시스템 테스팅 중 독립 테스트팀이 성능 효율성 테스팅 수행</li><li>최종 사용자 표본 집단으로 릴리스 전 알파·베타 테스팅 수행</li></ul></li></ul>
+      <h2>제안된 리스크 대응 방법은?</h2>`
+  };
+  return layouts[q.id] || '';
+}
 
 function getSet(n) {
   if (!verifiedSets.has(n)) return [];
@@ -56,8 +158,8 @@ function renderStart() {
         b.disabled=true;
         b.innerHTML=`${n}회<small>공식 ${official.name} 불러오는 중…</small>`;
         try {
-          const module=await import(`./reviewed-sets/official-${official.name}.mjs?v=20260723ko`);
-          startExam(module.default,`공식 Sample ${official.name} · ${n}회차`);
+          const module=await import(`./reviewed-sets/official-${official.name}.mjs?v=20260723table`);
+          startExam(normalizeOfficial(module.default),`공식 Sample ${official.name} · ${n}회차`);
         } catch (error) {
           console.error(error);
           b.disabled=false;
@@ -92,7 +194,11 @@ function renderQuestion() {
   $('answered-count').textContent=`응답 ${answers.filter(a=>a.length).length}개`;
   $('progress-fill').style.width=`${(current+1)/exam.length*100}%`;
   $('exam-name').textContent=examName; $('chapter').textContent=q.chapter; $('syllabus').textContent=`LO ${q.lo}`; $('level').textContent=q.level;
+  const layout=officialLayout(q);
   $('question-text').textContent=q.text;
+  $('question-text').classList.toggle('hidden',Boolean(layout));
+  $('question-detail').innerHTML=layout;
+  $('question-detail').classList.toggle('hidden',!layout);
   $('multi-hint').classList.toggle('hidden',q.answer.length===1);
   if(q.answer.length>1) $('multi-hint').textContent=`복수 정답 · ${q.answer.length}개 선택`;
   const type=q.answer.length>1?'checkbox':'radio';
@@ -140,7 +246,10 @@ function renderResults(){
 function readWrongs(){
   try {
     const saved=JSON.parse(localStorage.getItem(WRONG_KEY)||'[]');
-    return saved.map(item=>typeof item==='string'?questionBank.find(q=>(q.sourceId||q.id)===item):item).filter(Boolean);
+    return saved
+      .map(item=>typeof item==='string'?questionBank.find(q=>(q.sourceId||q.id)===item):item)
+      .filter(Boolean)
+      .map(item=>/^O[A-D]-/.test(item.id||'')?{...item,chapter:officialChapter(item.lo)||item.chapter}:item);
   } catch {
     return [];
   }
