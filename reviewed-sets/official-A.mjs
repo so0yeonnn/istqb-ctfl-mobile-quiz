@@ -1,5 +1,5 @@
-// Source: ISTQB CTFL v4.0.1 Sample Exam A v1.7
-// Non-commercial study extract; copyright remains with ISTQB.
+// Source: KSTQB official Korean translation of ISTQB CTFL v4.0.1 Sample Exam A
+// Personal study use; copyright remains with KSTQB / ISTQB.
 export default [
   {
     "id": "OA-01",
@@ -7,21 +7,21 @@ export default [
     "chapter": "1? ??? ??",
     "lo": "1.1.1",
     "level": "K1",
-    "text": "Which of the following statements describe a valid test objective?",
+    "text": "다음 설명 중 유효한 테스트 목적인 것은?",
     "options": [
-      "To prove that there are no unfixed defects in the system under test",
-      "To prove that there will be no failures after the implementation of the syst em into production",
-      "To reduce the risk level of the test object and to build confidence in the quali ty level",
-      "To verify that there are no untested combinations of inputs"
+      "테스트 중인 시스템에 수정되지 않은 결함이 없음을 증명하기 위해",
+      "운영 환경에 구현한 시스템에 오류가 없음을 증명하기 위해",
+      "테스트 대상의 리스크 수준을 낮추고, 품질 수준에 대한 자신감을 얻기 위해",
+      "테스트하지 않은 입력 조합이 없는지 확인하기 위해"
     ],
     "answer": [
       2
     ],
-    "explanation": "ISTQB official Sample A answer: C. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 테스트 중인 시스템에 더 이상 결함이 없다고 증명하는 것은 불가능 합니다. 테스팅 원리 1을 참조하십시오. b) 정답이 아닙니다. 테스팅 원리 7을 참조하십시오. c) 정답입니다. 테스팅은 결함과 장애를 찾아서 리스크 수준을 줄이고 테스트 대상의 품질 수준에 대한 신뢰를 높여줍니다. d) 정답이 아닙니다. 모든 입력 조합을 테스트하는 것은 불가능합니다. (테스팅 원리 2를 참조하십시오.)",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -30,21 +30,21 @@ export default [
     "chapter": "1? ??? ??",
     "lo": "1.2.1",
     "level": "K2",
-    "text": "Which of the following options shows an example of test activities that contribute to success?",
+    "text": "다음 중 테스트 활동이 성공에 기여하는 예를 나타내는 옵션은?",
     "options": [
-      "Having testers involved during various software development lifecycle (SDLC) activities will help to detect defects in work products",
-      "Testers try not to disturb the developers while coding, so that the developers w rite better code",
-      "Testers collaborating with end users help to improve the quality of defect reports during component integration and system testing",
-      "Certified testers will design much better test cases than non-certified t esters"
+      "소프트웨어 개발 수명주기의 다양한 활동에 테스터가 참여함으로써 작업 산출물의 결함 식별을 지원한다",
+      "개발자가 코드를 개발하는 동안 테스터가 방해하지 않도록 애씀으로써 개발자가 더 좋은 코드를 작성할 수 있게 한다",
+      "최종 사용자와 협업하는 테스터는 단위 통합 및 시스템 테스팅 중 작성하는 결함 보고서의 품질을 높인다",
+      "자격증을 보유한 테스터가 자격증이 없는 테스터보다 훨씬 좋은 테스트 케이스를 작성할 것이다"
     ],
     "answer": [
       0
     ],
-    "explanation": "ISTQB official Sample A answer: A. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답입니다. 소프트웨어 개발 수명주기(SDLC)의 시작부터 테스터가 참여하는 것은 중요합니다. 설계 결정 사항에 대한 이해를 높이고 결함을 조기에 발견할 수 있게 해줍니다. b) 정답이 아닙니다. 개발자와 테스터 모두 서로의 작업 산출물과 코드의 테스트 방법에 대해 더 이해하게 될 것입니다. c) 정답이 아닙니다. 최종 사용자는 결함 보고서의 품질 향상을 위해 테스터를 지원하지 않으며, 또한 사용자는 일반적으로 통합 테스팅과 같은 하위 레벨 테스팅에 참여하지 않습니다. d) 정답이 아닙니다. 자격증 보유는 테스터가 테스트 설계를 더 잘한다는 것을 의미하지 않습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -53,21 +53,21 @@ export default [
     "chapter": "1? ??? ??",
     "lo": "1.3.1",
     "level": "K2",
-    "text": "You have been assigned as a tester to a team producing a new system incrementally. You have noticed that no changes have been made to the existing regression test cases for several iterations and no new regression defects were identified. Your manager is happy, but you are no t. Which testing principle explains your skepticism?",
+    "text": "당신은 새로운 시스템을 점진적으로 개발하고 있는 팀의 테스터이다. 여러 번의 반복주기 가 진행되는 동안 리그레션 테스트 케이스가 바뀌지 않았고, 새로운 리그레션 결함도 식별되 지 않았음을 확인했다. 팀의 관리자는 기뻐하고 있지만, 당신은 그렇지 못하다. 당신이 걱정하 고 있는 것을 설명하는 테스팅의 원리는?",
     "options": [
-      "Tests wear out",
-      "Absence- of-defects fallacy",
-      "Defects cluster together",
-      "Exhaustive testing is impossible"
+      "테스트 효과는 줄어든다",
+      "결함 부재의 논리는 궤변이다",
+      "결함은 집중된다",
+      "완벽한 테스팅은 불가능하다"
     ],
     "answer": [
       0
     ],
-    "explanation": "ISTQB official Sample A answer: A. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답입니다. 이 원리는 만약 같은 테스트를 계속해서 반복한다면, 결국엔 이 테스트로 더 이상 새로운 결함을 찾지 못한다는 것을 의미합니다. 또한 모든 테스트가 이번 릴리스에서 통과한 이유도 이것 때문일 것입니다. b) 정답이 아닙니다. 이 원리는 그저 많은 수의 결함을 발견하고 수정하는 것이 시스템의 성공을 보장한다는 잘못된 믿음에 대해 이야기합니다. c) 정답이 아닙니다. 이 원리는 보통 적은 수의 컴포넌트가 대부분의 결함을 가지고 있다는 것을 말합니다. d) 정답이 아닙니다. 이 원리는 모든 입력값과 사전 조건의 조합을 테스트하는 것은 불가능하다는 것을 말합니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -76,21 +76,21 @@ export default [
     "chapter": "1? ??? ??",
     "lo": "1.4.1",
     "level": "K2",
-    "text": "You work in a team that develops a mobile application for food ordering. In the current iteration the team decided to implement the payment functionality. Which of the following activities is a part of test analysis?",
+    "text": "당신은 배달 주문 모바일 애플리케이션을 개발하는 팀에서 일하고 있다. 팀은 현재 반복 주기에서 결제 기능을 구현하기로 결정했다. 다음 중 테스트 분석 활동은?",
     "options": [
-      "Estimating that testing the integration with the payment service will take 8 person-days",
-      "Deciding that the team should test if it is possible to properly share payment bet ween many users",
-      "Using boundary value analysis (BVA) to derive the test data for the test cases that check the correct payment processing for the minimum allowed amount to be paid",
-      "Analyzing the discrepancy between the actual result and expected result after execu ting a test case that checks the process of payment with a credit card, and reporting a defect"
+      "결제 서비스와의 통합을 테스트하는 데 8 M/D가 소요될 것으로 예상하는 행위",
+      "한 건의 주문에 여러 명이 각자 결제를 할 수 있는지 팀이 테스트해야 한다고 결정하는 행위",
+      "경계값 분석으로 최소 결제 금액 처리를 확인하는 테스트 케이스에 필요한 테스트 데이터를 도출하는 행위",
+      "신용카드 결제를 확인하는 테스트 케이스를 실행한 후, 실제 결과와 기대 결과의 차이를 분석해서 결함을 보고하는 행위"
     ],
     "answer": [
       1
     ],
-    "explanation": "ISTQB official Sample A answer: B. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 테스트 노력을 추정하는 것은 테스트 계획 중 이루어집니다. b) 정답입니다. 이것은 테스트 분석 중 테스트 컨디션을 정의하는 예시입니다. c) 정답이 아닙니다. 커버리지 항목을 도출하기 위해 테스트 기법을 사용하는 것은 테스트 설계 중 이루어집니다. d) 정답이 아닙니다. 동적 테스팅 중 발견한 결함을 보고하는 것은 테스트 실행 중 이루어 집니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -99,21 +99,21 @@ export default [
     "chapter": "1? ??? ??",
     "lo": "1.4.2",
     "level": "K2",
-    "text": "Which of the following factors have a SIGNIFICANT influence on the test approach? i. The SDLC ii. The number of defects detected in previous projects iii. The identified product risks iv. New regulatory requirements forcing formal white-box testing v. The test environment setup",
+    "text": "다음 예시 중 테스트 프로세스에 중대한 영향을 미치는 요소를 고르시오. i. 소프트웨어 개발 수명주기(SDLC) ii. 이전 프로젝트에서 식별한 결함 수 iii. 식별한 제품 리스크 iv. 체계적인 화이트 박스 테스팅을 강제하는 새로운 규제 v. 테스트 환경 설정",
     "options": [
-      "i, ii have significant influence",
-      "i, iii, iv have significant influence",
-      "ii, iv, v have significant influence",
-      "iii, v have significant influence"
+      "i, ii",
+      "i, iii, iv",
+      "ii, iv, v",
+      "iii, v"
     ],
     "answer": [
       1
     ],
-    "explanation": "ISTQB official Sample A answer: B. See the official answer PDF for the full rationale.",
+    "explanation": "i. 참입니다. SDLC는 테스트 프로세스에 영향을 줍니다. ii. 거짓입니다. 이전 프로젝트에서 발견한 결함의 수는 어느 정도 영향이 있을 수 있지만, ⅰ, ⅲ, ⅳ 만큼 중요하지 않습니다. iii. 참입니다. 식별된 제품 리스크는 테스트 프로세스에 영향을 끼치는 중요한 요소 중 하나입니다. iv. 참입니다. 규제 요구사항은 테스트 프로세스에 영향을 끼치는 중요한 요소입니다. v. 거짓입니다. 테스트 환경은 테스트 프로세스에 중대한 영향을 끼치지 않습니다. 따라서: a) 정답이 아닙니다. b) 정답입니다. c) 정답이 아닙니다. d) 정답이 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -122,23 +122,23 @@ export default [
     "chapter": "1? ??? ??",
     "lo": "1.4.5",
     "level": "K2",
-    "text": "Which TWO of the following tasks belong MAINLY to a testing role?",
+    "text": "다음 중 주로 테스팅 역할을 하는 사람이 수행하는 작업 두 가지는?",
     "options": [
-      "Configure test environments",
-      "Maintain the product backlog",
-      "Design solutions to new requirements",
-      "Create the test plan",
-      "Analyze the test basis"
+      "테스트 환경 구성",
+      "제품 백로그 유지보수",
+      "새로운 요구사항을 위한 해결방안 설계",
+      "테스트 계획 생성",
+      "테스트 베이시스 분석"
     ],
     "answer": [
       0,
       4
     ],
-    "explanation": "ISTQB official Sample A answer: A, E. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답입니다. 이것은 테스터가 행합니다. b) 정답이 아닙니다. 제품 백로그는 제품 소유자가 만들고 유지합니다. c) 정답이 아닙니다. 이것은 개발팀이 행합니다. d) 정답이 아닙니다. 이것은 관리의 역할입니다. e) 정답입니다. 테스트 분석의 일환으로 수행되는 기술적인 작업이기 때문에 이는 테스터에 의해 수행됩니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -147,21 +147,21 @@ export default [
     "chapter": "1? ??? ??",
     "lo": "1.5.1",
     "level": "K2",
-    "text": "Which of the following skills (i-v) are the MOST important skills of a tester? i. Having domain knowledge ii. Creating a product vision iii. Being a good team player iv. Planning and organizing the work of the team v. Critical thinking",
+    "text": "다음 예시 중 테스터에게 가장 중요한 역량(skills)은? i. 도메인 지식 보유 ii. 제품 비전 수립 능력 iii. 좋은 팀 구성원 되기 iv. 팀이 수행하는 일의 계획 및 구성 능력 v. 비판적 사고",
     "options": [
-      "ii and iv are important",
-      "i, iii and v are important",
-      "i, ii and v are important",
-      "iii and iv are important"
+      "ii, iv",
+      "i, iii, v",
+      "i, ii, v",
+      "iii, iv"
     ],
     "answer": [
       1
     ],
-    "explanation": "ISTQB official Sample A answer: B. See the official answer PDF for the full rationale.",
+    "explanation": "i. 참입니다. 도메인 지식을 갖고 있는 것은 테스터에게 중요한 역량입니다. ii. 거짓입니다. 이것은 비즈니스 분석가와 비즈니스 담당자의 일입니다. iii. 참입니다. 좋은 팀원일 수 있는 역량은 중요한 스킬입니다. iv. 거짓입니다. 팀의 작업을 계획 및 구성하는 것은 테스트 관리자의 역할인 경우가 많고 아니면, 주로 애자일 소프트웨어 개발 프로젝트에서, 테스터만이 아닌 전체 팀의 일이 되기도 합니다. v. 참입니다. 비판적 사고는 테스터에게 중요한 역량 중 하나입니다. 따라서: a) 정답이 아닙니다. b) 정답입니다. c) 정답이 아닙니다. d) 정답이 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -170,21 +170,21 @@ export default [
     "chapter": "1? ??? ??",
     "lo": "1.5.2",
     "level": "K1",
-    "text": "How is the whole team approach present in the interactions between testers and business representatives?",
+    "text": "다음 중 전체 팀 접근법(Whole team approach)이 테스터와 비즈니스 담당자 간의 상호 작용에서 어떻게 나타나는지에 대한 올바른 예제인 것은?",
     "options": [
-      "Business representatives decide on test automation approaches",
-      "Testers help business representatives to define a test strategy",
-      "Business representatives are not part of the whole team approach",
-      "Testers help business representatives to create suitable acceptance tests"
+      "비즈니스 담당자가 테스트 자동화 접근법을 결정한다",
+      "테스터가 비즈니스 담당자의 테스트 전략 결정을 지원한다",
+      "비즈니스 담당자는 전체 팀 접근법의 구성원이 아니다",
+      "테스터가 비즈니스 담당자의 적절한 인수 테스트 작성을 지원한다"
     ],
     "answer": [
       3
     ],
-    "explanation": "ISTQB official Sample A answer: D. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 테스트 자동화 접근법은 개발자와 비즈니스 담당자의 도움을 받아 테스터가 정의합니다. b) 정답이 아닙니다. 테스트 전략은 개발자와 협업해서 결정됩니다. c) 정답이 아닙니다. 테스터, 개발자, 비즈니스 담당자는 전체 팀 접근법의 구성원입니다. d) 정답입니다. 원하는 품질 수준에 도달할 수 있도록 테스터는 비즈니스 담당자와 긴밀히 협력하게 됩니다. 여기에 적절한 인수 테스트를 생성할 수 있도록 지원하고 협력하는 것도 포함됩니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -193,21 +193,21 @@ export default [
     "chapter": "2? ????? ?? ???? ??? ???",
     "lo": "2.1.2",
     "level": "K1",
-    "text": "Consider the following rule: “for every SDLC activity there is a corresponding test activity”. In which SDLC models does this rule hold?",
+    "text": "“모든 소프트웨어 개발 수명주기(SDLC) 활동에는 그에 상응하는 테스트 활동이 있다.” 이 규칙은 어떤 소프트웨어 개발 수명주기 모델에 적용되는가?",
     "options": [
-      "Only in sequential development models",
-      "Only in iterative development models",
-      "Only in iterative and incremental development models",
-      "In sequential, incremental, and iterative development models"
+      "순차적 개발 모델에만",
+      "반복적 개발 모델에만",
+      "반복적, 점진적 개발 모델에만",
+      "순차적, 점진적, 반복적 개발 모델에"
     ],
     "answer": [
       3
     ],
-    "explanation": "ISTQB official Sample A answer: D. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. b) 정답이 아닙니다. c) 정답이 아닙니다. d) 정답입니다. 이 규칙은 모든 SDLC 모델에 적용됩니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -216,21 +216,21 @@ export default [
     "chapter": "2? ????? ?? ???? ??? ???",
     "lo": "2.1.3",
     "level": "K1",
-    "text": "Which of the following statements BEST describes the acceptance test-driven development (ATDD) approach?",
+    "text": "다음 중 인수 테스트 주도 개발(ATDD) 접근법을 가장 잘 설명한 것은?",
     "options": [
-      "In ATDD, acceptance criteria are typically created based on the given/when/then for mat",
-      "In ATDD, test cases are mainly created at component testing and are code-oriented",
-      "In ATDD, tests are created, based on acceptance criteria to drive the develop ment of the related software",
-      "in ATDD, tests are based on the desired behavior of the software, which makes it easier for team members to understand them"
+      "인수 테스트 주도 개발에서는 일반적으로 인수 조건을 given/when/then 형식으로 작성한다",
+      "인수 테스트 주도 개발에서는 테스트 케이스가 주로 단위 테스팅 수준에서 작성되며 코드 지향적이다",
+      "인수 테스트 주도 개발에서는 관련 소프트웨어 개발을 주도하기 위해 인수 조건을 기반으로 테스트를 작성한다",
+      "인수 테스트 주도 개발에서는 테스트가 소프트웨어의 기대 동작을 기반으로 하므로 팀원들이 이를 더 쉽게 이해할 수 있다"
     ],
     "answer": [
       2
     ],
-    "explanation": "ISTQB official Sample A answer: C. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 이것은 행동 주도 개발(BDD)에 더 자주 사용됩니다. b) 정답이 아닙니다. 이것은 테스트 주도 개발(TDD)에 대한 설명입니다. c) 정답입니다. 인수 테스트 주도 개발(ATDD)에서 테스트는 설계 프로세스 중 인수 조건을 기반으로 작성됩니다. d) 정답이 아닙니다. 이것은 BDD에서 사용됩니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -239,21 +239,21 @@ export default [
     "chapter": "2? ????? ?? ???? ??? ???",
     "lo": "2.1.5",
     "level": "K2",
-    "text": "Which of the following is NOT an example of the shift-left approach?",
+    "text": "다음 중 시프트 레프트 접근법(shift-left approach)의 사례가 아닌 것은?",
     "options": [
-      "Reviewing the user requirements before they are formally accepted by the stakeholde rs",
-      "Writing a component test before the corresponding code is written",
-      "Executing a performance efficiency test for a component during component t esting",
-      "Writing a test script before setting up the configuration management process"
+      "이해관계자가 공식적으로 승인하기 전에 사용자 요구사항 검토",
+      "관련 코드가 작성되기 전에 연관된 단위 테스트 작성",
+      "컴포넌트 테스팅을 하는 동안 컴포넌트에 대한 성능 테스트 실행",
+      "형상 관리 프로세스를 구축하기 전에 테스트 스크립트 작성"
     ],
     "answer": [
       3
     ],
-    "explanation": "ISTQB official Sample A answer: D. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 조기 리뷰는 쉬프트-레프트 접근법의 예시입니다. b) 정답이 아닙니다. TDD는 쉬프트-레프트 접근법의 예시입니다. c) 정답이 아닙니다. 조기 비기능 테스팅은 쉬프트-레프트 접근법의 예시입니다. d) 정답입니다. 테스트 스크립트는 형상 관리 대상이기 때문에 이 프로세스가 구축되기 전에 테스트 스크립트를 작성하는 것은 의미가 없습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -262,21 +262,21 @@ export default [
     "chapter": "2? ????? ?? ???? ??? ???",
     "lo": "2.1.6",
     "level": "K2",
-    "text": "Which of the arguments below would you use to convince your manager to organize retrospectives at the end of each release cycle?",
+    "text": "관리자가 각 릴리스 주기가 끝날 때 회고(retrospectives)를 주최하도록 설득하기 위한 주장 중 가장 적절한 것은?",
     "options": [
-      "Retrospectives are very popular these days and clients would appreciate it if we added them to our processes",
-      "Organizing retrospectives will save the organization money because without them end user representatives do not provide immediate feedback about the product",
-      "Process weaknesses identified during the retrospective can be analyzed and serve as a to do list for the organization’s continuous process improvement program",
-      "Retrospectives embrace five values including courage and respect, which are crucial to maintain continuous improvement in the organization"
+      "최근 회고의 인기가 매우 높으며 프로세스에 회고를 추가하면 고객이 좋아할 것이다",
+      "회고를 수행하지 않으면 최종 사용자 대표가 제품에 대한 즉각적인 피드백을 제공할 수 없기 때문에 회고를 수행하는 것이 조직의 비용 절감에 도움이 될 것이다",
+      "회고 과정에서 조직의 프로세스 약점을 식별해서 지속적인 프로세스 개선 과정에서 수행해야 할 작업 목록으로 사용할 수 있다",
+      "회고는 조직의 지속적인 발전에 중요한 용기와 존중 등 다섯 가지 가치가 발현될 수 있도록 한다"
     ],
     "answer": [
       2
     ],
-    "explanation": "ISTQB official Sample A answer: C. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 회고는 개선 기회를 식별하는 데 더 유용하며 고객에게는 중요성이 떨어집니다. b) 정답이 아닙니다. 회고는 제품에 대한 피드백을 수집하는 것이 아니라 프로세스에 대한 피드백을 수집하는 것을 목표로 합니다. 또한 회고는 팀 내부 활동이며 최종 사용자 대표를 포함해서는 안 됩니다. c) 정답입니다. 적절한 후속 조치가 동반되는 정기적인 회고는 개발과 테스팅의 지속적인 개선에 중요합니다. d) 정답이 아닙니다. 용기와 존중은 익스트림 프로그래밍의 가치이며 회고와 큰 관련이 없습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -285,7 +285,7 @@ export default [
     "chapter": "2? ????? ?? ???? ??? ???",
     "lo": "2.2.1",
     "level": "K2",
-    "text": "Which types of failures (1-4) fit which test levels (A-D) BEST? 1. Failures in system behavior as it deviates from the user’s business needs 2. Failures in communication between components 3. Failures in logic in the code 4. Failures in not correctly implemented business rules A. Component testing B. Component integration testing C. System testing D. Acceptance testing",
+    "text": "장애 유형과 테스트 레벨을 올바르게 연결한 것은? 1. 사용자의 비즈니스 요구와 다른 시스템 동작으로 인한 장애 2. 컴포넌트 간 통신 실패로 인한 장애 3. 코드 내 논리로 인한 장애 4. 올바르게 구현되지 않은 비즈니스 규칙으로 인한 장애 A. 단위 테스팅 B. 단위 통합 테스팅 C. 시스템 테스팅 D. 인수 테스팅",
     "options": [
       "1D, 2B, 3A, 4C",
       "1D, 2B, 3C, 4A",
@@ -295,11 +295,11 @@ export default [
     "answer": [
       0
     ],
-    "explanation": "ISTQB official Sample A answer: A. See the official answer PDF for the full rationale.",
+    "explanation": "각 항목을 살펴보면: • 인수 테스팅의 테스트 베이시스는 사용자의 비즈니스 요구입니다. (1D) • 컴포넌트 간 통신은 단위 통합 테스팅 동안 테스트됩니다. (2B) • 논리적 장애는 단위 테스팅 동안 발견할 수 있습니다. (3A) • 비즈니스 규칙은 시스템 테스팅의 테스트 베이시스입니다. (4C) 따라서: a) 정답입니다. b) 정답이 아닙니다. c) 정답이 아닙니다. d) 정답이 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -308,21 +308,21 @@ export default [
     "chapter": "2? ????? ?? ???? ??? ???",
     "lo": "2.2.3",
     "level": "K2",
-    "text": "You are testing a user story with three acceptance criteria: AC1, AC2 and AC3. A C1 is covered by test case TC1, AC2 by TC2, and AC3 by TC3. The test execution history had three test runs on three consecutive versions of the software as follows: Execution 1 Execution 2 Execution 3 TC1 (1) Failed (4) Passed (7) Passed TC2 (2) Passed (5) Failed (8) Passed TC3 (3) Failed (6) Failed (9) Passed Tests are repeated once you are informed that all defects found in the test run are corrected and a new version of the software is available. Which of the above tests are executed as regression tests?",
+    "text": "당신은 세 가지 인수 조건 AC1, AC2, AC3을 사용해 사용자 스토리를 테스트하고 있다. AC1은 테스트 케이스 TC1로, AC2는 TC2로, AC3은 TC3로 커버한다. 테스트 실행 내역에 다음과 같이 세 가지 버전의 소프트웨어에서 연속으로 세 번의 테스트 실행이 있었다. 첫 번째 실행 두 번째 실행 세 번째 실행 TC1 (1) 실패 (4) 합격 (7) 합격 TC2 (2) 합격 (5) 실패 (8) 합격 TC3 (3) 실패 (6) 실패 (9) 합격 테스트 실행 때 식별한 모든 결함이 수정되고 새로운 소프트웨어 버전이 준비되면 테스트를 다시 수행한다. 다음 중 리그레션 테스트로 수행된 테스트는?",
     "options": [
-      "Only 4, 7, 8, 9",
-      "Only 5, 7",
-      "Only 4, 6, 8 , 9",
-      "Only 5, 6"
+      "4, 7, 8, 9",
+      "5, 7",
+      "4, 6, 8, 9",
+      "5, 6"
     ],
     "answer": [
       1
     ],
-    "explanation": "ISTQB official Sample A answer: B. See the official answer PDF for the full rationale.",
+    "explanation": "TC1과 TC3이 첫 번째 실행(테스트 (1), 테스트 (3)) 때 실패했기 때문에 테스트 (4)와 테스트 (6)은 확인 테스트가 됩니다. TC2와 TC3이 두 번째 실행(테스트 (5), 테스트 (6)) 때 실패했기 때문에 테스트(8)과 테스트 (9)도 확인 테스트가 됩니다. TC2가 첫 번째 실행(테스트 (2)) 때 합격했기 때문에 테스트 (5)는 리그레션 테스트가 됩니다. TC1이 두 번째 실행(테스트 (4)) 때 합격했기 때문에 테스트 (7)도 리그레션 테스트가 됩니다. 따라서: a) 정답이 아닙니다. b) 정답입니다. c) 정답이 아닙니다. d) 정답이 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -331,21 +331,21 @@ export default [
     "chapter": "3? ?? ???",
     "lo": "3.1.2",
     "level": "K2",
-    "text": "Which of the following is NOT a benefit of static testing?",
+    "text": "다음 중 정적 테스팅의 이점이 아닌 것은?",
     "options": [
-      "Having less expensive defect management due to the ease of detecting defects later i n the SDLC",
-      "Fixing defects found during static testing is generally much less expensive than fixing defects found during dynamic testing",
-      "Finding coding defects that might not have been found by only performing dynamic testin g",
-      "Detecting gaps and inconsistencies in requirements"
+      "소프트웨어 수명 주기(SDLC) 후반에 결함을 더 많이 식별하므로 결함 관리 비용이 적게 든다",
+      "일반적으로 정적 테스팅 중 식별한 결함을 수정하는 것이 동적 테스팅 중 식별한 결함을 수정하는 것보다 비용이 훨씬 적게 든다",
+      "동적 테스팅만으로는 식별하지 못할 수 있는 코딩 결함을 식별할 수 있다",
+      "요구사항과의 차이 및 요구사항 내 불일치를 식별할 수 있다"
     ],
     "answer": [
       0
     ],
-    "explanation": "ISTQB official Sample A answer: A. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답입니다. 결함 관리 비용이 더 적게 들지 않습니다. SDLC 후반에 결함을 발견하고 수정하면 더 많은 비용이 듭니다. b) 정답이 아닙니다. 정적 테스팅의 이점입니다. c) 정답이 아닙니다. 정적 테스팅의 이점입니다. d) 정답이 아닙니다. 정적 테스팅의 이점입니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -354,21 +354,21 @@ export default [
     "chapter": "3? ?? ???",
     "lo": "3.2.1",
     "level": "K1",
-    "text": "Which of the following is a benefit of early and frequent feedback?",
+    "text": "다음 중 피드백을 조기에 자주 받았을 때의 이점인 것은?",
     "options": [
-      "It improves the test process for future projects",
-      "It forces customers to prioritize their requirements based on agreed risks",
-      "It provides a measure for the quality of changes",
-      "It helps avoid requirements misunderstandings"
+      "향후 프로젝트를 위해 테스트 프로세스를 개선할 수 있다",
+      "고객이 합의된 리스크에 따라 요구사항의 우선순위를 정하도록 한다",
+      "변경 사항의 품질을 측정할 수 있다",
+      "요구사항에 대한 오해를 피하는 데 도움이 된다"
     ],
     "answer": [
       3
     ],
-    "explanation": "ISTQB official Sample A answer: D. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 피드백은 테스트 프로세스를 개선할 수 있습니다. 하지만 개선 대상이 향후 프로젝트라면, 피드백을 조기에 받거나 자주 받을 필요는 없습니다. b) 정답이 아닙니다. 피드백은 요구사항의 우선순위를 정하기 위해 사용되지 않습니다. c) 정답이 아닙니다. 변경 사항의 품질 측정은 조기에 자주 받는 피드백 외에 다양한 방법이 있다. 또한, 이것은 3.2.1 절에서 언급된 피드백을 조기에 받았을 때의 이점 중 하나가 아니다. d) 정답입니다. 조기에 자주 피드백을 하면 잠재적 품질 문제에 대해 이른 시점부터 의견을 나눌 수 있습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -377,21 +377,21 @@ export default [
     "chapter": "3? ?? ???",
     "lo": "3.2.4",
     "level": "K2",
-    "text": "The reviews being used in your organization have the following attributes: • There is the role of a scribe • The main purpose is to evaluate quality • The meeting is led by the author of the work product • There is individual preparation • A review report is produced Which of the following review types is MOST likely being used?",
+    "text": "조직에서 수행하고 있는 리뷰가 다음과 같은 특징을 가지고 있다.  서기 역할을 하는 사람이 있다  주요 목적은 품질을 평가하는 것이다  작업 산출물 작성자가 회의를 주도한다  개별 준비 단계가 있다  리뷰 보고서를 작성한다 다음 중 사용하고 있는 리뷰 유형일 가능성이 가장 높은 것은?",
     "options": [
-      "Informal review",
-      "Walkthrough",
-      "Technical review",
-      "Inspection"
+      "비공식 리뷰(Informal review)",
+      "워크쓰루(Walkthrough)",
+      "기술 리뷰(Technical review)",
+      "인스펙션(Inspection)"
     ],
     "answer": [
       1
     ],
-    "explanation": "ISTQB official Sample A answer: B. See the official answer PDF for the full rationale.",
+    "explanation": "속성을 고려해보면 • 워크쓰루, 기술적 리뷰, 인스펙션을 위해 명시됩니다. 따라서, 수행하고 있는 리뷰는 비공식 리뷰일 수 없습니다. • 품질을 평가하는 것은 워크쓰루의 중요한 목적 중 하나입니다. • 이것은 인스펙션에 허락되지 않으며, 기술적 리뷰에서 보통 실행되지 않습니다. 중재자는 워크쓰루에 필요하며 비공식 리뷰에도 참여할 수 있습니다. • 모든 유형의 리뷰에(비공식 리뷰 포함) 개별 준비 단계가 포함될 수 있습니다. • 모든 유형의 리뷰로 리뷰 보고서가 만들어질 수 있습니다. 다만 비공식 리뷰에서 는 결과를 반드시 문서로 기록하지 않아도 됩니다. 따라서: a) 정답이 아닙니다. b) 정답입니다. c) 정답이 아닙니다. d) 정답이 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -400,21 +400,21 @@ export default [
     "chapter": "3? ?? ???",
     "lo": "3.2.5",
     "level": "K1",
-    "text": "Which of these statements is NOT a factor that contributes to successful reviews?",
+    "text": "다음 중 성공적인 리뷰에 기여하는 요소가 아닌 것은?",
     "options": [
-      "Participants should dedicate adequate time for the review",
-      "Splitting large work products in to small parts to make the required effort less intense",
-      "Participants should avoid behaviors that might indicate boredom, exasperation, or ho stility to other participants",
-      "Failures found should be acknowledged, appreciated, and handled objectively"
+      "참가자는 리뷰에 필요한 적절한 시간을 할애해야 한다",
+      "필요한 노력의 부담을 줄이기 위해 규모가 큰 작업 산출물을 작은 단위로 나눈다",
+      "참가자는 지루함, 분노, 다른 참가자에 대한 적대감으로 비칠 수 있는 행동을 삼가야 한다",
+      "식별한 장애를 인정, 환영하고 객관적으로 처리해야 한다"
     ],
     "answer": [
       3
     ],
-    "explanation": "ISTQB official Sample A answer: D. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 개인에게 적절한 시간을 할애하는 것은 성공 요소입니다. b) 정답이 아닙니다. 작업 산출물을 적절하게 나누는 것은 성공 요소입니다. c) 정답이 아닙니다. 지루함, 분노 등을 나타낼 수 있는 행동을 삼가는 것은 성공 요소입 니다. d) 정답입니다. 리뷰 중에는 장애가 아닌 결함을 찾게 됩니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -423,21 +423,21 @@ export default [
     "chapter": "4? ??? ??? ??",
     "lo": "4.1.1",
     "level": "K2",
-    "text": "Which of the following is a characteristic of experience-based test techniques?",
+    "text": "다음 중 경험 기반(experience-based) 테스트 기법의 특징은?",
     "options": [
-      "Test cases are created based on detailed design information",
-      "Items tested within the interface code section are used to measure coverage",
-      "The test techniques heavily rely on the tester’s knowledge of the software and the business domain",
-      "The test cases are used to identify deviations from the requirements"
+      "테스트 케이스는 상세 설계 정보를 기반으로 작성한다",
+      "인터페이스 코드에서 테스트하는 항목은 커버리지를 측정하는 데 사용한다",
+      "이 테스트 기법은 소프트웨어 및 비즈니스 도메인에 대한 테스터의 지식에 크게 의존한다",
+      "테스트 케이스는 요구사항과의 차이를 식별하기 위해 사용한다"
     ],
     "answer": [
       2
     ],
-    "explanation": "ISTQB official Sample A answer: C. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 이것은 화이트박스 테스트 기법의 흔한 특징입니다. 테스트 컨디션, 테스트 케이스, 테스트 데이터는 테스트 베이시스에서 도출하며 코드, 소프트웨어 아키텍처, 상세 설계서, 혹은 소프트웨어의 구조에 관한 정보를 포함한 기타 출처 모두 테스트 베이시스가 될 수 있습니다. b) 정답이 아닙니다. 이것은 화이트박스 테스트 기법의 흔한 특징입니다. 커버리지는 선택된 구조 내에서 테스트된 항목과 테스트 베이시스에 적용한 테스트 기법을 기반으로 측정합 니다. c) 정답입니다. 이것은 경험 기반 테스트 기법의 흔한 특징입니다. 지식과 경험에는 소프 트웨어의 예상 사용 모습, 환경, 발생 가능한 결함, 이런 결함의 분포 등이 포함됩니다. 이런 지식과 경험은 테스트를 정의하는 데 사용됩니다. d) 정답이 아닙니다. 이것은 블랙박스 테스트 기법의 흔한 특징입니다. 테스트 케이스는 요구사항을 구현하면서 누락된 내용은 없는지, 또 요구사항에서 벗어난 정도를 식별하 는 데 사용될 수 있습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -446,21 +446,21 @@ export default [
     "chapter": "4? ??? ??? ??",
     "lo": "4.2.1",
     "level": "K3",
-    "text": "You are testing a simplified apartment search form which has only two search criteria: • floor (with three possible options: ground floor; first floor; second or higher floor) • garden type (with three possible options: no garden; small garden; large garden) Each of the apartment on the ground floor has a garden, apartments on higher floors don’t. The form has a built-in validation mechanism that will not allow you to use the search criteria which violate this rule. Each test has two input values: floor and garden type. You want to apply equivalence partitioning (EP) to cover each floor and each garden type in your tests. What is the minimal number of test cases to achieve 100% EP coverage for valid partitions?",
+    "text": "검색 옵션이 2개 뿐인 단순한 아파트 검색 기능을 테스트하고 있다.  층(가능한 옵션 3가지: 지상 층, 1층, 2층 이상)  정원(가능한 옵션 3가지: 정원 없음, 작은 정원, 큰 정원) 지상 층에 있는 각 아파트에는 정원이 있고, 더 높은 층의 아파트는 정원이 없다. 검색 기 능에는 이 규칙을 위반한 검색은 허용하지 않는 유효성 검사 메커니즘이 있다. 각 테스트 케이스는 층과 정원이라는 두 가지 입력 값을 가진다. 층과 정원 옵션을 테스트 하기 위해 동등분할을 적용하려고 한다. 100% 유효한 동등분할 커버리지를 달성하기 위한 최소 테스트 케이스 수는?",
     "options": [
       "3",
       "4",
       "5",
-      "6 Select ONE option"
+      "6"
     ],
     "answer": [
       1
     ],
-    "explanation": "ISTQB official Sample A answer: B. See the official answer PDF for the full rationale.",
+    "explanation": "문제에서 제시된 상황은 실러버스에서 ”각 선택(each choice)” 커버리지로 설명됩니다. “작은 정원”과 “큰 정원”은 “지상 층”과만 조합될 수 있으므로, 이 두 가지 “정원 유형” 분할을 커버하려면 “지상 층”을 포함한 두 개의 테스트 케이스가 필요합니다. 또한 두 개의 다른 “층” 분할을 커버하려면 추가로 두 개의 테스트가 더 필요합니다. “정원 유 형” 분할의 남은 ”정원 없음” 값은 이들 테스트로 커버됩니다. 따라서 총 네(4) 개의 테스트 케이스가 필요합니다: TC1 (지상 층, 작은 정원) TC2 (지상 층, 큰 정원) TC3 (1층, 정원 없음) TC4 (2층 이상, 정원 없음) 따라서, a) 정답이 아닙니다. b) 정답입니다. c) 정답이 아닙니다. d) 정답이 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -469,7 +469,7 @@ export default [
     "chapter": "4? ??? ??? ??",
     "lo": "4.2.2",
     "level": "K3",
-    "text": "You are testing a system that calculates the final course grade for a given student. The final grade is assigned based on the final result, according to the following rules: • 0 – 50 points: failed • 51 – 60 points: fair • 61 – 70 points: satisfactory • 71 – 80 points: good • 81 – 90 points: very good • 91 – 100 points: excellent You have prepared the following set of test cases: Final result Final grade TC1 91 excellent TC2 50 failed TC3 81 very good TC4 60 fair TC5 70 satisfactory TC6 80 good What is the 2-value boundary value analysis (BVA) coverage for the final result that is achieved with the existing test cases?",
+    "text": "학생의 최종 성적을 계산하는 시스템을 테스트하고 있다. 최종 성적은 최종 점수를 기반으로 다음 규칙에 따라 할당된다:  0~50점: 탈락  51~60점: 보통  61~70점: 만족  71~80점: 좋음  81~90점: 매우 좋음  91~100점: 우수 당신은 다음과 같이 테스트 케이스 세트를 도출했다: 최종 점수 최종 성적 TC1 91 우수 TC2 50 탈락 TC3 81 매우 좋음 TC4 60 보통 TC5 70 만족 TC6 80 좋음 테스트 케이스로 달성한 최종 점수에 대한 두 개 선택 경계값 분석(2-value BVA) 커버리지는?",
     "options": [
       "50%",
       "60%",
@@ -479,11 +479,11 @@ export default [
     "answer": [
       0
     ],
-    "explanation": "ISTQB official Sample A answer: A. See the official answer PDF for the full rationale.",
+    "explanation": "최종 결과값은 12개의 경계값을 가지고 있습니다: 0, 50, 51, 60, 61, 70, 71, 80, 81, 90, 91, 100. 테스트 케이스는 그 중 6개를 커버하고 있습니다. (TC1 – 91, TC2 – 50, TC3 – 81, TC4 – 60, TC5 – 70, TC7 – 51) 그러므로 테스트 케이스는 12개 중 6개, 즉 50%를 커버하고 있습니다. 따라서, a) 정답입니다. b) 정답이 아닙니다. c) 정답이 아닙니다. d) 정답이 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -492,7 +492,7 @@ export default [
     "chapter": "4? ??? ??? ??",
     "lo": "4.2.3",
     "level": "K3",
-    "text": "Your favorite bicycle daily rental store has just introduced a new Customer R elationship Management system and asked you, one of their most loyal members, to test it. The implemented features are as follows: • Anyone can rent a bicycle, but members receive a 20% discount • However, if the return deadline is missed, the discount is no longer available • After 15 rentals, members get a gift: a T-Shirt Decision table describing the implemented features looks as follows: Conditions R1 R2 R3 R4 R5 R6 R7 R8 Being a member T T T T F F F F Missed deadline T F T F T F F T 15th rental F F T T F F T T Actions 20% discount X X Gift T-Shirt X X X Based ONLY on the feature description of the Customer Relationship Management system, which of the above rules describes an impossible situation?",
+    "text": "당신이 자주 이용하는 자전거 대여점에서 새로운 고객 관리 시스템을 도입했고, 단골 회원인 당신에게 테스트를 요청했다. 구현된 기능은 다음과 같다:  누구나 자전거를 빌릴 수 있고, 회원은 20% 할인을 받는다  단, 반납기한을 어긴 경우 할인이 적용되지 않는다  15회 대여 후 회원은 티셔츠를 선물로 받게 된다 구현된 기능에 대한 결정테이블은 다음과 같다. 조건 R1 R2 R3 R4 R5 R6 R7 R8 회원 T T T T F F F F 반납기한 경과 T F T F T F T F 15회 대여 F F T T F F T T 결과 20% 할인 X X 티셔츠 선물 X X X 고객 관리 시스템의 기능 설명만을 기준으로, 위의 조건 중 불가능한 상황인 것은?",
     "options": [
       "R4",
       "R2",
@@ -502,11 +502,11 @@ export default [
     "answer": [
       3
     ],
-    "explanation": "ISTQB official Sample A answer: D. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 반납 기한을 어긴 적이 없는 회원은 자전거를 15회 대여한 후 할인과 티셔츠를 선물로 받을 수 있습니다. b) 정답이 아닙니다. 반납 기한을 어긴 적이 없는 회원은 할인은 받을 수 있지만, 자전거를 15회 대여하기 전까지는 티셔츠를 선물로 받을 수 없습니다. c) 정답이 아닙니다. 비회원은 반납 기한을 어긴 적이 없다 하더라도 할인을 받을 수 없습니다. d) 정답입니다. 반납 기한을 어긴 적이 있는 비회원은 할인을 받을 수 없고, 티셔츠 선물은 회원만 받을 수 있습니다. 따라서, 이 조건은 성립할 수 없습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -515,7 +515,7 @@ export default [
     "chapter": "4? ??? ??? ??",
     "lo": "4.2.4",
     "level": "K3",
-    "text": "You test a system whose lifecycle is modeled by the state transition di agram shown below. The system starts in the INIT state and ends its operation in the OFF state. What is the MINIMAL number of test cases to achieve valid transitions coverage?",
+    "text": "다음과 같은 상태 전이 다이어그램으로 수명주기를 모델링한 시스템을 테스트해야 한다. 시스템은 INIT 상태에서 시작하고 OFF 상태에서 동작을 종료한다. 100% 유효 전이 커버리지를 달성하기 위한 최소 테스트 케이스 수는 몇 개인가?",
     "options": [
       "4",
       "2",
@@ -525,11 +525,11 @@ export default [
     "answer": [
       3
     ],
-    "explanation": "ISTQB official Sample A answer: D. See the official answer PDF for the full rationale.",
+    "explanation": "“test”와 “error” 전이는 하나의 테스트 케이스 안에서 동시에 일어날 수 없습니다. 그리고 “done” 전이 양쪽도 마찬가지입니다. 그렇기 때문에 전이 커버리지를 달성하기 위해서 적어도 3개의 테스트 케이스가 필요합니다. 예를 들자면: TC1: test, done TC2: run, error, done TC3: run, pause, resume, pause, done 따라서, a) 정답이 아닙니다. b) 정답이 아닙니다. c) 정답이 아닙니다. d) 정답입니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -538,21 +538,21 @@ export default [
     "chapter": "4? ??? ??? ??",
     "lo": "4.3.1",
     "level": "K2",
-    "text": "Your test suite achieved 100% statement coverage. What is the consequence of this fact?",
+    "text": "당신이 구성한 테스트 스위트로 100% 구문 커버리지를 달성했다. 이것은 무엇을 의미하 는가?",
     "options": [
-      "Each instruction in the code that contains a defect has been executed at least on ce",
-      "Any test suite containing more test cases than your test suite will also achieve 100% statement coverage",
-      "Each path in the code has been executed at least once",
-      "Every combination of input values has been tested at least once"
+      "코드 중 결함을 가지고 있는 각 명령어가 최소 한번은 실행됐다",
+      "당신이 만든 테스트 스위트보다 더 많은 테스트 케이스를 가진 테스트 스위트는 100% 구문 커버리지를 달성하게 될 것이다",
+      "코드에 있는 모든 경로가 한번 이상 실행됐다",
+      "입력값의 모든 조합이 적어도 한번은 테스트됐다"
     ],
     "answer": [
       0
     ],
-    "explanation": "ISTQB official Sample A answer: A. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답입니다. 100% 구문 커버리지가 달성되었으므로 모든 구문은(결함이 있는 것을 포함해서) 최소 한번 실행 및 평가된 것으로 볼 수 있습니다. b) 정답이 아닙니다. 커버리지는 테스트 케이스의 수가 아니라 무엇이 테스트됐는지에 따라 달라집니다. 예를 들어, “if (x==0) y+1”이라는 코드에 대해서 (x=0)이라는 하나의 테스트 케이스는 100% 구문 커버리지를 달성하지만, (x=1)과 (x=2)라는 두개의 테스트 케이스는 합쳐서 50% 구문 커버리지 밖에 달성하지 못합니다. c) 정답이 아닙니다. 코드에 루프가 포함돼 있으면 가능 경로는 무한하게 많아질 수 있기 때문에 코드의 가능 경로를 모두 실행하는 것은 불가능할 수 있습니다. d) 정답이 아닙니다. 완벽한 테스팅은 불가능합니다(실라버스의 7가지 테스팅 원리를 참조 하십시오). 예를 들어, “input x; print x”라는 코드가 있으면, 임의로 선택한 x값을 가진 하나의 테스트로 100% 구문 커버리지를 달성할 수 있지만, 커버되는 입력값은 하나뿐 입니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -561,21 +561,21 @@ export default [
     "chapter": "4? ??? ??? ??",
     "lo": "4.3.3",
     "level": "K2",
-    "text": "Which of the following is NOT true for white-box testing?",
+    "text": "다음 중 화이트박스 테스팅에 대한 설명으로 옳지 않은 것은?",
     "options": [
-      "During white-box testing the entire software implementation is considered",
-      "White-box coverage metrics can help identify additional tests to increase code coverage",
-      "White-box test techniques can be used in static testing",
-      "White-box testing can help identify gaps in requirements implementation"
+      "화이트박스 테스팅을 진행하는 동안 전체 소프트웨어 구현을 고려하게 된다",
+      "화이트박스 커버리지 측정지표는 코드 커버리지를 늘리기 위해 추가로 필요한 테스트 를 식별하는 데 도움이 될 수 있다",
+      "화이트박스 테스트 기법은 정적 테스팅에 사용할 수 있다",
+      "화이트박스 테스팅은 구현된 사항이 요구사항과 어떤 차이가 있는지 식별하는 데 도움이 될 수 있다"
     ],
     "answer": [
       3
     ],
-    "explanation": "ISTQB official Sample A answer: D. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 화이트박스 테스트 기법의 근본적인 강점은 테스팅 중 전체 소프트웨어 구현을 고려한다는 것입니다. b) 정답이 아닙니다. 화이트박스 커버리지 지표는 커버리지에 대한 객관적인 수치를 제공하 고, 커버리지를 높이기 위한 추가적인 테스트를 생성하는 데 필요한 정보를 제공합니다. c) 정답이 아닙니다. 화이트박스 테스트 기법은 리뷰를 수행하는 데 사용할 수 있습니다. (정적 테스팅) d) 정답입니다. 이것은 화이트박스 테스트 기법의 약점입니다. 구현 누락을 식별하지 못합니 다. 이런 기법은 요구사항 명세가 아닌 테스트 대상의 구조만을 기반으로 하기 때문입니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -584,21 +584,21 @@ export default [
     "chapter": "4? ??? ??? ??",
     "lo": "4.4.1",
     "level": "K2",
-    "text": "Which of the following BEST describes the concept behind error guessing?",
+    "text": "다음 중 오류 추정(Error guessing)의 개념을 가장 잘 설명한 것은?",
     "options": [
-      "Error guessing involves using your knowledge and experience of defects found in the past and typical errors made by developers",
-      "Error guessing involves using your personal experience of development and the errors you made as a developer",
-      "Error guessing requires you to imagine that you are the user of the test object and to guess errors the user could make interacting with it",
-      "Error guessing requires you to rapidly duplicate the development task to identify t he sort of errors a developer might make"
+      "오류 추정은 과거 식별한 결함과 개발자가 일반적으로 하는 실수에 대해 테스터가 가 진 지식과 경험을 활용한다",
+      "오류 추정은 테스터의 개인적인 개발 경험과 개발자로서 했던 실수에 대한 경험을 활용한다",
+      "오류 추정을 위해서는 테스터가 테스트하는 대상의 사용자라고 상상하고 사용자가 테스트 대상과 상호 작용하면서 부딪힐 수 있는 오류를 추정해야 한다",
+      "오류 추정을 위해서는 개발자가 할만한 실수를 파악하기 위해 개발 과정을 빠르게 직접 따라해 봐야 한다"
     ],
     "answer": [
       0
     ],
-    "explanation": "ISTQB official Sample A answer: A. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답입니다. 오류 추정의 기본 개념은 테스터가 (때로는 체크리스트와 함께) 과거의 경험을 기반으로 개발자의 오류나 테스트 대상에 있는 결함을 추정하는 것입니다. b) 정답이 아닙니다. 오류 추정을 수행할 때 이전에 개발자였던 테스터가 개인적인 경험을 활용할 수 있지만, 이 테스트 기법이 개발에 대한 사전지식을 기반으로 하진 않습니다. c) 정답이 아닙니다. 오류 추정은 사용자가 테스트 대상과 상호작용에 실패하는 방법을 추정하는 데 사용하는 기법이 아닙니다. d) 정답이 아닙니다. 개발 업무를 모방하는 것은 테스터가 개발자와 동등한 수준의 개발 능력을 갖고 있어야 한다는 점과 개발을 위한 시간이 필요하다는 점에서 비현실적인 면이 있습니다. 이것은 오류 추정이 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -607,21 +607,21 @@ export default [
     "chapter": "4? ??? ??? ??",
     "lo": "4.4.2",
     "level": "K2",
-    "text": "In your project there has been a delay in the release of a brand- new application and test execution started late, but you have very detailed domain knowledge and good analytical skills. The full list of requirements has not yet been shared with the team, but management is asking for some test results to be presented. Which test technique fits BEST in this situation?",
+    "text": "프로젝트에서 새로운 애플리케이션의 출시가 지연되고 테스트가 늦게 시작되었지만 당 신은 매우 상세한 도메인 지식과 우수한 분석 기술을 보유하고 있다. 요구사항 전체 목록이 아직 팀과 공유되지 않았지만, 관리자는 테스트 결과를 일부라도 보여달라고 한다. 이 상황에 가장 적합한 테스트 기법은?",
     "options": [
-      "Checklist-based testing",
-      "Error guessing",
-      "Exploratory testing",
-      "Branch testing"
+      "체크리스트 기반 테스팅(Checklist-based testing)",
+      "오류 추정(Error guessing)",
+      "탐색적 테스팅(Exploratory testing)",
+      "분기 테스팅(Branch testing)"
     ],
     "answer": [
       2
     ],
-    "explanation": "ISTQB official Sample A answer: C. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 이것은 새 제품입니다. 체크리스트는 아직 없을 가능성이 크고 누락된 요구사항으로 인해 테스트 컨디션을 아직 모를 수 있습니다. b) 정답이 아닙니다. 이것은 새 제품입니다. 올바른 오류 추정을 하기에 충분한 정보는 아직 없을 것입니다. c) 정답입니다. 탐색적 테스팅은 알려진 명세나 테스트 시간, 또는 양쪽 모두 부족할 때 가장 유용합니다. d) 정답이 아닙니다. 분기 테스팅은 시간이 오래 걸리며 관리자는 테스트 결과를 지금 보여달라고 합니다. 또한, 분기 테스팅을 위해 도메인 지식이 필요하진 않습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -630,21 +630,21 @@ export default [
     "chapter": "4? ??? ??? ??",
     "lo": "4.5.2",
     "level": "K2",
-    "text": "Which of the following BEST describes the way acceptance criteria can be documented?",
+    "text": "다음 중 인수 조건을 문서화하는 방법을 가장 잘 설명한 것은?",
     "options": [
-      "Performing retrospectives to determine the actual needs of the stakeholders regarding a given user story",
-      "Using the given/w hen/then format to describe an example test condition related to a given user story",
-      "Using verbal communication to reduce the risk of misunderstanding the accept ance criteria by others",
-      "Documenting risks related to a given user story in a test plan to facilitate the risk -based testing of a given user story"
+      "주어진 사용자 스토리 관련 이해관계자의 실제 요구사항을 판단하기 위해 회고를 수 행한다",
+      "주어진 사용자 스토리와 관련된 예제 테스트 컨디션을 설명하기 위해 given/when/then 형식을 사용해 작성한다",
+      "다른 사람들과 인수 조건에 대해 오해할 위험을 줄이기 위해 구두로 의사소통을 한다",
+      "주어진 사용자 스토리에 대해 리스크 기반 테스팅이 이루어질 수 있도록 사용자 스 토리 관련 리스크를 테스트 계획서에 기록한다"
     ],
     "answer": [
       1
     ],
-    "explanation": "ISTQB official Sample A answer: B. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 회고는 교훈을 포착하고 개발과 테스팅 프로세스를 개선하기 위해 사용되지, 인수 조건을 문서화하기 위한 것이 아닙니다. b) 정답입니다. 이것은 인수 조건을 문서화하는 표준적인 방법입니다. c) 정답이 아닙니다. 구두로 의사 소통하면 사용자 스토리의 일부로 인수 조건을 문서화하는 것은 불가능하게 됩니다. (3C 모델의 ‘카드(card)’ 측면) d) 정답이 아닙니다. 인수 조건은 사용자 스토리와 관련 있지, 테스트 계획과는 무관합니다. 또한, 인수 조건은 사용자 스토리가 끝났는지 판단하기 위해 충족되어야 하는 조건입니다. 리스크가 그런 조건은 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -653,21 +653,21 @@ export default [
     "chapter": "4? ??? ??? ??",
     "lo": "4.5.3",
     "level": "K3",
-    "text": "Consider the following user story: As an Editor I want to review content before it is published so that I can ensure the grammar is correct and its acceptance criteria: • The user can log in to the content management system with \"Editor\" role • The editor can view existing content pages • The editor can edit the page content • The editor can add markup comments • The editor can save changes • The editor can reassign to the \"content owner\" role to make updates Which of the following is the BEST example of an ATDD test for this user story?",
+    "text": "다음과 같은 사용자 스토리와 인수 조건이 주어졌다: 사용자 스토리 편집자로서 문서가 게시되기 전에 내용을 리뷰해 문법이 정확한지 확인하려고 한다. 인수 조건  사용자는 “편집자” 역할로 문서 관리 시스템에 로그인할 수 있다  편집자는 기존 문서 페이지를 볼 수 있다  편집자는 페이지 내용을 편집할 수 있다  편집자는 마크업 메모를 추가할 수 있다  편집자는 변경 사항을 저장할 수 있다  편집자는 업데이트를 위해 “문서 소유자”로 역할을 바꿀 수 있다 다음 중 이 사용자 스토리에 대한 인수 테스트 주도 개발(ATDD) 테스트의 예로 가장 적절한 것은?",
     "options": [
-      "Test if the editor can save the document after edit the page content",
-      "Test if the content owner can log in and make updates to the content",
-      "Test if the editor can schedule the edited content for publication",
-      "Test if the editor can reassign to another editor to make updates"
+      "편집자가 페이지 내용을 편집한 후 문서를 저장할 수 있는지 확인하는 테스트",
+      "문서 소유자가 로그인하여 문서를 업데이트할 수 있는지 확인하는 테스트",
+      "편집자가 편집된 문서의 게시 일정을 예약할 수 있는지 확인하는 테스트",
+      "편집자가 업데이트를 위해 다른 편집자를 지정할 수 있는지 확인하는 테스트"
     ],
     "answer": [
       0
     ],
-    "explanation": "ISTQB official Sample A answer: A. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답입니다. 이 테스트는 두 개의 인수 조건을 커버하고 있습니다: 하나는 문서 편집과 관련된 것이고 하나는 수정 사항을 저장하는 것과 관련된 것입니다. b) 정답이 아닙니다. 인수 조건은 편집자의 활동에 대한 것이지, 문서 소유자의 활동을 다루지 않습니다. c) 정답이 아닙니다. 편집된 문서의 배포 일정을 예약하는 것은 좋은 기능일 수는 있으나, 인수 조건에서 다루지 않습니다. d) 정답이 아닙니다. 인수 조건은 편집자에서 다른 편집자로의 역할 변경이 아닌, 문서 소유자로 역할을 바꾸는 것에 대해 이야기하고 있습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -676,21 +676,21 @@ export default [
     "chapter": "5? ??? ?? ??",
     "lo": "5.1.2",
     "level": "K1",
-    "text": "How do testers add value to iteration and release planning?",
+    "text": "다음 중 테스터가 반복주기 및 릴리스 계획에 기여하는 방법을 올바르게 설명한 것은?",
     "options": [
-      "Testers determine the priority of the user stories to be developed",
-      "Testers focus only on the functional aspects of the system to be tested",
-      "Testers participate in the detailed risk identification and risk assessment of user st ories",
-      "Testers guarantee the release of high-quality software through early test design du ring the release planning"
+      "테스터는 개발할 사용자 스토리의 우선순위를 결정한다",
+      "테스터는 테스트할 시스템의 기능적 측면에만 집중한다",
+      "테스터는 사용자 스토리에 대한 구체적인 리스크 식별 및 평가 과정에 참여한다",
+      "테스터는 릴리스 계획 단계에서 조기 테스트 설계를 통한 고품질 소프트웨어의 출시를 보장한다"
     ],
     "answer": [
       2
     ],
-    "explanation": "ISTQB official Sample A answer: C. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 사용자 스토리의 우선순위는 개발팀과 함께 비즈니스 담당자가 결정합니다. b) 정답이 아닙니다. 테스터는 테스트 대상 시스템의 기능 및 비기능 측면 모두에 초점을 맞춥니다. c) 정답입니다. 실라버스에 의하면 이것은 테스터가 반복 주기와 릴리스 계획에 가치를 제공하는 방법 중 하나입니다. d) 정답이 아닙니다. 조기 테스트 설계는 릴리스 계획의 일부가 아닙니다. 조기 테스트 설계로 자동으로 고품질 소프트웨어의 배포가 보장되는 것은 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -699,23 +699,23 @@ export default [
     "chapter": "5? ??? ?? ??",
     "lo": "5.1.3",
     "level": "K2",
-    "text": "Which TWO of the following options are the exit criteria for testing a system?",
+    "text": "다음 중 시스템 테스팅 완료 기준이 될 수 있는 두 가지는?",
     "options": [
-      "Test environment readiness",
-      "The ability to log in to the test object by the tester",
-      "Estimated defect density is reached",
-      "Requirements are translated into given/when/then format",
-      "Regression tests are automated"
+      "테스트 환경 준비 상황",
+      "테스터가 테스트 대상에 로그인할 수 있는지 여부",
+      "예상 결함 밀도 도달",
+      "given/when/then 형식으로의 요구사항 변환",
+      "리그레션 테스트 자동화"
     ],
     "answer": [
       2,
       4
     ],
-    "explanation": "ISTQB official Sample A answer: C, E. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 테스트 환경 준비 상황은 자원 가용성에 대한 조건입니다. 따라서 이것은 시작 조건에 해당합니다. b) 정답이 아닙니다. 이것은 자원 가용성 조건입니다. 따라서 이것은 시작 조건에 해당합니다. c) 정답입니다. 예상 결함 밀도는 충분함에 대한 측정입니다. 따라서 이것은 완료 조건에 해당합니다. d) 정답이 아닙니다. 정해진 형식으로의 요구사항 변환은 테스트 가능한 요구사항을 얻을 수 있게 합니다. 따라서 이것은 시작 조건에 해당합니다. e) 정답입니다. 리그레션 테스트의 자동화는 종료 조건입니다. 따라서 이것은 완료 조건에 해당합니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -724,21 +724,21 @@ export default [
     "chapter": "5? ??? ?? ??",
     "lo": "5.1.4",
     "level": "K3",
-    "text": "Your team uses the three-point estimation technique to estimate the test effort for a new high-risk feature. The following estimates were made: • Most optimistic estimation: 2 person-hours • Most likely estimation: 11 person-hours • Most pessimistic estimation: 14 person-hours What is the final estimate?",
+    "text": "당신의 팀은 3점 추정 기법을 사용해 리스크가 높은 새로운 기능에 대한 테스트 노력을 추 정하고 있다. 다음과 같은 추정이 이루어졌다.  가장 낙관적인 추정: 2M/H  가장 유력한 추정: 11M/H  가장 비관적인 추정: 14M/H 최종 추정치는 얼마인가?",
     "options": [
-      "9 person-hours",
-      "14 person-hours",
-      "11 person-hours",
-      "10 person-hours"
+      "9M/H",
+      "14M/H",
+      "11M/H",
+      "10M/H"
     ],
     "answer": [
       3
     ],
-    "explanation": "ISTQB official Sample A answer: D. See the official answer PDF for the full rationale.",
+    "explanation": "3점 추정 기법에서: 추정치 = (가장 낙관적 + 4* 가장 유력한 + 가장 비관적)/6 추정치 = (2+(4*11)+14)/6 = 10 따라서: a) 정답이 아닙니다. b) 정답이 아닙니다. c) 정답이 아닙니다. d) 정답입니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -747,21 +747,21 @@ export default [
     "chapter": "5? ??? ?? ??",
     "lo": "5.1.5",
     "level": "K3",
-    "text": "You are testing a mobile application that allows users to find a nearby restaurant based on the type of food they want to eat. Consider the following list of test cases, priorities (i.e., a smaller number means a higher priority), and dependencies: Test case number Test condition covered Priority Logical dependency TC 001 Select type of food 3 none TC 002 Select restaurant 2 TC 001 TC 003 Get direction 1 TC 002 TC 004 Call restaurant 2 TC 002 TC 005 Make reservation 3 TC 002 Which of the following test cases should be executed as the third one?",
+    "text": "사용자가 먹고 싶은 음식에 따라 근처 식당을 검색하는 모바일 애플리케이션을 테스트 하고 있다. 테스트 케이스, 우선순위(숫자가 작을수록 우선순위가 높음), 종속성은 다음과 같다. 번호 커버되는 테스트 컨디션 우선순위 논리적 종속성 TC001 음식 종류 선택 3 없음 TC002 음식점 선택 2 TC001 TC003 경로 획득 1 TC002 TC004 식당에 전화하기 2 TC002 TC005 예약하기 3 TC002 다음 중 세 번째로 실행할 테스트 케이스는?",
     "options": [
-      "TC 003",
-      "TC 005",
-      "TC 002",
-      "TC 001"
+      "TC003",
+      "TC005",
+      "TC002",
+      "TC001"
     ],
     "answer": [
       0
     ],
-    "explanation": "ISTQB official Sample A answer: A. See the official answer PDF for the full rationale.",
+    "explanation": "테스트 TC 001이 무조건 처음에 와야 하며, 그 다음으로 종속성을 만족시키기 위해 TC 002가 따라와야 합니다. 그 다음으로 우선순위를 만족시키기 위해 TC 003이 와야 하고, 그 뒤로 TC 004, TC 005가 따라와야 합니다. 따라서: a) 정답입니다. b) 정답이 아닙니다. c) 정답이 아닙니다. d) 정답이 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -770,7 +770,7 @@ export default [
     "chapter": "5? ??? ?? ??",
     "lo": "5.1.7",
     "level": "K2",
-    "text": "Consider the following test categories (1-4) and agile testing quadrants (A-D): 1. Usability testing 2. Component testing 3. Functional testing 4. Reliability testing A. Agile testing quadrant Q1: technology facing, supporting the development team B. Agile testing quadrant Q2: business facing, supporting the development team C. Agile testing quadrant Q3: business facing, critique the product D. Agile testing quadrant Q4: technology facing, critique the product How do the following test categories map onto the agile testing quadrants?",
+    "text": "다음 중 테스트 유형과 애자일 테스팅 사분면이 올바르게 짝지어진 것은? 1. 사용성 테스팅 2. 단위 테스팅 3. 기능 테스팅 4. 신뢰성 테스팅 A. 1사분면: 기술 측면, 개발팀 지원 B. 2사분면: 비즈니스 측면, 개발팀 지원 C. 3사분면: 비즈니스 측면, 제품 평가 D. 4사분면: 기술 측면, 제품 평가",
     "options": [
       "1C, 2A, 3B, 4D",
       "1D, 2A, 3C, 4B",
@@ -780,11 +780,11 @@ export default [
     "answer": [
       0
     ],
-    "explanation": "ISTQB official Sample A answer: A. See the official answer PDF for the full rationale.",
+    "explanation": "다음을 근거로: • 사용성 테스팅은 3사분면입니다. (1 – C) • 단위 테스팅은 1사분면입니다. (2 – A) • 기능 테스팅은 2사분면입니다. (3 – B) • 신뢰성 테스팅은 4사분면입니다. (4 – D) 따라서: a) 정답입니다. b) 정답이 아닙니다. c) 정답이 아닙니다. d) 정답이 아닙니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -793,21 +793,21 @@ export default [
     "chapter": "5? ??? ?? ??",
     "lo": "5.2.4",
     "level": "K2",
-    "text": "During a risk analysis the following risk was identified and assessed: • Risk: Response time is too long to generate a report • Risk likelihood: medium; risk impact: high • Response to risk: o An independent test team performs performance efficiency testing during system testing o A selected sample of end users performs alpha testing and beta testing before the release What measure is proposed to be taken in response to this analyzed risk?",
+    "text": "리스크 분석 결과 다음 리스크가 식별되고 평가되었다.  리스크: 보고서 생성에 너무 많은 시간이 걸린다  리스크 발생 가능성: 중간; 리스크 영향도: 높음  리스크 대응 방법:  시스템 테스팅 중에 독립적인 테스트팀이 성능 효율성 테스팅을 수행한다  최종 사용자 표본 집단을 선별해 릴리스 전에 알파 테스팅과 베타 테스팅을 수행한다 다음 중 분석한 리스크에 대해 대응 방법으로 제안된 것은?",
     "options": [
-      "Risk acceptance",
-      "Contingency plan",
-      "Risk mitigation",
-      "Risk transfer"
+      "리스크 수용 (Risk acceptance)",
+      "비상 대책 (Contingency plan)",
+      "리스크 완화 (Risk mitigation)",
+      "리스크 전가 (Risk transfer)"
     ],
     "answer": [
       2
     ],
-    "explanation": "ISTQB official Sample A answer: C. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 리스크를 수용하지 않았습니다. 명확한 대응 방법이 제안되어 있습니다. b) 정답이 아닙니다. 제안된 비상 대책은 없습니다. c) 정답입니다. 제안된 대응 방법은 리스크 완화 방법인 테스팅과 관련되어 있습니다. d) 정답이 아닙니다. 리스크는 전가되지 않고 완화되고 있습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -816,21 +816,21 @@ export default [
     "chapter": "5? ??? ?? ??",
     "lo": "5.3.3",
     "level": "K2",
-    "text": "Which work product can be used by an agile team to show the amount of work that has been completed and the amount of total work remaining for a given iteration?",
+    "text": "다음 중 주어진 반복주기에서 완료된 작업량과 남은 총 작업량을 보여주기 위해 애자일 팀이 사용할 수 있는 작업 산출물은?",
     "options": [
-      "Acceptance criteria",
-      "Defect report",
-      "Test completion report",
-      "Burndown chart"
+      "인수 조건",
+      "결함 보고서",
+      "테스트 완료 보고서",
+      "번다운(Burndown) 차트"
     ],
     "answer": [
       3
     ],
-    "explanation": "ISTQB official Sample A answer: D. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 인수 조건은 사용자 스토리가 준비되었는지 판단할 때 사용하는 기준 입니다. 작업 진행 상황을 보여주진 않습니다. b) 정답이 아닙니다. 결함 보고서는 결함에 대한 정보를 제공합니다. 작업 진행 상황을 보여 주진 않습니다. c) 정답이 아닙니다. 테스트 완료 보고서는 반복 주기가 끝나야 만들 수 있기 때문에 반복 주기 동안의 작업 진행 상황을 보여주진 않습니다. d) 정답입니다. 번다운 차트는 남은 시간 대비 남은 작업량을 시각적으로 보여줍니다. 지속적으로 작업 진행 상황을 보여주기 위해 매일 업데이트됩니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -839,21 +839,21 @@ export default [
     "chapter": "5? ??? ?? ??",
     "lo": "5.4.1",
     "level": "K2",
-    "text": "You need to update one of the automated test scripts to be in line wit h a new requirement. Which process indicates that you create a new version of the test script in the test repository?",
+    "text": "새로운 요구사항에 맞게 자동화된 테스트 스크립트 중 하나를 업데이트해야 한다. 다음 중 테스트 저장소에 새로운 버전의 테스트 스크립트를 생성하도록 하는 프로세스는?",
     "options": [
-      "Traceability management",
-      "Maintenance testing",
-      "Configuration management",
-      "Requirements engineering"
+      "추적성 관리(Traceability management)",
+      "유지보수 테스팅(Maintenance testing)",
+      "형상 관리(Configuration management)",
+      "요구공학(Requirements engineering)"
     ],
     "answer": [
       2
     ],
-    "explanation": "ISTQB official Sample A answer: C. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 추적성은 두 개 이상의 작업 산출물 사이의 관계에 대한 것이지 같은 작업 산출물의 다른 버전 간의 관계에 대한 것이 아닙니다. b) 정답이 아닙니다. 유지보수 테스팅은 수정 사항을 테스트하는 것과 관련 있습니다. 버전 제어와 밀접한 관계는 없습니다. c) 정답입니다. 테스팅을 지원하기 위해 형상 관리에 모든 테스트 항목의 버전 제어가 포함될 수 있습니다. d) 정답이 아닙니다. 요구공학은 요구사항의 도출, 문서화, 관리에 대한 것입니다. 테스트 스크립트 버전 제어와 밀접한 관계는 없습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -862,21 +862,21 @@ export default [
     "chapter": "5? ??? ?? ??",
     "lo": "5.5.1",
     "level": "K3",
-    "text": "You received the following defect report from the developers stating that the anomaly described in this test report is not reproducible. Application hangs up 2022-May-03 – John Doe – Rejected The application hangs up after entering “Test input: $ä” in the Name field on the ne w user creation screen. Tried to log off, log in with test_admin01 account, same issue. Tried with other test admin accounts, same issue. No error message received; log (see attached) contains fatal error notification. Based on the test case TC-1305, the application should accept the provided input and create the user. Please fix with high priority, this feature is related to REQ-0012, which is a critical new business requirement. What critical information is MISSING from th is test report that would have been useful for the developers?",
+    "text": "당신은 개발자로부터 테스트 보고서에 설명된 이상 현상이 재현 불가능하다는 다음과 같은 결함 보고서를 받았다. 애플리케이션 멈춤 2022년 5월 3일 – John Doe – 거부 새로운 사용자 생성 화면의 이름 필드에 “테스트 입력값: $ä”를 입력하면 애플리케이 션이 멈춥니다. 로그오프하고 test_admin01 계정으로 재 로그인을 시도했지만 동일한 문제가 발생합니다. 다른 테스트 관리자 계정으로 시도했지만 동일한 문제가 발생합 니다. 오류 메시지는 출력되지 않았으며, 로그(첨부 참조)에는 치명적인 오류 알림이 포함되어 있습니다. 테스트 케이스 TC-1305에 따르면, 애플리케이션은 제공된 입력값 을 인식하고 사용자를 생성해야 합니다. 이 기능은 중요한 새로운 비즈니스 요구사항 인 REQ-0012와 관련이 있으므로, 높은 우선순위로 수정해 주기 바랍니다. 개발자에게 유용했을 이 테스트 보고서에서 누락된 중요한 정보는 무엇인가?",
     "options": [
-      "Expected result and actual result",
-      "References and defect stat us",
-      "Test environment and test item",
-      "Priority and severity"
+      "기대 결과와 실제 결과",
+      "참고자료 및 결함 상태",
+      "테스트 환경 및 테스트 항목",
+      "우선순위 및 심각도"
     ],
     "answer": [
       2
     ],
-    "explanation": "ISTQB official Sample A answer: C. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 기대 결과는 “애플리케이션은 제공된 입력값을 받아서 사용자를 생성한 다” 입니다. 실제 결과는 “”테스트 입력값: $ä”를 입력하면 애플리케이션이 멈춘다” 입니다. b) 정답이 아닙니다. 테스트 케이스와 관련된 요구사항을 지칭하는 참조가 있으며 결함은 거부됐다고 나와있습니다. 또한, 개발자에게 결함 상태는 그렇게 도움이 되진 않습니다. c) 정답입니다. 이상 현상이 발견된 테스트 환경이 무엇인지 모르고 어떤 애플리케이션 (그리고 버전)이 영향을 받는지도 알지 못합니다. d) 정답이 아닙니다. 결함 보고서는 이상 현상의 우선순위가 높고 글로벌로 영향을 미치는 (전부는 아니어도 대다수 테스트 관리자 계정이 영향을 받는) 문제이고 비즈니스 이해 관계자에게 끼치는 영향이 크다고 이야기하고 있습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -885,21 +885,21 @@ export default [
     "chapter": "6? ??? ??",
     "lo": "6.1.1",
     "level": "K2",
-    "text": "Which test activity does a data preparation tool support?",
+    "text": "다음 중 데이터 준비 도구가 지원하는 테스트 활동은?",
     "options": [
-      "Test monitoring and test control",
-      "Test analysis",
-      "Test design and test implementation",
-      "Test completion"
+      "테스트 모니터링과 테스트 제어",
+      "테스트 분석과 설계",
+      "테스트 설계와 테스트 구현",
+      "테스트 완료"
     ],
     "answer": [
       2
     ],
-    "explanation": "ISTQB official Sample A answer: C. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 테스트 모니터링은 모든 활동과 테스트 계획 대비 실제 진행 상황을 지속적으로 점검하는 것을 포함합니다. 테스트 제어는 테스트 계획의 테스트 목표를 달 성하기 위해 필요한 조치를 취하는 것을 포함합니다. 이러한 활동 동안 테스트 데이터가 만들어지진 않습니다. b) 정답이 아닙니다. 테스트 분석은 테스트 컨디션을 식별하고 그들의 우선순위를 판단하기 위해 테스트 베이시스를 분석하는 것을 포함합니다. 테스트 설계는 테스트 컨디션을 테스트 케이스와 기타 테스트웨어로 구체화하는 것을 포함합니다. 이러한 활동 동안 테스트 데이터가 만들어지진 않습니다. c) 정답입니다. 테스트 구현은 테스트 실행에 필요한 테스트웨어를(예를 들어, 테스트 데이터를) 만들거나 획득하는 것을 포함합니다. d) 정답이 아닙니다. 테스트 완료 활동은 프로젝트 마일스톤(예를 들어, 릴리스 후, 반복 주기 끝, 테스트 레벨 완료) 때 수행하기 때문에 테스트 데이터를 준비하기에 너무 늦습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   },
   {
@@ -908,21 +908,21 @@ export default [
     "chapter": "6? ??? ??",
     "lo": "6.2.1",
     "level": "K1",
-    "text": "Which item correctly identifies a potential risk of performing test automation?",
+    "text": "다음 중 테스트 자동화 수행에 따른 잠재적 리스크를 올바르게 식별한 항목은?",
     "options": [
-      "It may introduce unknown regressions in production",
-      "Sufficient efforts to maintain testware may not be properly allocated",
-      "Testing tools and associated testware may not be sufficiently relied upon",
-      "It may reduce the time allocated for manual testing"
+      "운용 과정에서 알 수 없는 리그레션이 발생할 수 있다",
+      "테스트웨어를 유지하기 위한 충분한 노력이 할당되지 않을 수 있다",
+      "테스트 도구 및 관련 테스트웨어를 충분히 신뢰할 수 없다",
+      "수동 테스팅에 할당된 시간이 줄어들 수 있다"
     ],
     "answer": [
       1
     ],
-    "explanation": "ISTQB official Sample A answer: B. See the official answer PDF for the full rationale.",
+    "explanation": "a) 정답이 아닙니다. 테스트 자동화로 운영 환경에 새로운 리그레션이 생기지 않습니다. b) 정답입니다. 테스트웨어 유지를 위한 공수를 잘못 할당하는 것은 리스크입니다. c) 정답이 아닙니다. 테스트 도구는 그것과 그것의 테스트웨어를 신뢰할 수 있게 선택해야 합니다. d) 정답이 아닙니다. 테스트 자동화의 주된 목적은 수동 테스팅을 줄이는 것입니다. 그래서 이것은 이점이지 리스크가 아닙니다. 부록: 추가 샘플 문제의 정답표 A1 a A14 b A2 d A15 c A3 d A16 d A4 d A17 c A5 c A18 b A6 d A19 d A7 b, c A20 b A8 c A21 a A9 b A22 c A10 a A23 a A11 c A24 d A12 d A25 a, d A13 b A26 b 부록: 추가 샘플 문제의 정답 A1 a a) 정답입니다. 디버깅은 컴포넌트나 시스템에 있는 장애의 원인을 찾고, 분석하고, 제거하는 과정입니다. b) 정답이 아닙니다. 테스팅은 컴포넌트나 시스템과 관련 작업 산출물이 명시된 요구사항을 충족하고 목적에 적합한지 판단하고, 결함을 감지하기 위해 계획, 준비, 평가하는 과정 입니다. 장애 원인을 수정하는 것과는 무관합니다. c) 정답이 아닙니다. 요구사항 도출은 가용한 출처에서 요구사항을 수집, 포착, 통합하는 과정입니다. 장애 원인을 수정하는 것과는 무관합니다. d) 정답이 아닙니다. 결함 관리는 결함을 인지, 기록, 분류, 조사, 해결, 처리하는 과정입니다. 장애 원인을 수정하는 것과는 무관합니다. A2 d 다음을 근거로: 테스팅과 품질 보증은 같지 않습니다. 테스팅은 컴포넌트나 시스템과 관련 작업 산출물이 명시된 요구사항을 충족하고 목적에 적합한지 확인하고, 결함을 감지하기 위해 계획, 준비, 평가하는 모든 정적 및 동적 SDLC 활동으로 구성된 프로세스입니다. 품질 보증은 품질 관련 프로세스의 수립, 도입, 모니터링, 개선, 준수에 중점을 둡니다. 따라서: a) 정답이 아닙니다. b) 정답이 아닙니다. c) 정답이 아닙니다. d) 정답입니다. A3 d a) 정답이 아닙니다. 근본 원인은 프로그래밍 중 프로그래머의 주의가 분산됐다는 점입니다. b) 정답이 아닙니다. 유효하지 않은 입력값을 허용하는 것은 장애입니다. c) 정답이 아닙니다. 코드에 결함을 유발하게 만든 사고의 오류입니다. d) 정답입니다. 코드의 문제는 결함입니다. A4 d 고려 중인 테스트웨어는 테스트 차터입니다. 테스트 차터는 테스트 설계의 결과물입니다. 따라서: a) 정답이 아닙니다. b) 정답이 아닙니다. c) 정답이 아닙니다. d) 정답입니다. A5 c a) 정답이 아닙니다. 영향도 분석을 해도 테스트 완료 정도에 대한 정보는 얻지 못합니다. 변경의 영향도 분석 결과는 실행할 적합한 테스트 케이스를 선택하는 데 도움이 됩니다. b) 정답이 아닙니다. 추적성으로 예상 잔존 리스크 수준을 알고 싶다면 테스트 케이스에서 리스크까지 거슬러 올라가야 합니다. c) 정답입니다. 변경에 대한 영향도 분석은 리그레션 테스트를 위한 테스트 케이스를 고르는 데 도움이 됩니다. d) 정답이 아닙니다. 테스트 베이시스, 테스트 대상, 테스트 케이스 간의 추적성을 분석하는 것은 테스트 대상에 대해 정해진 커버리지를 달성하기 위한 테스트 데이터 선택에 도움이 되지 않습니다. 테스트 데이터를 선택하는 것은 추적성보다 테스트 분석이나 테스트 구현과 더 관련이 있습니다. A6 d a) 정답이 아닙니다. 품질은 테스트팀만의 책임이 아닌 프로젝트에 일하는 모두의 책임이 어야 합니다. b) 정답이 아닙니다. 우선 외부 테스트팀이 납품기한을 지키지 못한 것은 이점이 아닙니다. 그리고 외부 테스트팀이 납품기한을 엄수할 필요가 없다고 느낄 것이라 생각할 이유도 없습니다. c) 정답이 아닙니다. 테스트팀이 완전히 고립된 상태에서 일하게 하는 것은 나쁜 관행이며, 외부 테스트팀이 바뀌는 프로젝트 요구사항, 또 개발자와 원활한 의사소통에 관심을 가질 것을 기대할 것입니다. d) 정답입니다. 명세가 완벽한 경우는 없기 때문에 개발자는 일부 사항에 대해 가정을 해야 합니다. 독립적인 테스터는 개발자가 한 이런 가정과 그에 따른 해석에 의문을 제기하고 검증할 수 있다는 점에서 유용합니다. A7 b, c a) 정답이 아닙니다. 실행 가능한 코드는 일반적으로 후반 단계에서 생성되므로 소프트웨 어 개발 수명주기 초기에 동적 테스트를 수행할 수 없습니다. b) 정답입니다. 순차적 개발 모델에서 테스터는 초기 단계에서 정적 테스팅의 한 형태인 요 구사항 리뷰에 참여합니다. c) 정답입니다. 테스트 분석 및 테스트 설계와 함께 테스트 프로젝트가 시작되기 전에 소프 트웨어 개발 수명주기 초기에 태스트 계획을 수행할 수 있습니다. d) 정답이 아닙니다. 인수 테스트 수행은 동작하는 제품이 있을 때 수행할 수 있습니다. 순 차적 개발 수명주기 모델에서 동작하는 제품은 일반적으로 후반에 제공됩니다. e) 정답이 아닙니다. 유지보수 테스팅은 동작하고 배포된 제품이 있을 때 수행되고, 어떤 소프트웨어 개발 수명주기 모델이든 초기 단계에서 수행되지 않습니다. A8 c 다음을 근거로: i. 참입니다. 빠른 제품 출시와 시장 진입은 데브옵스의 장점입니다. ii. 거짓입니다. 보통 테스트 자동화의 사용으로 수동 테스트에 필요한 노력이 줄어듭니다. iii. 참입니다. 실행 가능한 소프트웨어의 지속적인 가용성은 장점입니다. iv. 거짓입니다. 더 많은 리그레션 테스트가 필요합니다. v. 거짓입니다. 모든 것을 자동화하지 않으며 테스트 자동화 프레임워크를 구축하는 비용은 비쌉니다. 따라서: a) 정답이 아닙니다. b) 정답이 아닙니다. c) 정답입니다. d) 정답이 아닙니다. A9 b a) 정답이 아닙니다. 시스템 성능 요구사항이 고객으로부터 직접 왔고 비즈니스 관점에서 성능이 중요하다는(즉, 우선순위가 높다는) 사실이 이 테스트를 기능 테스트로 만들진 않습니다. 테스트는 시스템이 “무엇을” 하는지 확인하는 것이 아니라, “어떻게” 하는지 (즉, 얼마나 빨리 주문을 처리하는지) 확인하기 때문입니다. b) 정답입니다. 이것은 비기능 테스팅의 한 유형인 성능 유효성 테스팅의 예시입니다. c) 정답이 아닙니다. 시나리오에서 사용자 인터페이스와의 상호작용이 테스트 컨디션의 일부인지 알 수 없습니다. 알 수 있었다 하더라도 이 테스트의 주된 목적은 성능을 확인하는 것이지, 유용성을 확인하는 것이 아닙니다. d) 정답이 아닙니다. 성능 유효성 테스팅을 수행하기 위해 코드의 내부 구조를 알 필요는 없 습니다. 구조에 대한 지식 없이도 수행 효율성 테스트를 할 수 있습니다. A10 a a) 정답입니다. 시스템이 단종되면 유지보수 테스팅의 유형인 데이터 마이그레이션 테스팅이 필요할 수 있습니다. b) 정답이 아닙니다. 리그레션 테스팅은 수정 작업으로 우연히 코드 다른 부분의 행동에 영향을 끼쳤는지 검증하는 것입니다. 지금은 새로운 시스템으로 데이터를 마이그레이션하는 것에 대해 이야기하고 있습니다. c) 정답이 아닙니다. 단위 테스팅은 데이터 마이그레이션이 아닌 개별 하드웨어나 소프트웨어 컴포넌트에 초점을 둡니다. d) 정답이 아닙니다. 통합 테스팅은 데이터 마이그레이션이 아닌 컴포넌트 간, 시스템 간, 또는 컴포넌트와 시스템 간의 상호작용에 초점을 둡니다. A11 c 제3자 공급사의 실행 가능한 코드만 리뷰할 수 없습니다. 따라서: a) 정답이 아닙니다. b) 정답이 아닙니다. c) 정답입니다. d) 정답이 아닙니다. A12 d 다음을 근거로: i. 이러한 행동은 소프트웨어가 실행되고 있을 때 쉽게 감지할 수 있습니다. 따라서, 식별하기 위해 동적 테스팅을 사용해야 합니다. ii. 이것은 일반적으로 정적 테스팅으로 더 쉽게 발견할 수 있는 결함 유형인 표준과의 불일치에 대한 예시입니다. iii. 만약 테스트 도중 소프트웨어가 실행된다면 그것은 동적 테스팅입니다. iv. 가능한 한 조기에 결함을 식별하는 것은 정적/동적 테스팅 모두의 목적입니다. v. 이것은 일반적으로 정적 테스팅으로 더 쉽게 발견할 수 있는 결함 유형인 테스트 베이시스 추적성 혹은 커버리지의 누락에 대한 예시입니다. 따라서: a) 정답이 아닙니다. b) 정답이 아닙니다. c) 정답이 아닙니다. d) 정답입니다. A13 b a) 정답이 아닙니다. 비공식 리뷰까지 포함한 모든 유형의 리뷰에 둘 이상의 역할이 있습니다. b) 정답입니다. 공식 리뷰 프로세스 중 여러 활동이 있습니다. c) 정답이 아닙니다. 리뷰할 문서는 가능한 한 빨리 배포해야 합니다. d) 정답이 아닙니다. 리뷰 중 발견한 결함은 보고해야 합니다. A14 b a) 정답이 아닙니다. 이것은 리뷰 리더의 일입니다. b) 정답입니다. 이것은 공식 리뷰에서 관리자가 할 일입니다. c) 정답이 아닙니다. 이것은 중재자의 일입니다. d) 정답이 아닙니다. 이것은 서기의 일입니다. A15 c 여기에는 3개의 동등 분할이 있습니다: {..., 10, 11}, {12}, {13, 14, ...}. 경계값은 11, 12, 13입니다. 각 경계마다 3가지 값(3-value) 경계값 분석을 적용하면 경계와 양쪽으로 이웃한 값을 테스트해야 합니다. 따라서:  11에 대해선 10, 11, 12를 테스트하고  12에 대해선 11, 12, 13을 테스트하고  13에 대해선 12, 13, 14를 테스트합니다. 결국 10, 11, 12 ,13, 14를 테스트해야 합니다. 따라서: a) 정답이 아닙니다. b) 정답이 아닙니다. c) 정답입니다. d) 정답이 아닙니다. A16 d a) 정답이 아닙니다. 이 경우에 아직 커버해야 하는(무조건) 분기가 적어도 하나는 있기 때문에 최소 하나의 테스트 케이스가 추가로 필요합니다. b) 정답이 아닙니다. 무조건 분기를 다 커버했다고 모든 조건 분기까지 커버됐다는 의미는 아닙니다. c) 정답이 아닙니다. 100% 분기 커버리지는 100% 구문 커버리지를 의미하지만, 그 반대는 아닙니다. 예를 들어서, ELSE가 없는 IF 결정문에서 하나의 테스트로 100% 구문 커버 리지를 달성할 수 있지만, 분기 커버리지는 50%만 달성됩니다. d) 정답입니다. 각 결정 결과는 하나의 조건 분기에 상응하기 때문에 100% 분기 커버리지는 결정 결과에 대해서도 100% 커버리지를 달성한 것이 됩니다. A17 c a) 정답이 아닙니다. 책은 일반적인 지침을 제공하지 공식적인 요구사항 문서이거나 명세, 유스케이스 목록, 사용자 스토리, 비즈니스 프로세스를 제공하진 않습니다. b) 정답이 아닙니다. 이 목록을 일련의 테스트 차터라고 볼 수도 있지만, 실제로는 확인해야 할 테스트 컨디션 목록에 더 가깝습니다. c) 정답입니다. 사용자 인터페이스 모범 사례 목록은 체계적으로 확인해야 하는 테스트 컨디션 목록입니다. d) 정답이 아닙니다. 테스트는 일어날 수 있는 장애에 초점을 맞추지 않고 되려 유용성 측면 에서 사용자에게 중요한 것에 대한 지식에 초점을 두고 있습니다. A18 b a) 정답이 아닙니다. 협업 기반 사용자 스토리 작성은 공통된 비전을 얻기 위해 모든 이해 관계자가 협력하여 사용자 스토리를 생성하는 것을 의미합니다. b) 정답입니다. 협업 기반 사용자 스토리 작성은 공통된 비전을 얻기 위해 모든 이해관계자가 협력하여 사용자 스토리를 생성하는 것을 의미합니다. c) 정답이 아닙니다. 협업 기반 사용자 스토리 작성은 공통된 비전을 얻기 위해 모든 이해 관계자가 협력하여 사용자 스토리를 생성하는 것을 의미합니다. d) 정답이 아닙니다. 이것은 협력 기반 접근법에 대한 설명이 아닌 각 사용자 스토리가 가져 야 하는 속성을 나열한 것입니다. A19 d a) 정답이 아닙니다. 문단은 테스트 접근법에 포함되는 테스트 레벨과 완료 조건에 대한 정보를 담고 있습니다. b) 정답이 아닙니다. 문단은 테스트 접근법에 포함되는 테스트 레벨과 완료 조건에 대한 정보를 담고 있습니다. c) 정답이 아닙니다. 문단은 테스트 접근법에 포함되는 테스트 레벨과 완료 조건에 대한 정보를 담고 있습니다. d) 정답입니다. 문단은 테스트 접근법에 포함되는 테스트 레벨과 완료 조건에 대한 정보를 담고 있습니다. A20 b a) 정답이 아닙니다. 하나의 팀원이 결정하는 것이 아니라 팀 활동이 되어야 합니다. b) 정답입니다. 만약 테스트 추정치가 같지 않지만, 결과의 차이가 작다면 “가장 많은 표를 얻은 숫자를 수용한다”와 같은 규칙을 적용할 수 있습니다. c) 정답이 아닙니다. 몇몇은 13을 얘기하고 몇몇은 8을 이야기했기 때문에 합의에 도달하지 못했습니다. d) 정답이 아닙니다. 팀이 테스트 추정치를 합의하지 못했다고 해서 기능을 제외해서는 안 됩니다. A21 a a) 정답입니다. 테스트 피라미드는 하위 테스트 레벨에서 더 많은 수의 테스트를 수행해야 한다는 것을 강조한다. b) 정답이 아닙니다. 하위 테스트 레벨에서 커다란 기능을 테스트해야 한다는 것은 사실이 아닙니다. 테스트는 더 작은 단위로 나뉘며 특정 로직에 초점을 맞추므로, 오히려 그 반 대입니다. c) 정답이 아닙니다. 테스트 피라미드는 테스트 레벨에 따라 테스트의 분량이 어떻게 분포 되는지를 보여줍니다. d) 정답이 아닙니다. 테스트 피라미드 모델은 테스트 자동화에서 팀을 지원합니다. A22 c a) 정답이 아닙니다. 리스크 영향도와 리스크 발생 가능성은 독립적입니다. b) 정답이 아닙니다. 리스크 영향도와 리스크 발생 가능성은 독립적입니다. c) 정답입니다. 리스크 영향도와 리스크 발생 가능성은 독립적입니다. d) 정답이 아닙니다. 리스크 수준을 계산하기 위해 두 요소 모두 필요합니다. A23 a 다음을 근거로: i. 이것은 프로젝트 리스크입니다. ii. 이것은 제품 리스크입니다. iii. 이것은 제품 리스크입니다. iv. 이것은 프로젝트 리스크입니다. v. 이것은 제품 리스크입니다. 따라서: a) 정답입니다. b) 정답이 아닙니다. c) 정답이 아닙니다. d) 정답이 아닙니다. A24 d a) 정답이 아닙니다. 이것은 리스크 분석이 아닌 리스크 모니터링 활동의 예시입니다. b) 정답이 아닙니다. 이것은 테스팅과 관련 없는 아키텍처 결정의 예시입니다. c) 정답이 아닙니다. 이것은 테스팅의 강도나 범위와 관련 없는 정량적 리스크 분석을 실행하는 예시입니다. d) 정답입니다. 이것은 리스크 분석이 테스팅의 강도에(즉, 상세화 수준에) 어떻게 영향을 미치는지 보여줍니다. A25 a, d a) 정답입니다. 발견한 결함의 수는 테스트 대상의 품질과 관련이 있습니다. b) 정답이 아닙니다. 이것은 테스트 대상의 품질이 아닌 테스트 효율성에 대한 지표입니다. c) 정답이 아닙니다. 실행된 테스트 케이스의 수는 품질에 대해 어떤 것도 알려주지 않습니다; 테스트 결과는 알려줄 수도 있습니다. d) 정답입니다. 결함 밀도는 테스트 대상의 품질과 관련이 있습니다. e) 정답이 아닙니다. 결함 수정 시간은 프로세스에 대한 지표입니다. 제품의 품질에 대해 아무것도 알려주지 않습니다. A26 b a) 정답이 아닙니다. 테스트 진행의 장애 요인은 상위 수준의 것이거나 비즈니스와 관계된 것일 수 있습니다. 따라서 이것은 비즈니스 이해관계자에게 중요한 정보입니다. b) 정답입니다. 분기 테스팅은 개발자와 기술 테스트 분석가 사용하는 기술 지표입니다. 비즈니스 담당자는 이 정보에 아무런 관심이 없습니다. c) 정답이 아닙니다. 테스트 진행 상황은 프로젝트와 관련된 것이기 때문에 비즈니스 담당자에게 유용할 수 있습니다. d) 정답이 아닙니다. 리스크는 제품 품질에 영향을 끼치므로 비즈니스 담당자에게 유용할 수 있습니다.",
     "source": {
-      "owner": "International Software Testing Qualifications Board (ISTQB)",
-      "label": "CTFL v4.0.1 Sample Exam A v1.7",
-      "usage": "Non-commercial study extract with source acknowledgement"
+      "owner": "KSTQB / ISTQB",
+      "label": "CTFL v4.0.1 Sample Exam A v1.7 Korean translation",
+      "usage": "Official Korean sample for personal study"
     }
   }
 ];
