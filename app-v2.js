@@ -150,6 +150,7 @@ function officialLayout(q) {
       <h2>제안된 리스크 대응 방법은?</h2>`
   };
   if (layouts[q.id]) return layouts[q.id];
+  if (globalThis.OFFICIAL_BCD_LAYOUTS?.[q.id]) return globalThis.OFFICIAL_BCD_LAYOUTS[q.id];
   const sourceImage=sourceVisuals[q.id];
   if (!sourceImage) return '';
   return `
@@ -179,7 +180,7 @@ function renderStart() {
         b.disabled=true;
         b.innerHTML=`${n}회<small>공식 ${official.name} 불러오는 중…</small>`;
         try {
-          const module=await import(`./reviewed-sets/official-${official.name}.mjs?v=20260723visual`);
+          const module=await import(`./reviewed-sets/official-${official.name}.mjs?v=20260723tablesall`);
           startExam(normalizeOfficial(module.default),`공식 Sample ${official.name} · ${n}회차`);
         } catch (error) {
           console.error(error);
