@@ -46,6 +46,20 @@ const officialChapter = lo => ({
 const normalizeOfficial = items => items.map(q=>({...q,chapter:officialChapter(q.lo)||q.chapter}));
 
 function officialLayout(q) {
+  const sourceVisuals = {
+    'OB-22':'sample-b-q22-source.png',
+    'OB-23':'sample-b-q23-source.png',
+    'OB-31':'sample-b-q31-source.png',
+    'OB-32':'sample-b-q32-source.png',
+    'OB-38':'sample-b-q38-source.png',
+    'OB-39':'sample-b-q39-source.png',
+    'OC-22':'sample-c-q22-source.png',
+    'OC-23':'sample-c-q23-source.png',
+    'OC-32':'sample-c-q32-source.png',
+    'OD-22':'sample-d-q22-source.png',
+    'OD-23':'sample-d-q23-source.png',
+    'OD-32':'sample-d-q32-source.png'
+  };
   const layouts = {
     'OA-13': `
       <h2>장애 유형과 테스트 레벨을 올바르게 연결한 것은?</h2>
@@ -135,7 +149,14 @@ function officialLayout(q) {
       <ul><li><strong>발생 가능성:</strong> 중간</li><li><strong>영향도:</strong> 높음</li><li><strong>대응:</strong><ul><li>시스템 테스팅 중 독립 테스트팀이 성능 효율성 테스팅 수행</li><li>최종 사용자 표본 집단으로 릴리스 전 알파·베타 테스팅 수행</li></ul></li></ul>
       <h2>제안된 리스크 대응 방법은?</h2>`
   };
-  return layouts[q.id] || '';
+  if (layouts[q.id]) return layouts[q.id];
+  const sourceImage=sourceVisuals[q.id];
+  if (!sourceImage) return '';
+  return `
+    <p class="question-note">공식 원문의 표·그림입니다. 이미지를 누르면 크게 볼 수 있어요.</p>
+    <a class="question-source-link" href="./assets/official/${sourceImage}" target="_blank" rel="noopener">
+      <img class="question-diagram question-source-image" src="./assets/official/${sourceImage}" alt="${escapeHtml(q.id)} 공식 원문의 표 또는 다이어그램">
+    </a>`;
 }
 
 function getSet(n) {
@@ -158,7 +179,7 @@ function renderStart() {
         b.disabled=true;
         b.innerHTML=`${n}회<small>공식 ${official.name} 불러오는 중…</small>`;
         try {
-          const module=await import(`./reviewed-sets/official-${official.name}.mjs?v=20260723table`);
+          const module=await import(`./reviewed-sets/official-${official.name}.mjs?v=20260723visual`);
           startExam(normalizeOfficial(module.default),`공식 Sample ${official.name} · ${n}회차`);
         } catch (error) {
           console.error(error);
