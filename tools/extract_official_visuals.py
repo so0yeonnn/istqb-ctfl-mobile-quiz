@@ -101,3 +101,8 @@ for sample, numbers in TARGETS.items():
                 OUTPUT / f"sample-{sample.lower()}-q{number}-source.png",
                 optimize=True,
             )
+
+        for image in rendered.values():
+            source_path = Path(image.filename)
+            image.close()
+            source_path.unlink()
