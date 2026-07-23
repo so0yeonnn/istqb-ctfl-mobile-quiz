@@ -1,4 +1,4 @@
-const CACHE = 'istqb-ctfl-reviewed-21-sets-share-fix-2';
+const CACHE = 'istqb-ctfl-official-and-mobile-fix-20260723';
 const ASSETS = ['./', './index.html', './app.css', './bank.js', './app-v2.js', './manifest.webmanifest'];
 
 self.addEventListener('install', event => {
