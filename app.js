@@ -418,6 +418,21 @@ function finishExam() {
   saveState();
   clearInterval(timerHandle);
   finishDialog.close();
+
+  // --- 과거 시험 누적 기록 저장 기능 추가 ---
+  const { score } = getResults();
+  const historyItem = {
+    date: new Date().toLocaleString(),
+    score: score,
+    total: questions.length,
+    percentage: Math.round((score / questions.length) * 100)
+  };
+
+  const existingHistory = JSON.parse(localStorage.getItem('quizHistory')) || [];
+  existingHistory.push(historyItem);
+  localStorage.setItem('quizHistory', JSON.stringify(existingHistory));
+  // ------------------------------------------
+
   renderResults();
   showScreen('result-screen');
 }
@@ -595,6 +610,7 @@ $('#download-button').addEventListener('click', downloadResults);
 $('#reset-button').addEventListener('click', () => {
   if (!confirm('저장된 답안과 결과를 모두 지우고 새로 시작할까요?')) return;
   localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem('quizHistory'); // 저장된 역대 기록도 같이 초기화
   state = newState();
   clearInterval(timerHandle);
   timerElement.textContent = '60:00';
