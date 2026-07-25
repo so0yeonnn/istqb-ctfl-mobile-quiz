@@ -592,6 +592,67 @@ $('#cancel-finish').addEventListener('click', () => finishDialog.close());
 $('#confirm-finish').addEventListener('click', finishExam);
 $('#share-button').addEventListener('click', shareResults);
 $('#download-button').addEventListener('click', downloadResults);
+// 1. 기록 없이 나가기 기능
+$('#exit-button')?.addEventListener('click', () => {
+  if (!confirm('현재 푸시던 답안을 저장하지 않고 나갈까요?')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  clearInterval(timerHandle);
+  timerElement.textContent = '60:00';
+  state = newState();
+  resumeButton.classList.add('hidden');
+  showScreen('start-screen');
+});
+
+// 2. 날아간 오답 목록 수동 주입 기능 (개발자도구 콘솔 실행용)
+window.injectMyWrongList = function() {
+  // 락돌님이 말씀해주신 1~5회차 오답 조건들
+  const targetKeys = [
+    { exam: 1, nums: [3, 10, 18, 25, 35, 37] },
+    { exam: 2, nums: [5, 11, 18, 23, 24, 32, 33] },
+    { exam: 3, nums: [1, 4, 5, 11, 13, 14, 17, 18, 20, 22, 23, 24, 25, 26, 28, 33, 34, 35, 36, 37, 39] },
+    { exam: 4, nums: [18, 21] },
+    { exam: 5, nums: [13, 14, 32, 35, 36, 39] }
+  ];
+
+  if (typeof bank === 'undefined') {
+    alert('bank.js의 문제 데이터를 찾을 수 없습니다.');
+    return;
+  }
+
+  // bank.js 전체 데이터에서 해당 회차, 해당 번호의 문제만 추출
+  let collected = [];
+  targetKeys.forEach(item => {
+    const examQuestions = bank[item.exam] || [];
+    item.nums.forEach(num => {
+      if (examQuestions[num - 1]) {
+        collected.push(examQuestions[num - 1]);
+      }
+    });
+  });
+
+  if (collected.length === 0) {
+    alert('오답 문제를 추출하지 못했습니다. bank.js 구조를 확인해주세요.');
+    return;
+  }
+
+  // 문제 세팅 및 시험 시작
+  questions.length = 0;
+  questions.push(...collected);
+
+  state = {
+    answers: Array(questions.length).fill(null),
+    flags: Array(questions.length).fill(false),
+    current: 0,
+    startedAt: Date.now(),
+    finishedAt: null
+  };
+
+  saveState();
+  showScreen('quiz-screen');
+  renderQuestion();
+  startTimer();
+  alert(`총 ${collected.length}개의 날아간 오답 문제를 불러왔습니다! 바로 풀기를 시작합니다.`);
+};
 $('#reset-button').addEventListener('click', () => {
   if (!confirm('저장된 답안과 결과를 모두 지우고 새로 시작할까요?')) return;
   localStorage.removeItem(STORAGE_KEY);
