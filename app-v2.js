@@ -1,5 +1,5 @@
 const STORAGE_KEY = 'istqb-ctfl-v3-session';
-const WRONG_KEY = 'istqb-ctfl-v3-wrongs';
+const WRONG_KEY = 'istqb-ctfl-v4-wrongs';
 const CODEX_THREAD_URL = 'codex://threads/019f7f7d-3300-7d63-9b8e-2cba380e9a49';
 const canonicalChapter = value => value
   .replace('1장 테스트의 기초','1장 테스트 기초')
@@ -311,7 +311,7 @@ function wrongIds(){
 }
 
 async function loadWrongQuestions(){
-  const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260726wrongs`)));
+  const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260726wrongs42`)));
   const currentQuestions=[
     ...questionBank,
     ...LEGACY_WRONG_QUESTIONS,
