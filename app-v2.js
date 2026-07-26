@@ -1,5 +1,5 @@
 const STORAGE_KEY = 'istqb-ctfl-v3-session';
-const WRONG_KEY = 'istqb-ctfl-v4-wrongs';
+const WRONG_KEY = 'istqb-ctfl-v5-wrong-records';
 const CODEX_THREAD_URL = 'codex://threads/019f7f7d-3300-7d63-9b8e-2cba380e9a49';
 const canonicalChapter = value => value
   .replace('1장 테스트의 기초','1장 테스트 기초')
@@ -40,6 +40,8 @@ const INITIAL_WRONG_REFS = [
 ];
 const INITIAL_WRONG_IDS = INITIAL_WRONG_REFS.map(([id])=>id);
 const INITIAL_WRONG_LABELS = new Map(INITIAL_WRONG_REFS);
+const WRONG_SEED_VERSION = 1;
+const WRONG_SEED_OVERRIDES = {};
 let exam = [];
 let examName = '';
 let answers = [];
@@ -47,6 +49,7 @@ let flags = [];
 let current = 0;
 let remaining = 0;
 let timerId = null;
+let examMode = 'regular';
 
 const $ = id => document.getElementById(id);
 const screens = ['start-screen','quiz-screen','overview-screen','result-screen'];
@@ -215,22 +218,24 @@ function renderStart() {
     grid.appendChild(b);
   }
   $('chapter-picker').innerHTML=chapters.map((c,i)=>`<label class="chapter-check"><input type="checkbox" value="${i}" checked><span>${escapeHtml(c)}</span></label>`).join('');
-  const wrongCount=wrongIds().length;
+  const wrongCount=activeWrongRecords().length;
   $('wrong-start').classList.toggle('hidden',!wrongCount);
   if(wrongCount) $('wrong-start').textContent=`저장된 오답 ${wrongCount}문제 다시 풀기`;
   $('resume-button').classList.toggle('hidden',!localStorage.getItem(STORAGE_KEY));
 }
 
-function startExam(items,name,resume=null) {
+function startExam(items,name,resume=null,mode='regular') {
   exam=items; examName=name; current=resume?.current||0;
   answers=resume?.answers||items.map(()=>[]); flags=resume?.flags||items.map(()=>false);
   remaining=resume?.remaining ?? Math.ceil(items.length*90);
+  examMode=resume?.examMode||mode;
   show('quiz-screen'); renderQuestion(); startTimer(); save(); window.scrollTo(0,0);
 }
 
 function renderQuestion() {
   const q=exam[current];
-  $('question-number').textContent=q.reviewLabel?`${q.reviewLabel} · ${current+1} / ${exam.length}`:`${current+1} / ${exam.length}`;
+  const wrongCount=examMode==='wrong-review'?` · 누적 오답 ${q.wrongCount||1}회`:'';
+  $('question-number').textContent=q.reviewLabel?`${q.reviewLabel} · ${current+1} / ${exam.length}${wrongCount}`:`${current+1} / ${exam.length}`;
   $('answered-count').textContent=`응답 ${answers.filter(a=>a.length).length}개`;
   $('progress-fill').style.width=`${(current+1)/exam.length*100}%`;
   $('exam-name').textContent=examName; $('chapter').textContent=q.chapter; $('syllabus').textContent=`LO ${q.lo}`; $('level').textContent=q.level;
@@ -256,7 +261,7 @@ function renderQuestion() {
 
 function startTimer(){ clearInterval(timerId); updateTimer(); timerId=setInterval(()=>{remaining--;updateTimer();save();if(remaining<=0)finish();},1000); }
 function updateTimer(){ const m=Math.max(0,Math.floor(remaining/60));const s=Math.max(0,remaining%60);$('timer').textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`; }
-function save(){ localStorage.setItem(STORAGE_KEY,JSON.stringify({exam,examName,answers,flags,current,remaining})); }
+function save(){ localStorage.setItem(STORAGE_KEY,JSON.stringify({exam,examName,answers,flags,current,remaining,examMode})); }
 function showOverview(){
   clearInterval(timerId);
   show('overview-screen');
@@ -276,14 +281,46 @@ function finish(){
   clearInterval(timerId);
   localStorage.removeItem(STORAGE_KEY);
   const correct=exam.filter((q,i)=>same(q.answer,answers[i])).length;
-  const newWrongIds=exam.filter((q,i)=>!same(q.answer,answers[i])).map(q=>q.sourceId||q.id);
-  localStorage.setItem(WRONG_KEY,JSON.stringify([...new Set([...wrongIds(),...newWrongIds])]));
+  const records=wrongRecords();
+  const byId=new Map(records.map(record=>[record.id,record]));
+  const now=new Date().toISOString();
+
+  exam.forEach((q,i)=>{
+    const id=q.sourceId||q.id;
+    const isCorrect=same(q.answer,answers[i]);
+    let record=byId.get(id);
+    if(isCorrect){
+      if(examMode==='wrong-review'&&record){
+        record.active=false;
+        record.lastResult='correct';
+        record.lastReviewedAt=now;
+      }
+      q.reviewOutcome='correct';
+      q.wrongCount=record?.wrongCount||q.wrongCount||0;
+      return;
+    }
+
+    if(record){
+      record.wrongCount+=1;
+      record.active=true;
+      record.lastResult='wrong';
+      record.lastWrongAt=now;
+    } else {
+      record={id,label:q.reviewLabel||null,wrongCount:1,active:true,lastResult:'wrong',lastWrongAt:now,order:records.length};
+      records.push(record);
+      byId.set(id,record);
+    }
+    q.reviewOutcome='wrong';
+    q.wrongCount=record.wrongCount;
+  });
+
+  saveWrongRecords(records);
   show('result-screen');
   $('timer').textContent='완료';
   const pct=Math.round(correct/exam.length*100);
   $('result-label').textContent=examName;
   $('result-title').textContent=`${correct} / ${exam.length} (${pct}%)`;
-  $('result-summary').textContent=pct>=65?'합격 기준 65%를 넘었습니다. 오답의 학습목표를 다시 확인하세요.':'합격 기준 65% 미만입니다. 취약 장을 먼저 복습하세요.';
+  $('result-summary').textContent=examMode==='wrong-review'?`맞힌 문제는 오답 목록에서 제외했습니다. 남은 활성 오답은 ${activeWrongRecords().length}문제입니다.`:(pct>=65?'합격 기준 65%를 넘었습니다. 오답의 학습목표를 다시 확인하세요.':'합격 기준 65% 미만입니다. 취약 장을 먼저 복습하세요.');
   renderResults();
   window.scrollTo(0,0);
 }
@@ -295,39 +332,93 @@ function renderResults(){
   $('wrong-answers').innerHTML=bad.length?bad.map(({q,i})=>`<article class="wrong"><h4>${escapeHtml(q.reviewLabel||`${i+1}번`)}. ${escapeHtml(q.text)}</h4><p class="answer-bad">내 답: ${answers[i].length?answers[i].map(x=>letters[x]).join(', '):'미응답'}</p><p class="answer-good">정답: ${q.answer.map(x=>letters[x]).join(', ')}</p><p class="explanation">${escapeHtml(q.explanation)}</p><small>${escapeHtml(q.chapter)} · LO ${q.lo} · ${q.level}</small></article>`).join(''):'<p>모든 문제를 맞혔습니다.</p>';
 }
 
-function readWrongIds(){
+function wrongRecords(){
+  const seeded=INITIAL_WRONG_REFS.map(([id,label],order)=>({id,label,wrongCount:1,active:true,lastResult:'wrong',order}));
+  const byId=new Map(seeded.map(record=>[record.id,record]));
+  let savedVersion=0;
   try {
-    const saved=JSON.parse(localStorage.getItem(WRONG_KEY)||'[]');
-    return saved
-      .map(item=>typeof item==='string'?item:item?.sourceId||item?.id)
-      .filter(id=>typeof id==='string'&&id.length);
-  } catch {
-    return [];
+    const saved=JSON.parse(localStorage.getItem(WRONG_KEY)||'null');
+    const savedRecords=Array.isArray(saved)?saved:(saved?.records||[]);
+    savedVersion=Array.isArray(saved)?0:(saved?.version||0);
+    savedRecords.forEach((item,index)=>{
+      const id=typeof item==='string'?item:item?.id||item?.sourceId;
+      if(!id) return;
+      const previous=byId.get(id);
+      byId.set(id,{
+        id,
+        label:item?.label||previous?.label||INITIAL_WRONG_LABELS.get(id)||null,
+        wrongCount:Math.max(1,Number(item?.wrongCount)||previous?.wrongCount||1),
+        active:item?.active!==false,
+        lastResult:item?.lastResult||previous?.lastResult||'wrong',
+        lastWrongAt:item?.lastWrongAt||previous?.lastWrongAt||null,
+        lastReviewedAt:item?.lastReviewedAt||previous?.lastReviewedAt||null,
+        order:Number.isFinite(item?.order)?item.order:(previous?.order??INITIAL_WRONG_REFS.length+index)
+      });
+    });
+  } catch {}
+
+  if(savedVersion<WRONG_SEED_VERSION){
+    Object.entries(WRONG_SEED_OVERRIDES).forEach(([id,override])=>{
+      const record=byId.get(id);
+      if(record) byId.set(id,{...record,...override,id});
+    });
   }
+  return [...byId.values()];
 }
 
-function wrongIds(){
-  return [...new Set([...INITIAL_WRONG_IDS,...readWrongIds()])];
+function saveWrongRecords(records){
+  localStorage.setItem(WRONG_KEY,JSON.stringify({version:WRONG_SEED_VERSION,records}));
+}
+
+function activeWrongRecords(){
+  return wrongRecords()
+    .filter(record=>record.active)
+    .sort((a,b)=>b.wrongCount-a.wrongCount||a.order-b.order);
 }
 
 async function loadWrongQuestions(){
-  const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260726wrongs42`)));
+  const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260726wrongcounts`)));
   const currentQuestions=[
     ...questionBank,
     ...LEGACY_WRONG_QUESTIONS,
     ...officialModules.flatMap(module=>normalizeOfficial(module.default))
   ];
   const byId=new Map(currentQuestions.map(q=>[q.sourceId||q.id,q]));
-  return wrongIds()
-    .map(id=>byId.get(id))
-    .filter(Boolean)
-    .map(q=>{
-      const id=q.sourceId||q.id;
-      const reviewLabel=INITIAL_WRONG_LABELS.get(id);
-      return reviewLabel?{...q,reviewLabel}:q;
-    });
+  return activeWrongRecords()
+    .map(record=>{
+      const q=byId.get(record.id);
+      if(!q) return null;
+      return {...q,reviewLabel:record.label||INITIAL_WRONG_LABELS.get(record.id)||q.reviewLabel,wrongCount:record.wrongCount};
+    })
+    .filter(Boolean);
 }
-function exportText(){ const correct=exam.filter((q,i)=>same(q.answer,answers[i])).length; const bad=exam.map((q,i)=>({q,i})).filter(x=>!same(x.q.answer,answers[x.i])); return `# ISTQB CTFL ${examName} 결과\n\n- 점수: ${correct}/${exam.length} (${Math.round(correct/exam.length*100)}%)\n- 제출일: ${new Date().toLocaleString('ko-KR')}\n\n## 오답\n\n${bad.map(({q,i})=>`### ${q.reviewLabel||`${i+1}번`} · ${q.chapter} · LO ${q.lo} · ${q.level}\n- 문제: ${q.text}\n- 내 답: ${answers[i].length?answers[i].map(x=>letters[x]).join(', '):'미응답'}\n- 정답: ${q.answer.map(x=>letters[x]).join(', ')}\n- 해설: ${q.explanation}`).join('\n\n')}`; }
+function exportText(){
+  const NL=String.fromCharCode(10);
+  const rows=exam.map((q,i)=>({q,i,correct:same(q.answer,answers[i])}));
+  const correct=rows.filter(row=>row.correct).length;
+  const bad=rows.filter(row=>!row.correct);
+  const passedReview=examMode==='wrong-review'?rows.filter(row=>row.correct):[];
+  const wrongBody=bad.length?bad.map(({q,i})=>`### ${q.reviewLabel||`${i+1}번`} · ${q.chapter} · LO ${q.lo} · ${q.level}
+- 문제: ${q.text}
+- 내 답: ${answers[i].length?answers[i].map(x=>letters[x]).join(', '):'미응답'}
+- 정답: ${q.answer.map(x=>letters[x]).join(', ')}
+- 누적 오답 횟수: ${q.wrongCount||1}회
+- 해설: ${q.explanation}`).join(NL+NL):'없음';
+  const passedBody=passedReview.length?`
+
+## 재시험에서 맞힌 문제
+
+${passedReview.map(({q})=>`- ${q.reviewLabel||q.id} · 누적 오답 ${q.wrongCount||1}회 · 활성 오답에서 제외`).join(NL)}`:'';
+  return `# ISTQB CTFL ${examName} 결과
+
+- 점수: ${correct}/${exam.length} (${Math.round(correct/exam.length*100)}%)
+- 제출일: ${new Date().toLocaleString('ko-KR')}
+- 시험 유형: ${examMode==='wrong-review'?'오답 재시험':'일반 시험'}
+
+## 오답
+
+${wrongBody}${passedBody}`;
+}
 
 async function copyText(text){
   if(navigator.clipboard?.writeText){
@@ -364,7 +455,7 @@ $('wrong-start').onclick=async()=>{
   button.textContent='오답 문제 불러오는 중…';
   try {
     const items=await loadWrongQuestions();
-    if(items.length) startExam(items,'오답 다시 풀기');
+    if(items.length) startExam(items,'오답 다시 풀기',null,'wrong-review');
   } catch(error) {
     console.error(error);
     alert('오답 문제를 불러오지 못했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.');
@@ -394,6 +485,7 @@ $('exit-button').onclick=()=>{
   answers=[];
   flags=[];
   remaining=0;
+  examMode='regular';
   $('timer').textContent='60:00';
   show('start-screen');
   renderStart();
