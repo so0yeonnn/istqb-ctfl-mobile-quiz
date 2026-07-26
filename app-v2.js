@@ -36,12 +36,37 @@ const INITIAL_WRONG_REFS = [
   ['OA-39','3회 39번'],
   ['P4-18','4회 18번'],['P4-21','4회 21번'],
   ['P5-13','5회 13번'],['P5-14','5회 14번'],['P5-32','5회 32번'],
-  ['P5-35','5회 35번'],['P5-36','5회 36번'],['P5-39','5회 39번']
+  ['P5-35','5회 35번'],['P5-36','5회 36번'],['P5-39','5회 39번'],
+  ['P6-04','6회 4번'],['P6-29','6회 29번']
 ];
 const INITIAL_WRONG_IDS = INITIAL_WRONG_REFS.map(([id])=>id);
 const INITIAL_WRONG_LABELS = new Map(INITIAL_WRONG_REFS);
-const WRONG_SEED_VERSION = 1;
-const WRONG_SEED_OVERRIDES = {};
+const WRONG_SEED_VERSION = 2;
+const RETRY_WRONG_COUNTS = {
+  'LEGACY-1-35':2,
+  'LEGACY-2-05':2,
+  'LEGACY-2-32':2,
+  'P5-14':2,
+  'P5-35':2,
+  'P6-04':1,
+  'P6-29':1
+};
+const WRONG_SEED_OVERRIDES = Object.fromEntries(INITIAL_WRONG_REFS.map(([id])=>{
+  const wrongCount=RETRY_WRONG_COUNTS[id];
+  if(wrongCount) return [id,{
+    wrongCount,
+    active:true,
+    lastResult:'wrong',
+    lastWrongAt:id.startsWith('P6-')
+      ?'2026-07-26T23:12:37+09:00'
+      :'2026-07-26T17:35:56+09:00'
+  }];
+  return [id,{
+    active:false,
+    lastResult:'correct',
+    lastReviewedAt:'2026-07-26T17:35:56+09:00'
+  }];
+}));
 let exam = [];
 let examName = '';
 let answers = [];
