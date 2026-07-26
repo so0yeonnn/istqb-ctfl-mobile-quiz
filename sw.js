@@ -1,4 +1,4 @@
-const CACHE = 'istqb-ctfl-official-tables-all-20260723';
+const CACHE = 'istqb-ctfl-controls-20260726';
 const ASSETS = ['./', './index.html', './app.css', './bank.js', './official-layouts-bcd.js', './app-v2.js', './manifest.webmanifest', './assets/official/sample-a-q23-state.png'];
 
 self.addEventListener('install', event => {

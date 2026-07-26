@@ -239,7 +239,20 @@ function renderQuestion() {
 function startTimer(){ clearInterval(timerId); updateTimer(); timerId=setInterval(()=>{remaining--;updateTimer();save();if(remaining<=0)finish();},1000); }
 function updateTimer(){ const m=Math.max(0,Math.floor(remaining/60));const s=Math.max(0,remaining%60);$('timer').textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`; }
 function save(){ localStorage.setItem(STORAGE_KEY,JSON.stringify({exam,examName,answers,flags,current,remaining})); }
-function showOverview(){ clearInterval(timerId);show('overview-screen');$('overview-summary').textContent=`응답 ${answers.filter(a=>a.length).length}개 · 미응답 ${answers.filter(a=>!a.length).length}개 · 검토 ${flags.filter(Boolean).length}개`;$('question-grid').innerHTML=exam.map((q,i)=>`<button class="${answers[i].length?'answered':''} ${flags[i]?'flagged':''}" data-i="${i}">${i+1}</button>`).join('');$('question-grid').querySelectorAll('button').forEach(b=>b.onclick=()=>{current=Number(b.dataset.i);show('quiz-screen');renderQuestion();startTimer();}); }
+function showOverview(){
+  clearInterval(timerId);
+  show('overview-screen');
+  const answeredCount=exam.filter((q,i)=>answers[i]?.length).length;
+  const flaggedCount=exam.filter((q,i)=>Boolean(flags[i])).length;
+  $('overview-summary').textContent=`응답 ${answeredCount}개 · 미응답 ${exam.length-answeredCount}개 · 검토 ${flaggedCount}개`;
+  $('question-grid').innerHTML=exam.map((q,i)=>`<button class="${answers[i]?.length?'answered':''} ${flags[i]?'flagged':''}" data-i="${i}">${i+1}</button>`).join('');
+  $('question-grid').querySelectorAll('button').forEach(b=>b.onclick=()=>{
+    current=Number(b.dataset.i);
+    show('quiz-screen');
+    renderQuestion();
+    startTimer();
+  });
+}
 
 function finish(){
   clearInterval(timerId);
@@ -318,6 +331,21 @@ $('finish-button').onclick=()=>{
   finish();
 };
 $('cancel-finish').onclick=()=>$('finish-dialog').close();$('confirm-finish').onclick=()=>{$('finish-dialog').close();finish();};
+$('exit-button').onclick=()=>{
+  if(!window.confirm('현재 답안을 저장하지 않고 문제 선택 화면으로 나갈까요?')) return;
+  clearInterval(timerId);
+  localStorage.removeItem(STORAGE_KEY);
+  exam=[];
+  examName='';
+  current=0;
+  answers=[];
+  flags=[];
+  remaining=0;
+  $('timer').textContent='60:00';
+  show('start-screen');
+  renderStart();
+  window.scrollTo(0,0);
+};
 $('reset-button').onclick=()=>{show('start-screen');renderStart();window.scrollTo(0,0);};
 $('download-button').onclick=()=>{const blob=new Blob([exportText()],{type:'text/markdown;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`istqb-${examName.replaceAll(' ','-')}.md`;a.click();URL.revokeObjectURL(a.href);};
 $('share-button').onclick=()=>copyResult(true);
