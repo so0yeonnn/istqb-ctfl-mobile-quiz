@@ -22,6 +22,24 @@ const officialSamples = {
   16:{name:'C',version:'1.6'},
   23:{name:'D',version:'1.5'}
 };
+const INITIAL_WRONG_REFS = [
+  ['LEGACY-1-03','1회 3번'],['LEGACY-1-10','1회 10번'],['LEGACY-1-18','1회 18번'],
+  ['LEGACY-1-25','1회 25번'],['LEGACY-1-35','1회 35번'],['LEGACY-1-37','1회 37번'],
+  ['LEGACY-2-05','2회 5번'],['LEGACY-2-11','2회 11번'],['LEGACY-2-18','2회 18번'],
+  ['LEGACY-2-23','2회 23번'],['LEGACY-2-24','2회 24번'],['LEGACY-2-32','2회 32번'],
+  ['LEGACY-2-33','2회 33번'],
+  ['OA-01','3회 1번'],['OA-04','3회 4번'],['OA-05','3회 5번'],['OA-11','3회 11번'],
+  ['OA-13','3회 13번'],['OA-14','3회 14번'],['OA-17','3회 17번'],['OA-18','3회 18번'],
+  ['OA-20','3회 20번'],['OA-22','3회 22번'],['OA-23','3회 23번'],['OA-24','3회 24번'],
+  ['OA-25','3회 25번'],['OA-26','3회 26번'],['OA-28','3회 28번'],['OA-33','3회 33번'],
+  ['OA-34','3회 34번'],['OA-35','3회 35번'],['OA-36','3회 36번'],['OA-37','3회 37번'],
+  ['OA-39','3회 39번'],
+  ['P4-18','4회 18번'],['P4-21','4회 21번'],
+  ['P5-13','5회 13번'],['P5-14','5회 14번'],['P5-32','5회 32번'],
+  ['P5-35','5회 35번'],['P5-36','5회 36번'],['P5-39','5회 39번']
+];
+const INITIAL_WRONG_IDS = INITIAL_WRONG_REFS.map(([id])=>id);
+const INITIAL_WRONG_LABELS = new Map(INITIAL_WRONG_REFS);
 let exam = [];
 let examName = '';
 let answers = [];
@@ -197,7 +215,7 @@ function renderStart() {
     grid.appendChild(b);
   }
   $('chapter-picker').innerHTML=chapters.map((c,i)=>`<label class="chapter-check"><input type="checkbox" value="${i}" checked><span>${escapeHtml(c)}</span></label>`).join('');
-  const wrongCount=readWrongs().length;
+  const wrongCount=wrongIds().length;
   $('wrong-start').classList.toggle('hidden',!wrongCount);
   if(wrongCount) $('wrong-start').textContent=`저장된 오답 ${wrongCount}문제 다시 풀기`;
   $('resume-button').classList.toggle('hidden',!localStorage.getItem(STORAGE_KEY));
@@ -212,7 +230,7 @@ function startExam(items,name,resume=null) {
 
 function renderQuestion() {
   const q=exam[current];
-  $('question-number').textContent=`${current+1} / ${exam.length}`;
+  $('question-number').textContent=q.reviewLabel?`${q.reviewLabel} · ${current+1} / ${exam.length}`:`${current+1} / ${exam.length}`;
   $('answered-count').textContent=`응답 ${answers.filter(a=>a.length).length}개`;
   $('progress-fill').style.width=`${(current+1)/exam.length*100}%`;
   $('exam-name').textContent=examName; $('chapter').textContent=q.chapter; $('syllabus').textContent=`LO ${q.lo}`; $('level').textContent=q.level;
@@ -258,9 +276,8 @@ function finish(){
   clearInterval(timerId);
   localStorage.removeItem(STORAGE_KEY);
   const correct=exam.filter((q,i)=>same(q.answer,answers[i])).length;
-  const newWrongs=exam.filter((q,i)=>!same(q.answer,answers[i]));
-  const merged=new Map([...readWrongs(),...newWrongs].map(q=>[q.sourceId||q.id,q]));
-  localStorage.setItem(WRONG_KEY,JSON.stringify([...merged.values()]));
+  const newWrongIds=exam.filter((q,i)=>!same(q.answer,answers[i])).map(q=>q.sourceId||q.id);
+  localStorage.setItem(WRONG_KEY,JSON.stringify([...new Set([...wrongIds(),...newWrongIds])]));
   show('result-screen');
   $('timer').textContent='완료';
   const pct=Math.round(correct/exam.length*100);
@@ -275,21 +292,42 @@ function renderResults(){
   const groups=[...chapters.map(c=>({name:c,items:exam.map((q,i)=>({q,i})).filter(x=>x.q.chapter===c)})),{name:'인지 수준 K1',items:exam.map((q,i)=>({q,i})).filter(x=>x.q.level==='K1')},{name:'인지 수준 K2',items:exam.map((q,i)=>({q,i})).filter(x=>x.q.level==='K2')},{name:'인지 수준 K3',items:exam.map((q,i)=>({q,i})).filter(x=>x.q.level==='K3')}].filter(g=>g.items.length);
   $('chapter-results').innerHTML=groups.map(g=>{const n=g.items.filter(x=>same(x.q.answer,answers[x.i])).length,p=Math.round(n/g.items.length*100);return `<div class="chapter-row"><span>${escapeHtml(g.name)}</span><strong>${n}/${g.items.length}</strong><div class="chapter-bar"><span style="width:${p}%"></span></div></div>`}).join('');
   const bad=exam.map((q,i)=>({q,i})).filter(x=>!same(x.q.answer,answers[x.i]));
-  $('wrong-answers').innerHTML=bad.length?bad.map(({q,i})=>`<article class="wrong"><h4>${i+1}. ${escapeHtml(q.text)}</h4><p class="answer-bad">내 답: ${answers[i].length?answers[i].map(x=>letters[x]).join(', '):'미응답'}</p><p class="answer-good">정답: ${q.answer.map(x=>letters[x]).join(', ')}</p><p class="explanation">${escapeHtml(q.explanation)}</p><small>${escapeHtml(q.chapter)} · LO ${q.lo} · ${q.level}</small></article>`).join(''):'<p>모든 문제를 맞혔습니다.</p>';
+  $('wrong-answers').innerHTML=bad.length?bad.map(({q,i})=>`<article class="wrong"><h4>${escapeHtml(q.reviewLabel||`${i+1}번`)}. ${escapeHtml(q.text)}</h4><p class="answer-bad">내 답: ${answers[i].length?answers[i].map(x=>letters[x]).join(', '):'미응답'}</p><p class="answer-good">정답: ${q.answer.map(x=>letters[x]).join(', ')}</p><p class="explanation">${escapeHtml(q.explanation)}</p><small>${escapeHtml(q.chapter)} · LO ${q.lo} · ${q.level}</small></article>`).join(''):'<p>모든 문제를 맞혔습니다.</p>';
 }
 
-function readWrongs(){
+function readWrongIds(){
   try {
     const saved=JSON.parse(localStorage.getItem(WRONG_KEY)||'[]');
     return saved
-      .map(item=>typeof item==='string'?questionBank.find(q=>(q.sourceId||q.id)===item):item)
-      .filter(Boolean)
-      .map(item=>/^O[A-D]-/.test(item.id||'')?{...item,chapter:officialChapter(item.lo)||item.chapter}:item);
+      .map(item=>typeof item==='string'?item:item?.sourceId||item?.id)
+      .filter(id=>typeof id==='string'&&id.length);
   } catch {
     return [];
   }
 }
-function exportText(){ const correct=exam.filter((q,i)=>same(q.answer,answers[i])).length; const bad=exam.map((q,i)=>({q,i})).filter(x=>!same(x.q.answer,answers[x.i])); return `# ISTQB CTFL ${examName} 결과\n\n- 점수: ${correct}/${exam.length} (${Math.round(correct/exam.length*100)}%)\n- 제출일: ${new Date().toLocaleString('ko-KR')}\n\n## 오답\n\n${bad.map(({q,i})=>`### ${i+1}번 · ${q.chapter} · LO ${q.lo} · ${q.level}\n- 문제: ${q.text}\n- 내 답: ${answers[i].length?answers[i].map(x=>letters[x]).join(', '):'미응답'}\n- 정답: ${q.answer.map(x=>letters[x]).join(', ')}\n- 해설: ${q.explanation}`).join('\n\n')}`; }
+
+function wrongIds(){
+  return [...new Set([...INITIAL_WRONG_IDS,...readWrongIds()])];
+}
+
+async function loadWrongQuestions(){
+  const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260726wrongs`)));
+  const currentQuestions=[
+    ...questionBank,
+    ...LEGACY_WRONG_QUESTIONS,
+    ...officialModules.flatMap(module=>normalizeOfficial(module.default))
+  ];
+  const byId=new Map(currentQuestions.map(q=>[q.sourceId||q.id,q]));
+  return wrongIds()
+    .map(id=>byId.get(id))
+    .filter(Boolean)
+    .map(q=>{
+      const id=q.sourceId||q.id;
+      const reviewLabel=INITIAL_WRONG_LABELS.get(id);
+      return reviewLabel?{...q,reviewLabel}:q;
+    });
+}
+function exportText(){ const correct=exam.filter((q,i)=>same(q.answer,answers[i])).length; const bad=exam.map((q,i)=>({q,i})).filter(x=>!same(x.q.answer,answers[x.i])); return `# ISTQB CTFL ${examName} 결과\n\n- 점수: ${correct}/${exam.length} (${Math.round(correct/exam.length*100)}%)\n- 제출일: ${new Date().toLocaleString('ko-KR')}\n\n## 오답\n\n${bad.map(({q,i})=>`### ${q.reviewLabel||`${i+1}번`} · ${q.chapter} · LO ${q.lo} · ${q.level}\n- 문제: ${q.text}\n- 내 답: ${answers[i].length?answers[i].map(x=>letters[x]).join(', '):'미응답'}\n- 정답: ${q.answer.map(x=>letters[x]).join(', ')}\n- 해설: ${q.explanation}`).join('\n\n')}`; }
 
 async function copyText(text){
   if(navigator.clipboard?.writeText){
@@ -319,7 +357,22 @@ async function copyResult(openCodex){
 }
 
 $('custom-start').onclick=()=>{const selected=[...document.querySelectorAll('#chapter-picker input:checked')].map(x=>chapters[Number(x.value)]);if(!selected.length){alert('한 개 이상의 장을 선택하세요.');return;}const pool=questionBank.filter(q=>selected.includes(q.chapter));const count=Math.min(Number($('question-count').value),pool.length);startExam(shuffle(pool).slice(0,count),'맞춤 랜덤 연습');};
-$('wrong-start').onclick=()=>{const items=readWrongs();if(items.length)startExam(shuffle(items),'\uC624\uB2F5 \uB2E4\uC2DC \uD480\uAE30');};
+$('wrong-start').onclick=async()=>{
+  const button=$('wrong-start');
+  const oldText=button.textContent;
+  button.disabled=true;
+  button.textContent='오답 문제 불러오는 중…';
+  try {
+    const items=await loadWrongQuestions();
+    if(items.length) startExam(items,'오답 다시 풀기');
+  } catch(error) {
+    console.error(error);
+    alert('오답 문제를 불러오지 못했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.');
+  } finally {
+    button.disabled=false;
+    button.textContent=oldText;
+  }
+};
 $('resume-button').onclick=()=>{try{const s=JSON.parse(localStorage.getItem(STORAGE_KEY));startExam(s.exam,s.examName,s)}catch{localStorage.removeItem(STORAGE_KEY);renderStart();}};
 $('prev-button').onclick=()=>{if(current>0){current--;renderQuestion();save();}};
 $('next-button').onclick=()=>{if(current<exam.length-1){current++;renderQuestion();save();window.scrollTo(0,0);}else showOverview();};
