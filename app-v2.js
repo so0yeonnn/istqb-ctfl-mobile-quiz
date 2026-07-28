@@ -38,11 +38,15 @@ const INITIAL_WRONG_REFS = [
   ['P5-13','5회 13번'],['P5-14','5회 14번'],['P5-32','5회 32번'],
   ['P5-35','5회 35번'],['P5-36','5회 36번'],['P5-39','5회 39번'],
   ['P6-04','6회 4번'],['P6-29','6회 29번'],
-  ['P7-11','7회 11번'],['P7-32','7회 32번']
+  ['P7-11','7회 11번'],['P7-32','7회 32번'],
+  ['P8-06','8회 6번'],['P8-10','8회 10번'],
+  ['OB-01','9회 1번'],['OB-03','9회 3번'],['OB-06','9회 6번'],['OB-07','9회 7번'],
+  ['OB-09','9회 9번'],['OB-17','9회 17번'],['OB-18','9회 18번'],['OB-20','9회 20번'],
+  ['OB-27','9회 27번'],['OB-32','9회 32번'],['OB-35','9회 35번'],['OB-36','9회 36번']
 ];
 const INITIAL_WRONG_IDS = INITIAL_WRONG_REFS.map(([id])=>id);
 const INITIAL_WRONG_LABELS = new Map(INITIAL_WRONG_REFS);
-const WRONG_SEED_VERSION = 3;
+const WRONG_SEED_VERSION = 4;
 const RETRY_WRONG_COUNTS = {
   'LEGACY-1-35':2,
   'LEGACY-2-05':2,
@@ -52,13 +56,41 @@ const RETRY_WRONG_COUNTS = {
   'P6-04':1,
   'P6-29':1,
   'P7-11':1,
-  'P7-32':1
+  'P7-32':1,
+  'P8-06':1,
+  'P8-10':1,
+  'OB-01':1,
+  'OB-03':1,
+  'OB-06':1,
+  'OB-07':1,
+  'OB-09':1,
+  'OB-17':1,
+  'OB-18':1,
+  'OB-20':1,
+  'OB-27':1,
+  'OB-32':1,
+  'OB-35':1,
+  'OB-36':1
 };
 const WRONG_RESULT_TIMES = {
   'P6-04':'2026-07-26T23:12:37+09:00',
   'P6-29':'2026-07-26T23:12:37+09:00',
   'P7-11':'2026-07-27T16:15:40+09:00',
-  'P7-32':'2026-07-27T16:15:40+09:00'
+  'P7-32':'2026-07-27T16:15:40+09:00',
+  'P8-06':'2026-07-28T20:38:00+09:00',
+  'P8-10':'2026-07-28T20:38:00+09:00',
+  'OB-01':'2026-07-28T20:37:17+09:00',
+  'OB-03':'2026-07-28T20:37:17+09:00',
+  'OB-06':'2026-07-28T20:37:17+09:00',
+  'OB-07':'2026-07-28T20:37:17+09:00',
+  'OB-09':'2026-07-28T20:37:17+09:00',
+  'OB-17':'2026-07-28T20:37:17+09:00',
+  'OB-18':'2026-07-28T20:37:17+09:00',
+  'OB-20':'2026-07-28T20:37:17+09:00',
+  'OB-27':'2026-07-28T20:37:17+09:00',
+  'OB-32':'2026-07-28T20:37:17+09:00',
+  'OB-35':'2026-07-28T20:37:17+09:00',
+  'OB-36':'2026-07-28T20:37:17+09:00'
 };
 const WRONG_SEED_OVERRIDES = Object.fromEntries(INITIAL_WRONG_REFS.map(([id])=>{
   const wrongCount=RETRY_WRONG_COUNTS[id];
@@ -273,7 +305,8 @@ function renderQuestion() {
   $('exam-name').textContent=examName; $('chapter').textContent=q.chapter; $('syllabus').textContent=`LO ${q.lo}`; $('level').textContent=q.level;
   const layout=officialLayout(q);
   $('question-text').textContent=q.text;
-  $('question-text').classList.toggle('hidden',Boolean(layout));
+  const showFullOfficialStem=Boolean(layout) && /^O[BCD]-/.test(q.id);
+  $('question-text').classList.toggle('hidden',Boolean(layout) && !showFullOfficialStem);
   $('question-detail').innerHTML=layout;
   $('question-detail').classList.toggle('hidden',!layout);
   $('multi-hint').classList.toggle('hidden',q.answer.length===1);
@@ -409,7 +442,7 @@ function activeWrongRecords(){
 }
 
 async function loadWrongQuestions(){
-  const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260726wrongcounts`)));
+  const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260728fullstems`)));
   const currentQuestions=[
     ...questionBank,
     ...LEGACY_WRONG_QUESTIONS,
