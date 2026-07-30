@@ -1,4 +1,4 @@
-const CACHE = 'istqb-ctfl-round9-20260728';
+const CACHE = 'istqb-ctfl-round10-20260730';
 const ASSETS = ['./', './index.html', './app.css', './bank.js', './legacy-wrongs.js', './official-layouts-bcd.js', './app-v2.js', './manifest.webmanifest', './assets/official/sample-a-q23-state.png'];
 
 self.addEventListener('install', event => {
