@@ -43,11 +43,12 @@ const INITIAL_WRONG_REFS = [
   ['OB-01','9회 1번'],['OB-03','9회 3번'],['OB-06','9회 6번'],['OB-07','9회 7번'],
   ['OB-09','9회 9번'],['OB-17','9회 17번'],['OB-18','9회 18번'],['OB-20','9회 20번'],
   ['OB-27','9회 27번'],['OB-32','9회 32번'],['OB-35','9회 35번'],['OB-36','9회 36번'],
-  ['P10-03','10회 3번'],['P10-09','10회 9번'],['P10-18','10회 18번']
+  ['P10-03','10회 3번'],['P10-09','10회 9번'],['P10-18','10회 18번'],
+  ['P12-19','12회 19번'],['P12-22','12회 22번'],['P12-35','12회 35번']
 ];
 const INITIAL_WRONG_IDS = INITIAL_WRONG_REFS.map(([id])=>id);
 const INITIAL_WRONG_LABELS = new Map(INITIAL_WRONG_REFS);
-const WRONG_SEED_VERSION = 6;
+const WRONG_SEED_VERSION = 7;
 const RETRY_WRONG_COUNTS = {
   'LEGACY-1-35':2,
   'LEGACY-2-05':4,
@@ -74,7 +75,10 @@ const RETRY_WRONG_COUNTS = {
   'OB-36':1,
   'P10-03':1,
   'P10-09':1,
-  'P10-18':1
+  'P10-18':1,
+  'P12-19':1,
+  'P12-22':1,
+  'P12-35':1
 };
 const WRONG_RESULT_TIMES = {
   'LEGACY-2-05':'2026-07-31T00:00:00+09:00',
@@ -98,7 +102,10 @@ const WRONG_RESULT_TIMES = {
   'OB-36':'2026-07-28T20:37:17+09:00',
   'P10-03':'2026-07-30T21:47:00+09:00',
   'P10-09':'2026-07-30T21:47:00+09:00',
-  'P10-18':'2026-07-30T21:47:00+09:00'
+  'P10-18':'2026-07-30T21:47:00+09:00',
+  'P12-19':'2026-08-02T16:56:44+09:00',
+  'P12-22':'2026-08-02T16:56:44+09:00',
+  'P12-35':'2026-08-02T16:56:44+09:00'
 };
 const WRONG_SEED_OVERRIDES = Object.fromEntries(INITIAL_WRONG_REFS.map(([id])=>{
   const wrongCount=RETRY_WRONG_COUNTS[id];
