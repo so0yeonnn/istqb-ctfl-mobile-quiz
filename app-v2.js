@@ -280,7 +280,7 @@ function renderStart() {
         b.disabled=true;
         b.innerHTML=`${n}회<small>공식 ${official.name} 불러오는 중…</small>`;
         try {
-          const module=await import(`./reviewed-sets/official-${official.name}.mjs?v=20260723tablesall`);
+          const module=await import(`./reviewed-sets/official-${official.name}.mjs?v=20260803officialpdf`);
           startExam(normalizeOfficial(module.default),`공식 Sample ${official.name} · ${n}회차`);
         } catch (error) {
           console.error(error);
@@ -457,7 +457,7 @@ function activeWrongRecords(){
 }
 
 async function loadWrongQuestions(){
-  const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260728fullstems`)));
+  const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260803officialpdf`)));
   const currentQuestions=[
     ...questionBank,
     ...LEGACY_WRONG_QUESTIONS,
