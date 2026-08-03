@@ -147,6 +147,10 @@ const normalizeOfficial = items => items.map(q=>({...q,chapter:officialChapter(q
 
 function officialLayout(q) {
   const sourceVisuals = {
+    'OA-14':'sample-a-q14-source.png',
+    'OA-21':'sample-a-q21-source.png',
+    'OA-22':'sample-a-q22-source.png',
+    'OA-33':'sample-a-q33-source.png',
     'OB-22':'sample-b-q22-source.png',
     'OB-23':'sample-b-q23-source.png',
     'OB-31':'sample-b-q31-source.png',
@@ -249,8 +253,8 @@ function officialLayout(q) {
       <ul><li><strong>발생 가능성:</strong> 중간</li><li><strong>영향도:</strong> 높음</li><li><strong>대응:</strong><ul><li>시스템 테스팅 중 독립 테스트팀이 성능 효율성 테스팅 수행</li><li>최종 사용자 표본 집단으로 릴리스 전 알파·베타 테스팅 수행</li></ul></li></ul>
       <h2>제안된 리스크 대응 방법은?</h2>`
   };
-  if (layouts[q.id]) return layouts[q.id];
-  if (globalThis.OFFICIAL_BCD_LAYOUTS?.[q.id]) return globalThis.OFFICIAL_BCD_LAYOUTS[q.id];
+  if (layouts[q.id] && !sourceVisuals[q.id]) return layouts[q.id];
+  if (globalThis.OFFICIAL_BCD_LAYOUTS?.[q.id] && !sourceVisuals[q.id]) return globalThis.OFFICIAL_BCD_LAYOUTS[q.id];
   const sourceImage=sourceVisuals[q.id];
   if (!sourceImage) return '';
   return `
@@ -280,7 +284,7 @@ function renderStart() {
         b.disabled=true;
         b.innerHTML=`${n}회<small>공식 ${official.name} 불러오는 중…</small>`;
         try {
-          const module=await import(`./reviewed-sets/official-${official.name}.mjs?v=20260803officialpdf`);
+          const module=await import(`./reviewed-sets/official-${official.name}.mjs?v=20260803officialpdf2`);
           startExam(normalizeOfficial(module.default),`공식 Sample ${official.name} · ${n}회차`);
         } catch (error) {
           console.error(error);
@@ -457,7 +461,7 @@ function activeWrongRecords(){
 }
 
 async function loadWrongQuestions(){
-  const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260803officialpdf`)));
+  const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260803officialpdf2`)));
   const currentQuestions=[
     ...questionBank,
     ...LEGACY_WRONG_QUESTIONS,
