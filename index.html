@@ -39,6 +39,16 @@
         <button id="custom-start" class="primary wide">선택 범위에서 시작</button>
       </section>
 
+      <section class="picker-card reverse-card">
+        <div class="section-title"><h3>역방향 개념 훈련</h3><span>설명 → 개념</span></div>
+        <p class="source-note">설명이나 사례를 보고 해당 개념을 고릅니다. 64개 학습목표를 한 문제씩 연습할 수 있어요.</p>
+        <div id="reverse-chapter-picker" class="chapter-picker"></div>
+        <label class="select-row" for="reverse-question-count">문제 수
+          <select id="reverse-question-count"><option value="10" selected>10문제</option><option value="20">20문제</option><option value="64">전체</option></select>
+        </label>
+        <button id="reverse-start" class="primary wide">역방향 문제 시작</button>
+      </section>
+
       <div class="stack-actions">
         <button id="wrong-start" class="secondary hidden">저장된 오답 다시 풀기</button>
         <button id="resume-button" class="secondary hidden">진행 중 시험 이어 풀기</button>
@@ -77,8 +87,9 @@
 
   <dialog id="finish-dialog"><h2>시험을 종료할까요?</h2><p id="finish-dialog-text"></p><div class="dialog-actions"><button id="cancel-finish" class="secondary">계속 풀기</button><button id="confirm-finish" class="primary">채점하기</button></div></dialog>
   <script src="bank.js?v=20260723tablesall"></script>
+  <script src="reverse-bank.js?v=20260807reverse64"></script>
   <script src="legacy-wrongs.js?v=20260726wrongs42"></script>
   <script src="official-layouts-bcd.js?v=20260728fullstems"></script>
-  <script src="app-v2.js?v=20260803officialpdf2"></script>
+  <script src="app-v2.js?v=20260807reverse64"></script>
 </body>
 </html>

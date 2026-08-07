@@ -5,6 +5,7 @@ const canonicalChapter = value => value
   .replace('1장 테스트의 기초','1장 테스트 기초')
   .replace('2장 소프트웨어 개발 수명주기 전반의 테스트','2장 SDLC 전반의 테스팅');
 const questionBank = QUESTION_BANK.map(q=>({...q,chapter:canonicalChapter(q.chapter)}));
+const reverseQuestionBank = buildReverseQuestions(questionBank);
 const chapters = [...new Set(questionBank.map(q => q.chapter))];
 const letters = ['A','B','C','D','E'];
 const shuffle = items => {
@@ -301,6 +302,7 @@ function renderStart() {
     grid.appendChild(b);
   }
   $('chapter-picker').innerHTML=chapters.map((c,i)=>`<label class="chapter-check"><input type="checkbox" value="${i}" checked><span>${escapeHtml(c)}</span></label>`).join('');
+  $('reverse-chapter-picker').innerHTML=chapters.map((c,i)=>`<label class="chapter-check"><input type="checkbox" value="${i}" checked><span>${escapeHtml(c)}</span></label>`).join('');
   const wrongCount=activeWrongRecords().length;
   $('wrong-start').classList.toggle('hidden',!wrongCount);
   if(wrongCount) $('wrong-start').textContent=`저장된 오답 ${wrongCount}문제 다시 풀기`;
@@ -404,7 +406,11 @@ function finish(){
   const pct=Math.round(correct/exam.length*100);
   $('result-label').textContent=examName;
   $('result-title').textContent=`${correct} / ${exam.length} (${pct}%)`;
-  $('result-summary').textContent=examMode==='wrong-review'?`맞힌 문제는 오답 목록에서 제외했습니다. 남은 활성 오답은 ${activeWrongRecords().length}문제입니다.`:(pct>=65?'합격 기준 65%를 넘었습니다. 오답의 학습목표를 다시 확인하세요.':'합격 기준 65% 미만입니다. 취약 장을 먼저 복습하세요.');
+  $('result-summary').textContent=examMode==='wrong-review'
+    ?`맞힌 문제는 오답 목록에서 제외했습니다. 남은 활성 오답은 ${activeWrongRecords().length}문제입니다.`
+    :examMode==='reverse'
+      ?'설명에서 개념을 떠올리는 역방향 인출 결과입니다. 틀린 개념은 기존 오답 목록에 누적됩니다.'
+      :(pct>=65?'합격 기준 65%를 넘었습니다. 오답의 학습목표를 다시 확인하세요.':'합격 기준 65% 미만입니다. 취약 장을 먼저 복습하세요.');
   renderResults();
   window.scrollTo(0,0);
 }
@@ -464,6 +470,7 @@ async function loadWrongQuestions(){
   const officialModules=await Promise.all(['A','B','C','D'].map(name=>import(`./reviewed-sets/official-${name}.mjs?v=20260803officialpdf2`)));
   const currentQuestions=[
     ...questionBank,
+    ...reverseQuestionBank,
     ...LEGACY_WRONG_QUESTIONS,
     ...officialModules.flatMap(module=>normalizeOfficial(module.default))
   ];
@@ -497,7 +504,7 @@ ${passedReview.map(({q})=>`- ${q.reviewLabel||q.id} · 누적 오답 ${q.wrongCo
 
 - 점수: ${correct}/${exam.length} (${Math.round(correct/exam.length*100)}%)
 - 제출일: ${new Date().toLocaleString('ko-KR')}
-- 시험 유형: ${examMode==='wrong-review'?'오답 재시험':'일반 시험'}
+- 시험 유형: ${examMode==='wrong-review'?'오답 재시험':examMode==='reverse'?'역방향 개념 훈련':'일반 시험'}
 
 ## 오답
 
@@ -532,6 +539,13 @@ async function copyResult(openCodex){
 }
 
 $('custom-start').onclick=()=>{const selected=[...document.querySelectorAll('#chapter-picker input:checked')].map(x=>chapters[Number(x.value)]);if(!selected.length){alert('한 개 이상의 장을 선택하세요.');return;}const pool=questionBank.filter(q=>selected.includes(q.chapter));const count=Math.min(Number($('question-count').value),pool.length);startExam(shuffle(pool).slice(0,count),'맞춤 랜덤 연습');};
+$('reverse-start').onclick=()=>{
+  const selected=[...document.querySelectorAll('#reverse-chapter-picker input:checked')].map(x=>chapters[Number(x.value)]);
+  if(!selected.length){alert('한 개 이상의 장을 선택하세요.');return;}
+  const pool=reverseQuestionBank.filter(q=>selected.includes(q.chapter));
+  const count=Math.min(Number($('reverse-question-count').value),pool.length);
+  startExam(shuffle(pool).slice(0,count),'역방향 개념 훈련',null,'reverse');
+};
 $('wrong-start').onclick=async()=>{
   const button=$('wrong-start');
   const oldText=button.textContent;
